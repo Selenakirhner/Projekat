@@ -1,0 +1,617 @@
+{
+    "navigation": {
+        "home": "Početna",
+        "about": "O nama",
+        "services": "Usluge",
+        "gallery": "Galerija",
+        "contact": "Kontakt",
+        "donate": "Doniraj",
+        "dogAdoption": "Udomljavanje pasa",
+        "catAdoption": "Udomljavanje mačaka",
+        "volunteer": "Volontiranje",
+        "sterilization": "Sterilizacija",
+        "checkups": "Zdravstveni pregledi",
+        "microchip": "Mikročipovanje",
+        "vaccinations": "Vakcinacije",
+        "volunteering": "Postanite volonter",
+        "adoption": "Udomljavanje",
+        "vetHelp": "Veterinarska pomoć",
+        "name":"Šapica sreće",
+        "description": "Pružamo šapu ljubavi svakoj životinji. Udruženje za udomljavanje životinja osnovano 2015. godine."
+    },
+    "slide-content": {
+        "title1": "Udomite ljubimca",
+        "description1": "Naše životinje čekaju svoj dom",
+        "button1": "Pogledajte sve",
+        "title2": "Postanite volonter",
+        "description2": "Vaša pomoć znači sve",
+        "button2": "Prijavi se",
+        "title3": "Pomozite nam",
+        "description3": "Svaka donacija je važna",
+        "button3": "Doniraj"
+    },
+    "about": {
+        "title": "Ko smo mi?",
+        "content": "Šapica sreće je udruženje građana osnovano 2015. godine sa ciljem da pomogne napuštenim životinjama da pronađu svoj dom. Do sada smo uspešno udomili preko 800 pasa i mačaka.",
+        "button": "Saznaj više o nama"
+    },
+    "services": {
+        "title": "Naše usluge",
+        "vet": "Veterinarska pomoć",
+        "dogAdoption": "Udomljavanje pasa",
+        "catAdoption": "Udomljavanje mačaka",
+        "descriptionVet": "Vakcinacije, sterilizacije i zdravstveni pregledi za vaše ljubimce.",
+        "descriptionDog": "Pomozite nam da pronađemo dom za pse svih rasa i uzrasta.",
+        "descriptionCat": "Nežne mačke svih uzrasta čekaju nekoga ko će ih voleti."
+    },
+    "video": {
+        "title": "Kako odabrati najboljeg kućnog ljubimca za vas",
+        "description": "Odabir pravog kućnog ljubimca je važan korak. Pogledajte naše video snimke da saznate kako da izaberete životinju koja odgovara vašem stilu života i porodici."
+    },
+    "animation": {
+        "title": "Naši štićenici",
+        "description1": "Udomi me",
+        "description2": "Čeka tebe",
+        "description3": "Biću ti najbolji prijatelj"  
+    }, 
+    "documents": {
+        "title": "Korisni dokumenti",
+        "adoptionForm": "Vodič za udomljavanje (PDF)",
+        "adoptionAgreement": "Ugovor o udomljavanju",
+        "advice": "Saveti za nove vlasnike",
+        "download1": "(preuzeto 2.5MB)",
+        "download2": "(preuzeto 1.2MB)",
+        "download3": "(preuzeto 3.1MB)"
+    },
+    "map": {
+        "title": "Gde se nalazimo",
+        "addressLabel": "Adresa:",
+        "address": "Bulevar oslobođenja 123, Beograd",
+        "hoursLabel": "Radno vreme:",
+        "time": "Ponedeljak - Petak: 10h - 18h, Subota: 10h - 15h"
+    },  
+    "hero2": {
+        "title": "O nama",
+        "subtitle": "Upoznajte priču iza Šapica sreće"
+    },
+    "story": {
+        "title": "Naša priča",
+        "content1": "Šapica sreće je osnovano 2015. godine od strane grupe volontera koji su želeli da pomognu napuštenim životinjama na ulicama Beograda. Ono što je počelo kao hraniteljstvo za nekoliko pasa, danas je preraslo u jedno od najvećih udruženja za udomljavanje u Srbiji.",
+        "content2":"Naš tim čine strastveni ljubitelji životinja, veterinari, treneri i volonteri koji svakodnevno rade na tome da svaka životinja dobije šansu za srećan život. Do sada smo uspešno udomili preko 200 pasa i mačaka, a svakodnevno se brinemo o još 30-ak životinja u našem azilu.",
+        "content3":"Verujemo da svaka životinja zaslužuje ljubav, pažnju i siguran dom. Naša misija je da im to omogućimo kroz programe udomljavanja, edukacije i podrške novim vlasnicima.",
+        "titleMission": "Naša misija",
+        "contentMission":"Pružiti utočište, negu i ljubav napuštenim životinjama i pronaći im odgovorne i brižne vlasnike.",
+        "tittleVision": "Naša vizija",
+        "contentVision": "Svet u kome nema napuštenih životinja i gde se svaki ljubimac tretira kao član porodice."
+    },
+
+    "statistics": {
+        "title": "Naš uticaj u brojkama",
+        "adoptedDogs": "Udomljenih pasa",
+        "adoptedCats": "Udomljenih mačaka",
+        "volunteers": "Aktivnih volontera",
+        "shelter": "Trenutno u azilu"
+    },
+    "team": {
+        "title": "Upoznajte naš tim",
+        "name1": "Jovana Petrović",
+        "description1": "Osnivač i direktor",
+        "content1": "Sa preko 10 godina iskustva u spasavanju životinja, Jovana vodi naš tim sa strašću i posvećenošću.",
+        "name2": "Marko Janković",
+        "description2": "Veterinar",
+        "content2": "Marko brine o zdravlju svih naših štićenika i obavlja redovne preglede i vakcinacije.",   
+        "name3": "Ana Marić",
+        "description3": "Koordinator volontera",
+        "content3": "Ana organizuje sve volonterske aktivnosti i brine se da svaki volonter pronađe svoje mesto.",   
+        "name4": "Nikola Jovanović",
+        "description4": "Menadžer za udomljavanje",
+        "content4": "Nikola koordinira proces udomljavanja i vodi razgovore sa potencijalnim vlasnicima.",
+        "partenrs": "Naši parnteri"
+    },
+
+    "galleryPage": {
+    "title": "Upoznajte naš tim i azil",
+    "intro": "Pogledajte kako izgleda život u našem azilu, upoznajte volontere i pogledajte prostor u kome naši štićenici borave dok čekaju svoj dom.",
+    "items": {
+        "item1": {
+            "title": "Veterinarski tim",
+            "subtitle": "Dr Marković i sestre Jovanović",
+            "description": "Brine se o zdravlju naših štićenika"
+        },
+        "item2": {
+            "title": "Upravni tim",
+            "subtitle": "Koordinacija i organizacija",
+            "description": "5 godina iskustva u udomljavanju"
+        },
+        "item3": {
+            "title": "Prostor za pse",
+            "subtitle": "Moderni boksevi sa dvorištem",
+            "description": "Svaki pas ima svoj krevet i igračke"
+        },
+        "item4": {
+            "title": "Mačja soba",
+            "subtitle": "Topao prostor za krznene prijatelje",
+            "description": "Mačke se slobodno kreću"
+        },
+        "item5": {
+            "title": "Veterinarska ambulanta",
+            "subtitle": "Potpuno opremljena",
+            "description": "Redovni pregledi i vakcinacije"
+        },
+        "item6": {
+            "title": "Psi u šetnji",
+            "subtitle": "Uživaju u prirodi",
+            "description": "Svakodnevne aktivnosti"
+        },
+        "item7": {
+            "title": "Mačke posmatraju",
+            "subtitle": "Lili",
+            "description": "Vaši najbolji drugari"
+        },
+        "item8": {
+            "title": "Štenad",
+            "subtitle": "Leglo od 5 šteneta",
+            "description": "Rođeni u azilu, spremni za dom"
+        },
+        "item9": {
+            "title": "Volonterski tim",
+            "subtitle": "Subotom u azilu",
+            "description": "Druženje sa psima"
+        },
+        "item10": {
+            "title": "Akcija čišćenja",
+            "subtitle": "Zajedno do čistog prostora",
+            "description": "Hvala svim volonterima"
+        }
+    }
+    },
+    "hero3": {
+        "title3": "Naše usluge",
+        "subtitle3": "Sve što vam treba na jednom mestu"
+    },
+    "servicesPage": {
+        "titleU":"Udomljavanje",
+        "pet1" : "Psi",
+        "desc1" :"Pogledajte sve pse koji čekaju svoj dom. Različite rase, uzrasti i karakteri.",
+        "petBtn1" : "Pogledaj pse",
+        "pet2" : "Mačke",
+        "desc2" : "Nežne mačke svih uzrasta koje traže topao dom i ljubav.",
+        "petBtn2" : "Pogledaj mačke",
+        "titleV": "Veterinarska pomoć",
+        "vacc" : "Vakcinacije",
+        "desc3": "Redovne vakcinacije za pse i mačke. Zaštitite svog ljubimca.",
+        "vBtn1" : "Saznaj više",
+        "ster" : "Sterilizacija",
+        "desc4": "Sterilizacija i kastracija po povoljnim cenama.",
+        "vBtn2" : "Saznaj više",
+        "microcip" : "Mikročipovanje",
+        "desc5": "Mikročipovanje i upis u centralni registar.",
+        "vBtn3" : "Saznaj više",
+        "check" : "Zdravstveni pregledi",
+        "desc6": "Redovni zdravstveni pregledi za pse i mačke. Pravovremena dijagnoza i lečenje.",
+        "vBtn4" : "Saznaj više",
+        "titleVol" : "Volontiranje i podrška",
+        "volon" : "Postani volonter",
+        "descVo1":"Pridruži se našem timu volontera. Šetnja pasa, hranjenje, druženje.",
+        "voBtn1" : "Prijavi se",
+        "don" : "Donacije",
+        "descVo2" : "Pomozite nam donacijama - hrana, oprema, novac, ili volontirajte.",
+        "voBtn2" : "Doniraj"
+    },
+    "ctaUsluge": {
+        "title": "Nisi siguran šta ti treba?",
+         "description": "Kontaktiraj nas i pomoći ćemo ti da pronađeš pravu uslugu za tebe i tvog ljubimca."
+    },
+
+    "hero": {
+        "title": "Kontaktirajte nas",
+        "subtitle": "Tu smo za sva vaša pitanja"
+    },
+
+    "address": {
+        "title": "Adresa",
+        "line1": "Bulevar oslobođenja 123",
+        "line2": "11000 Beograd"
+     },
+    "phone": {
+        "title": "Telefon"
+    },
+    "form": {
+        "titleForm": "Pošaljite nam poruku",
+        "name": "Ime i prezime *",
+        "email": "Email adresa *",
+        "phone": "Telefon",
+        "subject": "Naslov poruke *",
+        "interest": "Zainteresovani ste za:",
+        "options": {
+            "opcion": "Izaberite opciju",
+            "adoption": "Udomljavanje",
+            "volunteer": "Volontiranje",
+            "donation": "Donaciju",
+            "info": "Informacije",
+            "other": "Ostalo"
+        },
+    "placeholders":{
+        "name": "Unesite ime i prezime",
+        "email": "Unesite email adresu",
+        "phone": "Unesite broj telefona",
+        "subject": "Unesite naslov poruke",
+        "message": "Unesite vašu poruku..."
+    },
+    "message": "Poruka *",
+    "consent": "Slažem se sa obradom podataka *",
+    "button": "Pošalji poruku"
+    },
+    "map1": {
+    "titleMap": "Gde se nalazimo"
+    },
+    "workingHours": {
+        "title": "Radno vreme",
+        "weekdays": "Ponedeljak - Petak:",
+        "weekdaysTime": "10:00 - 18:00",
+        "saturday": "Subota:",
+        "saturdayTime": "10:00 - 15:00",
+        "sunday": "Nedelja:",
+        "sundayStatus": "Zatvoreno"
+    },
+    "volunteer": {
+        "title": "Postanite volonter",
+        "heading": "Zašto volontirati?",
+        "benefits": {
+            "1": "- Druženje sa životinjama",
+            "2": "- Upoznavanje novih ljudi",
+            "3": "- Sticanje iskustva",
+            "4": "- Osećaj ispunjenosti",
+            "5": "- Preporuke za posao"
+        },
+        "description": "Pridružite se našem timu volontera i pomozite nam da promenimo živote napuštenih životinja.",
+        "button": "Prijavi se odmah"
+    },
+    "dogsPage": {
+        "title": "Psi za udomljavanje",
+        "description": "Upoznajte naše pse koji čekaju svoj dom",
+        "age": "Uzrast",
+        "breed": "Rasa",
+        "button": "Udomi",
+        "dogs": {
+            "dog1": {
+                "age": "2 godine",
+                "breed": "Mešanac",
+                "desc": "Veseo, razigran, voli decu"
+            },
+            "dog2": {
+                "age": "3 godine",
+                "breed": "Mešanac",
+                "desc": "Miran, dobar sa kućnim životinjama"
+            },
+            "dog3": {
+                "age": "1 godina",
+                "breed": "Pomeranac",
+                "desc": "Pufnasta, razigrana"
+            },
+            "dog4": {
+                "age": "7 meseci",
+                "breed": "Bernski pastirski pas",
+                "desc": "Najbolji čuvar"
+            },
+            "dog5": {
+                "age": "2.5 godine",
+                "breed": "Zlatni retriver",
+                "desc": "Veseo, inteligentan"
+            },
+            "dog6": {
+                "age": "11 meseci",
+                "breed": "Mešanac",
+                "desc": "Druželjubiv, dobar sa decom"
+            }
+        }
+    },
+    "catsPage": {
+        "title": "Mačke za udomljavanje",
+        "description": "Upoznajte naše mačke koje čekaju svoj dom",
+        "age": "Uzrast",
+        "breed": "Rasa",
+        "button": "Udomi",
+        "cats": {
+            "cat1": {
+                "age": "3 godine",
+                "breed": "Mejkun",
+                "desc": "Druželjiva, inteligentna"
+            },
+            "cat2": {
+                "age": "5 meseci",
+                "breed": "Mešanac",
+                "desc": "Miran, dobar sa decom"
+            },
+            "cat3": {
+                "age": "2 godine",
+                "breed": "Mešanac",
+                "desc": "Voli prirodu, druželjiv"
+            },
+            "cat4": {
+                "age": "2 godine",
+                "breed": "Ruska plava",
+                "desc": "Razigrana, ljubazna"
+            },
+            "cat5": {
+                "age": "3 meseca",
+                "breed": "Bengalska",
+                "desc": "Voli decu i da se mazi"
+            },
+            "cat6": {
+                "age": "4 godine",
+                "breed": "Mešanac",
+                "desc": "Druželjiva, ljubazna"
+            },
+            "cat7": {
+                "age": "2 godine",
+                "breed": "Mešanac",
+                "desc": "Samostalan, voli decu"
+            },
+            "cat8": {
+                "age": "10 meseci",
+                "breed": "Persijska",
+                "desc": "Mekana, razigrana"
+            }
+        }
+    },
+
+    "vaccinationPage": {
+        "mainTitle": "Zašto je vakcinacija važna?",
+        "mainDescription": "Redovna vakcinacija je najbolji način da zaštitite svog ljubimca od zaraznih i smrtonosnih bolesti. Naš veterinarski tim koristi najkvalitetnije vakcine i pridržava se svih protokola.",
+        "dogsTitle": "Vakcinacije za pse:",
+        "dogsList": {
+            "item1": "<strong>Osnovna vakcina (DHPPi):</strong> Štiti od kuge, hepatitisa, parvoviroze i parainfluence",
+            "item2": "<strong>Besnilo:</strong> Obavezna vakcina po zakonu",
+            "item3": "<strong>Bordetela:</strong> Zaštita od infekcija gornjih disajnih puteva",
+            "item4": "<strong>Lajmska bolest:</strong> Preporučuje se za pse koji borave u prirodi"
+        },
+        "catsTitle": "Vakcinacije za mačke:",
+        "catsList": {
+            "item1": "<strong>Osnovna vakcina (FVRCP):</strong> Štiti od panleukopenije, kaliciviroze i rinotraheitisa",
+            "item2": "<strong>Besnilo:</strong> Obavezna vakcina",
+            "item3": "<strong>FeLV:</strong> Vakcina protiv leukoze"
+        },
+        "whenTitle": "Kada vakcinisati?",
+        "table": {
+            "header1": "Uzrast",
+            "header2": "Preporučena vakcinacija",
+            "row1": {
+                "col1": "6-8 nedelja",
+                "col2": "Prva vakcinacija"
+            },
+            "row2": {
+                "col1": "12 nedelja",
+                "col2": "Druga vakcinacija + besnilo"
+            },
+            "row3": {
+                "col1": "16 nedelja",
+                "col2": "Treća vakcinacija (po potrebi)"
+            },
+            "row4": {
+                "col1": "Godišnje",
+                "col2": "Revakcinacija"
+            }
+        },
+        "priceCard": {
+            "title": "Cena vakcinacije",
+            "item1": "Osnovna vakcina (psi)",
+            "item2": "Osnovna vakcina (mačke)",
+            "item3": "Vakcina protiv besnila",
+            "total": "Paket (sve vakcine)"
+        },
+        "contactSidebar": {
+            "title": "Zakažite termin",
+            "workTime": "Pon-Pet: 10-18h",
+            "button": "Zakaži odmah"
+        },
+        "noteCard": {
+            "title": "Važna napomena",
+            "text": "Pre vakcinacije obavezan je klinički pregled. Ukoliko ljubimac nije pregledan u poslednjih mesec dana, cena pregleda je 800 RSD."
+        },
+        "vaccinationVideo": {
+            "title": "Zašto je vakcinacija važna?",
+            "title2":"Razumevanje vakcinacije pasa",
+            "description": "Stručno objašnjenje zašto je redovna vakcinacija ključna za zdravlje vašeg ljubimca."
+        },
+        "cta": {
+            "title": "Spremni da zaštitite svog ljubimca?",
+            "description": "Kontaktirajte nas i zakažite termin za vakcinaciju",
+            "button": "Kontaktiraj nas"
+        }
+    },
+    "donationsPage": {
+        "title": "Podržite naš rad",
+        "description": "Svaka donacija, ma koliko mala, mnogo znači našim štićenicima.",
+        "cards": {
+            "money": {
+                "title": "Novčane donacije",
+                "account": "Tekući račun: 123-456789-10 (Banka Intesa)",
+                "paypal": "PayPal: donacije@sapica-srece.rs"
+            },
+            "food": {
+                "title": "Hrana i poslastice",
+                "text": "Potrebna nam je:",
+                "items": {
+                    "item1": "Suva hrana za pse i mačke",
+                    "item2": "Mokra hrana (konzerve)",
+                    "item3": "Poslastice za dresuru"
+                }
+            },
+            "equipment": {
+                "title": "Oprema",
+                "items": {
+                    "item1": "Povodci i ogrlice",
+                    "item2": "Kreveti i ćebad",
+                    "item3": "Igracke za pse",
+                    "item4": "Posude za vodu i hranu"
+                }
+            },
+            "medical": {
+                "title": "Medicinski materijal",
+                "items": {
+                    "item1": "Zavoj, gaza, flasteri",
+                    "item2": "Antibiotici",
+                    "item3": "Sredstva za dezinfekciju"
+                }
+            }
+        }
+    },
+    "microchipPage": {
+        "title": "Mikročipovanje pasa i mačaka",
+        "description": "Mikročip je trajna identifikacija vašeg ljubimca. Obavezno po zakonu za sve pse, a preporučuje se i za mačke.",
+        "whatTitle": "Šta je mikročip?",
+        "whatText": "Mikročip je elektronski identifikator veličine zrna pirinča koji se ubrizgava pod kožu. Sadrži jedinstveni broj koji se upisuje u centralni registar.",
+        "procedureTitle": "Postupak mikročipovanja:",
+    "steps": {
+        "step1": "<strong>Pregled:</strong> Kratak klinički pregled",
+        "step2": "<strong>Ubrizgavanje:</strong> Brzo i bezbolno, kao vakcinacija",
+        "step3": "<strong>Skeniranje:</strong> Provera da li se čip očitava",
+        "step4": "<strong>Upis u registar:</strong> Unos podataka u centralnu bazu",
+        "step5": "<strong>Dobijate pasoš:</strong> Sa svim podacima o čipu"
+    },
+    "priceCard": {
+        "title": "Cene",
+        "item1": "Mikročip + upis",
+        "item2": "Pas (sa važećim pasošem)",
+        "item3": "Mačke"
+    }
+    },
+    "checkupsPage": {
+    "title": "Zdravstveni pregledi",
+    "description": "Redovni pregledi su ključni za dug i zdrav život vašeg ljubimca.",
+    "includesTitle": "Šta obuhvata pregled?",
+    "includesList": {
+        "item1": "<strong>Klinički pregled:</strong> Temperatura, puls, disanje",
+        "item2": "<strong>Pregled ušiju i očiju:</strong> Infekcije, strana tela",
+        "item3": "<strong>Pregled zuba:</strong> Zubni kamenac, upale desni",
+        "item4": "<strong>Pregled kože i dlake:</strong> Paraziti, alergije",
+        "item5": "<strong>Pregled srca i pluća:</strong> Stetoskopom",
+        "item6": "<strong>Palpacija abdomena:</strong> Organi, bolne tačke"
+    },
+    "additionalTitle": "Dodatni pregledi:",
+    "additionalList": {
+        "item1": "Ultrazvuk - 2.500 RSD",
+        "item2": "Rendgen - 3.000 RSD",
+        "item3": "Krvna slika - 1.800 RSD",
+        "item4": "Biohemija - 2.200 RSD"
+    },
+    "priceCard": {
+        "title": "Cena pregleda",
+        "item1": "Klinički pregled"
+    }
+    },
+    "sterilizationPage": {
+    "title": "Sterilizacija i kastracija",
+    "description": "Sterilizacija je odgovoran čin svakog vlasnika. Pomaže u kontroli populacije, smanjuje rizik od određenih bolesti i produžava životni vek ljubimca.",
+    "benefitsTitle": "Prednosti sterilizacije:",
+    "benefitsList": {
+        "item1": "<strong>Smanjuje rizik od tumora mlečnih žlezdi</strong> (posebno ako se uradi pre prvog teranja)",
+        "item2": "<strong>Eliminiše rizik od piometre</strong> - infekcije materice",
+        "item3": "<strong>Smanjuje agresivnost</strong> i želju za lutanjem",
+        "item4": "<strong>Nema neželjenih štenaca</strong> - odgovorno vlasništvo",
+        "item5": "<strong>Produžava životni vek</strong> u proseku 1-3 godine"
+    },
+    "whenTitle": "Kada uraditi sterilizaciju?",
+    "whenText": "Preporučuje se između 6 i 12 meseci starosti, u zavisnosti od rase i veličine psa. Za manje rane može i ranije, za velike kasnije.",
+    "priceCard": {
+        "title": "Cene sterilizacije",
+        "item1": "Mužjak - pas (do 15kg)",
+        "item2": "Mužjak - pas (15-30kg)",
+        "item3": "Mužjak - pas (preko 30kg)",
+        "item4": "Ženka - pas (do 15kg)",
+        "item5": "Ženka - pas (15-30kg)",
+        "item6": "Ženka - pas (preko 30kg)",
+        "item7": "Mačke (mužjak/ženka)"
+    }
+    },
+    "volunteerPage": {
+    "title": "Postani volonter",
+    "description": "Pridruži se našem timu i pomozi životinjama da lakše prebrode dane do udomljavanja.",
+    "activitiesTitle": "Šta volonteri rade?",
+    "activities": {
+        "walking": {
+            "title": "Šetnja pasa",
+            "text": "Svakodnevne šetnje su neophodne za fizičko i mentalno zdravlje pasa."
+        },
+        "feeding": {
+            "title": "Hranjenje",
+            "text": "Pomoć u hranjenju i održavanju higijene."
+        },
+        "cleaning": {
+            "title": "Čišćenje",
+            "text": "Održavanje bokseva i prostorija čistim."
+        },
+        "photo": {
+            "title": "Fotografisanje",
+            "text": "Pravljenje lepih slika za oglase."
+        },
+        "transport": {
+            "title": "Transport",
+            "text": "Vožnja životinja do veterinara ili novih domova."
+        }
+    },
+    "howTitle": "Kako se prijaviti?",
+    "steps": {
+        "step1": "Popuni prijavni formular ispod",
+        "step2": "Dođi na kratak razgovor",
+        "step3": "Prođi osnovnu obuku",
+        "step4": "Počni sa volontiranjem!"
+    },
+    "form": {
+        "title": "Prijava za volontiranje",
+        "namePlaceholder": "Ime i prezime",
+        "emailPlaceholder": "Email",
+        "phonePlaceholder": "Telefon",
+        "selectLabel": "Izaberi aktivnost",
+        "selectOptions": {
+            "option1": "Šetnja pasa",
+            "option2": "Hranjenje",
+            "option3": "Čišćenje",
+            "option4": "Fotografisanje",
+            "option5": "Transport",
+            "option6": "Sve"
+        },
+        "textareaPlaceholder": "Zašto želiš da volontiraš?",
+        "submitButton": "Pošalji prijavu"
+    },
+    "infoCard": {
+        "title": "Informacije",
+        "location": "<strong>Lokacija:</strong> Bulevar oslobođenja 123",
+        "time": "<strong>Vreme:</strong> Svaki dan 10-18h",
+        "contact": "<strong>Kontakt:</strong> volonteri@sapica-srece.rs",
+        "required": "<strong>Potrebno:</strong> Ljubav prema životinjama i malo slobodnog vremena"
+    }
+    },
+    "footer": {
+        "quickLinks": "Brzi linkovi",
+        "contact": "Kontaktirajte nas",
+        "newsletter": "Prijavite se na newsletter",
+        "emailPlaceholder": "Vaš email",
+        "subscribe": "Prijavi se",
+        "rights": "Sva prava zadržana",
+        "phone": "011/123-456",
+        "email": "info@sapica-srece.rs",
+        "address": "Bulevar oslobođenja 123, Beograd",
+        "privacy": "Politika privatnosti",
+        "terms": "Uslovi korišćenja"
+    },
+    "buttons": {
+        "readMore": "Pročitaj više",
+        "send": "Pošalji poruku",
+        "adopt": "Udomi"
+    },
+    "contact": {
+        "name": "Ime i prezime",
+        "email": "Email adresa",
+        "phone": "Telefon",
+        "message": "Poruka",
+        "send": "Pošalji poruku"
+    },
+    "messages": {
+    "newsletterSuccess": "Hvala na prijavi! Proverite vaš email.",
+    "newsletterError": "Molimo unesite validnu email adresu.",
+    "formSuccessTitle": "Hvala na poruci!",
+    "formSuccessMessage": "Javićemo vam se u najkraćem mogućem roku."
+}
+}

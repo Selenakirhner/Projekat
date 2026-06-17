@@ -1,0 +1,619 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About us",
+        "services": "Services",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "donate": "Donate",
+        "dogAdoption": "Dog Adoption",
+        "catAdoption": "Cat Adoption",
+        "volunteer": "Volunteer",
+        "sterilization": "Sterilization",
+        "checkups": "Health checkups",
+        "microchip": "Microchipping",
+        "vaccinations": "Vaccinations",
+        "volunteering": "Become a volunteer",
+        "adoption": "Adoption",
+        "vetHelp": "Veterinary help",
+        "name": "Paw of Happiness",
+        "description": "Providing a paw of love to every animal. Animal welfare organization founded in 2015."
+    },
+    "slide-content": {
+        "title1": "Adopt a pet",
+        "description1": "Our animals are waiting for their home",
+        "button1": "View all",
+        "title2": "Become a volunteer",
+        "description2": "Your help makes all the difference.", 
+        "button2": "Sign up",   
+        "title3": "Help us",
+        "description3": "Every donation counts",
+        "button3": "Donate"
+    },
+    "about": {
+        "title": "Who are we?",
+        "content": "Paw of Happiness is a citizens' association founded in 2015 with the aim of helping abandoned animals find their homes. So far, we have successfully adopted over 800 dogs and cats.",
+        "button": "Learn more about us"
+    },
+    "services": {
+        "title": "Our Services",
+        "vet": "Veterinary help",
+        "dogAdoption": "Dog Adoption",
+        "catAdoption": "Cat Adoption",
+        "descriptionVet": "Vaccinations, sterilizations, and health checkups for your pets.",
+        "descriptionDog": "Help us find a home for dogs of all breeds and ages.",
+        "descriptionCat": "Gentle cats of all ages are waiting for someone to love them."
+    },
+    "video": {
+        "title": "How to Choose the Best Pet for You",
+        "description": "Choosing the right pet is an important decision. Watch our video to learn how to select a pet that fits your lifestyle and family."
+    },
+    "animation": {
+        "title": "Our Residents",
+        "description1": "Adopt me",
+        "description2": "Waiting for you",
+        "description3": "I will be your best friend"  
+    },
+    "documents": {
+        "title": "Important Documents",
+        "adoptionForm": "Adoption Guide (PDF)",
+        "adoptionAgreement": "Adoption Agreement",
+        "advice": "Tips for new pet owners",
+        "download1": "(download 2.5MB)",
+        "download2": "(download 1.2MB)",
+        "download3": "(download 3.1MB)"
+
+    },
+    "map": {
+        "title": "Our Location",
+        "addressLabel": "Address:",
+        "address": "Bulevar Oslobođenja 123, Belgrade",
+        "hoursLabel": "Working hours:",
+        "time": "Monday - Friday: 10am - 6pm, Saturday: 10am - 3pm"
+    },
+    "hero2": {
+        "title": "About Us",
+        "subtitle": "Learn the story behind Paw of Happiness"
+    },
+    "story": {
+        "title": "Our Story",
+        "content1": "Paw of Happiness was founded in 2015 by a group of volunteers who wanted to help abandoned animals on the streets of Belgrade. What started as fostering for a few dogs, today has grown into one of the largest adoption associations in Serbia.",
+        "content2":"Our team consists of passionate animal lovers, veterinarians, trainers, and volunteers who work daily to give every animal a chance for a happy life. So far, we have successfully adopted over 200 dogs and cats, and we care for about 30 animals in our shelter every day.",
+        "content3":"We believe that every animal deserves love, attention, and a safe home. Our mission is to provide that through adoption programs, education, and support for new owners.",
+        "titleMission": "Our Mission",
+        "contentMission": "Provide shelter, care and love to abandoned animals and find them responsible and caring owners.",
+        "tittleVision": "Our Vision",
+        "contentVision": "A world where there are no abandoned animals and where every pet is treated as a family member."
+    },
+    "statistics": {
+        "title": "Our Impact in Numbers",
+        "adoptedDogs": "Adopted Dogs",
+        "adoptedCats": "Adopted Cats",
+        "volunteers": "Active Volunteers",
+        "shelter": "Currently in Shelter"
+    },
+    "team": {
+        "title": "Meet Our Team",
+        "name1": "Jovana Petrović",
+        "description1": "Founder and Director",
+        "content1": "With over 10 years of experience in animal rescue, Jovana leads our team with passion and dedication.",
+        "name2": "Marko Janković",
+        "description2": "Veterinarian",
+        "content2": "Dr. Marko has been providing veterinary care for our animals for over 5 years, ensuring they are healthy and happy.",
+        "name3": "Ana Marić",
+        "description3": "Volunteer Coordinator",
+        "content3": "Ana organizes our volunteer efforts and ensures that everyone has a rewarding experience helping our animals.",
+        "name4": "Nikola Jovanović",
+        "description4": "Adoption Manager",
+        "content4": "Nikola coordinates the adoption process and conducts interviews with potential adopters.",
+        "partenrs": "Our Partners"
+    },
+    "galleryPage": {
+    "title": "Meet Our Team and Shelter",
+    "intro": "See what life is like in our shelter, meet the volunteers, and take a look at the space where our residents stay while waiting for their forever homes.",
+    "items": {
+        "item1": {
+            "title": "Veterinary Team",
+            "subtitle": "Dr. Marković and the Jovanović sisters",
+            "description": "Takes care of our residents' health"
+        },
+        "item2": {
+            "title": "Management Team",
+            "subtitle": "Coordination and organization",
+            "description": "5 years of experience in adoption"
+        },
+        "item3": {
+            "title": "Dog Area",
+            "subtitle": "Modern kennels with yard",
+            "description": "Every dog has their own bed and toys"
+        },
+        "item4": {
+            "title": "Cat Room",
+            "subtitle": "Warm space for furry friends",
+            "description": "Cats move freely"
+        },
+        "item5": {
+            "title": "Veterinary Clinic",
+            "subtitle": "Fully equipped",
+            "description": "Regular checkups and vaccinations"
+        },
+        "item6": {
+            "title": "Dogs on a Walk",
+            "subtitle": "Enjoying nature",
+            "description": "Daily activities"
+        },
+        "item7": {
+            "title": "Cats Watching",
+            "subtitle": "Lili",
+            "description": "Your best friends"
+        },
+        "item8": {
+            "title": "Puppies",
+            "subtitle": "Litter of 5 puppies",
+            "description": "Born in the shelter, ready for a home"
+        },
+        "item9": {
+            "title": "Volunteer Team",
+            "subtitle": "Saturdays at the shelter",
+            "description": "Spending time with dogs"
+        },
+        "item10": {
+            "title": "Cleaning Action",
+            "subtitle": "Together for a clean space",
+            "description": "Thanks to all volunteers"
+        }
+    }
+    },
+    "hero3": {
+        "title3": "Our Service",
+        "subtitle3": "All you need in one place"
+    },
+    "servicesPage": {
+        "titleU": "Adoption",
+        "pet1": "Dogs",
+        "desc1": "See all the dogs waiting for their forever home. Different breeds, ages, and personalities.",
+        "petBtn1": "View Dogs",
+        "pet2": "Cats",
+        "desc2": "Gentle cats of all ages looking for a warm home and love.",
+        "petBtn2": "View Cats",
+        "titleV": "Veterinary Help",
+        "vacc": "Vaccinations",
+        "desc3": "Regular vaccinations for dogs and cats. Protect your pet.",
+        "vBtn1": "Learn More",
+        "ster": "Sterilization",
+        "desc4": "Sterilization and castration at affordable prices.",
+        "vBtn2": "Learn More",
+        "microchip": "Microchipping",
+        "desc5": "Microchipping and registration in the central registry.",
+        "vBtn3": "Learn More",
+        "check": "Health Checkups",
+        "desc6": "Regular health checkups for dogs and cats. Timely diagnosis and treatment.",
+        "vBtn4": "Learn More",
+        "titleVol": "Volunteering & Support",
+        "volon": "Become a Volunteer",
+        "descVo1": "Join our team of volunteers. Walking dogs, feeding, spending time with animals.",
+        "voBtn1": "Apply Now",
+        "don": "Donations",
+        "descVo2": "Help us with donations - food, equipment, money, or volunteer your time.",
+        "voBtn2": "Donate"
+    },
+    "ctaUsluge": {
+        "title": "Not sure what you need?",
+        "description": "Contact us and we will help you find the right service for you and your pet.",
+        "ctaBtn": "Contact Us"
+    },
+    "hero": {
+    "title": "Contact Us",
+    "subtitle": "We are here for all your questions"
+    },
+
+    "address": {
+        "title": "Address",
+        "line1": "Bulevar Oslobođenja 123",
+        "line2": "11000 Belgrade"
+    },
+
+    "phone": {
+        "title": "Phone"
+    },
+
+    "form": {
+        "titleForm": "Send Us a Message",
+        "name": "Full Name *",
+        "email": "Email Address *",
+        "phone": "Phone",
+        "subject": "Message Subject *",
+        "interest": "You are interested in:",
+        "options": {
+            "option": "Select an option",
+            "adoption": "Adoption",
+            "volunteer": "Volunteering",
+            "donation": "Donation",
+            "info": "Information",
+            "other": "Other"
+        },
+    "placeholders":{
+        "name": "Enter your full name",
+        "email": "Enter your email address",
+        "phone": "Enter your phone number",
+        "subject": "Enter the message subject",
+        "message": "Enter your message..."
+    },
+    "message": "Message *",
+    "consent": "I agree to the processing of my data *",
+    "button": "Send Message"
+    },
+
+    "map1": {
+        "titleMap": "Where We Are Located"
+    },
+
+    "workingHours": {
+        "title": "Working Hours",
+        "weekdays": "Monday - Friday:",
+        "weekdaysTime": "10:00 - 18:00",
+        "saturday": "Saturday:",
+        "saturdayTime": "10:00 - 15:00",
+        "sunday": "Sunday:",
+        "sundayStatus": "Closed"
+    },
+
+    "volunteer": {
+        "title": "Become a Volunteer",
+        "heading": "Why Volunteer?",
+        "benefits": {
+            "1": "- Spending time with animals",
+            "2": "- Meeting new people",
+            "3": "- Gaining experience",
+            "4": "- A sense of fulfillment",
+            "5": "- Job recommendations"
+        },
+        "description": "Join our team of volunteers and help us change the lives of abandoned animals."
+    },
+    "dogsPage": {
+        "title": "Dogs for Adoption",
+        "description": "Meet our dogs waiting for their forever home",
+        "age": "Age",
+        "breed": "Breed",
+        "button": "Adopt",
+        "dogs": {
+            "dog1": {
+                "age": "2 years",
+                "breed": "Mixed",
+                "desc": "Cheerful, playful, loves children"
+            },
+            "dog2": {
+                "age": "3 years",
+                "breed": "Mixed",
+                "desc": "Calm, good with other pets"
+            },
+            "dog3": {
+                "age": "1 year",
+                "breed": "Pomeranian",
+                "desc": "Fluffy, playful"
+            },
+            "dog4": {
+                "age": "7 months",
+                "breed": "Bernese Mountain Dog",
+                "desc": "Best guard dog"
+            },
+            "dog5": {
+                "age": "2.5 years",
+                "breed": "Golden Retriever",
+                "desc": "Cheerful, intelligent"
+            },
+            "dog6": {
+                "age": "11 months",
+                "breed": "Mixed",
+                "desc": "Friendly, good with children"
+            }
+        }
+    },
+    "catsPage": {
+        "title": "Cats for Adoption",
+        "description": "Meet our cats waiting for their forever home",
+        "age": "Age",
+        "breed": "Breed",
+        "button": "Adopt",
+        "cats": {
+            "cat1": {
+                "age": "3 years",
+                "breed": "Maine Coon",
+                "desc": "Friendly, intelligent"
+            },
+            "cat2": {
+                "age": "5 months",
+                "breed": "Mixed",
+                "desc": "Calm, good with children"
+            },
+            "cat3": {
+                "age": "2 years",
+                "breed": "Mixed",
+                "desc": "Loves nature, friendly"
+            },
+            "cat4": {
+                "age": "2 years",
+                "breed": "Russian Blue",
+                "desc": "Playful, kind"
+            },
+            "cat5": {
+                "age": "3 months",
+                "breed": "Bengal",
+                "desc": "Loves children and cuddles"
+            },
+            "cat6": {
+                "age": "4 years",
+                "breed": "Mixed",
+                "desc": "Friendly, kind"
+            },
+            "cat7": {
+                "age": "2 years",
+                "breed": "Mixed",
+                "desc": "Independent, loves children"
+            },
+            "cat8": {
+                "age": "10 months",
+                "breed": "Persian",
+                "desc": "Soft, playful"
+            }
+        }
+    },
+    "vaccinationPage": {
+        "mainTitle": "Why is vaccination important?",
+        "mainDescription": "Regular vaccination is the best way to protect your pet from infectious and deadly diseases. Our veterinary team uses the highest quality vaccines and follows all protocols.",
+        "dogsTitle": "Vaccinations for dogs:",
+        "dogsList": {
+            "item1": "<strong>Core vaccine (DHPPi):</strong> Protects against distemper, hepatitis, parvovirus and parainfluenza",
+            "item2": "<strong>Rabies:</strong> Mandatory vaccine by law",
+            "item3": "<strong>Bordetella:</strong> Protection against upper respiratory infections",
+            "item4": "<strong>Lyme disease:</strong> Recommended for dogs that spend time outdoors"
+        },
+        "catsTitle": "Vaccinations for cats:",
+        "catsList": {
+            "item1": "<strong>Core vaccine (FVRCP):</strong> Protects against panleukopenia, calicivirus and rhinotracheitis",
+            "item2": "<strong>Rabies:</strong> Mandatory vaccine",
+            "item3": "<strong>FeLV:</strong> Vaccine against leukemia"
+        },
+        "whenTitle": "When to vaccinate?",
+        "table": {
+            "header1": "Age",
+            "header2": "Recommended vaccination",
+            "row1": {
+                "col1": "6-8 weeks",
+                "col2": "First vaccination"
+            },
+            "row2": {
+                "col1": "12 weeks",
+                "col2": "Second vaccination + rabies"
+            },
+            "row3": {
+                "col1": "16 weeks",
+                "col2": "Third vaccination (if needed)"
+            },
+            "row4": {
+                "col1": "Yearly",
+                "col2": "Revaccination"
+            }
+        },
+        "priceCard": {
+            "title": "Vaccination price",
+            "item1": "Core vaccine (dogs)",
+            "item2": "Core vaccine (cats)",
+            "item3": "Rabies vaccine",
+            "total": "Package (all vaccines)"
+        },
+        "contactSidebar": {
+            "title": "Schedule an appointment",
+            "workTime": "Mon-Fri: 10am-6pm",
+            "button": "Schedule now"
+        },
+        "noteCard": {
+            "title": "Important note",
+            "text": "A clinical examination is mandatory before vaccination. If your pet hasn't been examined in the last month, the examination fee is 800 RSD."
+        },
+        "vaccinationVideo": {
+            "title": "Why is vaccination important?",
+            "title2":"Understanding dog vaccination",
+            "description": "Expert explanation of why regular vaccination is key to your pet's health."
+        },
+        "cta": {
+            "title": "Ready to protect your pet?",
+            "description": "Contact us and schedule your vaccination appointment",
+            "button": "Contact us"
+        }
+    },
+    "donationsPage": {
+        "title": "Support Our Work",
+        "description": "Every donation, no matter how small, means a lot to our residents.",
+        "cards": {
+            "money": {
+                "title": "Monetary Donations",
+                "account": "Bank account: 123-456789-10 (Intesa Bank)",
+                "paypal": "PayPal: donations@sapica-srece.rs"
+            },
+            "food": {
+                "title": "Food and Treats",
+                "text": "We need:",
+                "items": {
+                    "item1": "Dry food for dogs and cats",
+                    "item2": "Wet food (cans)",
+                    "item3": "Training treats"
+                }
+            },
+            "equipment": {
+                "title": "Equipment",
+                "items": {
+                    "item1": "Leashes and collars",
+                    "item2": "Beds and blankets",
+                    "item3": "Dog toys",
+                    "item4": "Food and water bowls"
+                }
+            },
+            "medical": {
+                "title": "Medical Supplies",
+                "items": {
+                    "item1": "Bandages, gauze, plasters",
+                    "item2": "Antibiotics",
+                    "item3": "Disinfectants"
+                }
+            }
+        }
+    },
+    "microchipPage": {
+        "title": "Microchipping dogs and cats",
+        "description": "A microchip is a permanent identification for your pet. Mandatory by law for all dogs, and recommended for cats.",
+        "whatTitle": "What is a microchip?",
+        "whatText": "A microchip is an electronic identifier the size of a grain of rice that is injected under the skin. It contains a unique number that is entered into the central registry.",
+        "procedureTitle": "Microchipping procedure:",
+        "steps": {
+            "step1": "<strong>Examination:</strong> Short clinical examination",
+            "step2": "<strong>Injection:</strong> Quick and painless, like a vaccination",
+            "step3": "<strong>Scanning:</strong> Checking if the chip is readable",
+            "step4": "<strong>Registry entry:</strong> Entering data into the central database",
+            "step5": "<strong>You receive a passport:</strong> With all chip information"
+        },
+        "priceCard": {
+            "title": "Prices",
+            "item1": "Microchip + registration",
+            "item2": "Dog (with valid passport)",
+            "item3": "Cats"
+        }
+    },
+    "checkupsPage": {
+        "title": "Health Checkups",
+        "description": "Regular checkups are key to a long and healthy life for your pet.",
+        "includesTitle": "What does the checkup include?",
+        "includesList": {
+            "item1": "<strong>Clinical examination:</strong> Temperature, pulse, breathing",
+            "item2": "<strong>Ear and eye examination:</strong> Infections, foreign objects",
+            "item3": "<strong>Dental examination:</strong> Tartar, gum inflammation",
+            "item4": "<strong>Skin and coat examination:</strong> Parasites, allergies",
+            "item5": "<strong>Heart and lung examination:</strong> With stethoscope",
+            "item6": "<strong>Abdominal palpation:</strong> Organs, painful spots"
+        },
+        "additionalTitle": "Additional examinations:",
+        "additionalList": {
+            "item1": "Ultrasound - 2,500 RSD",
+            "item2": "X-ray - 3,000 RSD",
+            "item3": "Blood count - 1,800 RSD",
+            "item4": "Biochemistry - 2,200 RSD"
+        },
+        "priceCard": {
+            "title": "Examination price",
+            "item1": "Clinical examination"
+        }
+    },
+    "sterilizationPage": {
+    "title": "Sterilization and Castration",
+    "description": "Sterilization is a responsible act of every owner. It helps control the population, reduces the risk of certain diseases, and extends the pet's lifespan.",
+    "benefitsTitle": "Benefits of sterilization:",
+    "benefitsList": {
+        "item1": "<strong>Reduces the risk of mammary tumors</strong> (especially if done before the first heat)",
+        "item2": "<strong>Eliminates the risk of pyometra</strong> - uterine infection",
+        "item3": "<strong>Reduces aggression</strong> and the urge to roam",
+        "item4": "<strong>No unwanted puppies</strong> - responsible ownership",
+        "item5": "<strong>Extends lifespan</strong> by an average of 1-3 years"
+    },
+    "whenTitle": "When to sterilize?",
+    "whenText": "Recommended between 6 and 12 months of age, depending on the breed and size of the dog. For smaller breeds it can be done earlier, for larger ones later.",
+    "priceCard": {
+        "title": "Sterilization prices",
+        "item1": "Male - dog (up to 15kg)",
+        "item2": "Male - dog (15-30kg)",
+        "item3": "Male - dog (over 30kg)",
+        "item4": "Female - dog (up to 15kg)",
+        "item5": "Female - dog (15-30kg)",
+        "item6": "Female - dog (over 30kg)",
+        "item7": "Cats (male/female)"
+    }
+    },
+    "volunteerPage": {
+        "title": "Become a Volunteer",
+        "description": "Join our team and help animals get through the days until adoption.",
+        "activitiesTitle": "What do volunteers do?",
+        "activities": {
+            "walking": {
+                "title": "Dog Walking",
+                "text": "Daily walks are essential for the physical and mental health of dogs."
+            },
+            "feeding": {
+                "title": "Feeding",
+                "text": "Help with feeding and maintaining hygiene."
+            },
+            "cleaning": {
+                "title": "Cleaning",
+                "text": "Keeping the boxes and rooms clean."
+            },
+            "photo": {
+                "title": "Photography",
+                "text": "Taking nice pictures for advertisements."
+            },
+            "transport": {
+                "title": "Transport",
+                "text": "Driving animals to the vet or new homes."
+            }
+        },
+        "howTitle": "How to apply?",
+    "steps": {
+        "step1": "Fill out the application form below",
+        "step2": "Come for a short interview",
+        "step3": "Complete basic training",
+        "step4": "Start volunteering!"
+    },
+    "form": {
+        "title": "Volunteer Application",
+        "namePlaceholder": "Full name",
+        "emailPlaceholder": "Email",
+        "phonePlaceholder": "Phone",
+        "selectLabel": "Choose activity",
+        "selectOptions": {
+            "option1": "Dog walking",
+            "option2": "Feeding",
+            "option3": "Cleaning",
+            "option4": "Photography",
+            "option5": "Transport",
+            "option6": "All"
+        },
+        "textareaPlaceholder": "Why do you want to volunteer?",
+        "submitButton": "Send application"
+    },
+    "infoCard": {
+        "title": "Information",
+        "location": "<strong>Location:</strong> Bulevar oslobođenja 123",
+        "time": "<strong>Time:</strong> Every day 10am-6pm",
+        "contact": "<strong>Contact:</strong> volunteers@sapica-srece.rs",
+        "required": "<strong>Required:</strong> Love for animals and some free time"
+    }
+    },
+    "footer": {
+        "quickLinks": "Quick links",
+        "contact": "Contact us",
+        "newsletter": "Newsletter",
+        "emailPlaceholder": "Your email",
+        "subscribe": "Subscribe",
+        "rights": "All rights reserved",
+        "phone": "011/123-456",
+        "email": "info@sapica-srece.rs",
+        "address": "Bulevar Oslobođenja 123, Belgrade",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use"
+    },
+    "buttons": {
+        "readMore": "Read more",
+        "send": "Send message",
+        "adopt": "Adopt"
+    },
+    "contact": {
+        "name": "Full name",
+        "email": "Email address",
+        "phone": "Phone",
+        "message": "Message",
+        "send": "Send message"
+    },
+    "messages": {
+    "newsletterSuccess": "Thank you for subscribing! Check your email.",
+    "newsletterError": "Please enter a valid email address.",
+    "formSuccessTitle": "Thank you for your message!",
+    "formSuccessMessage": "We will get back to you as soon as possible."
+}
+}
