@@ -391,21 +391,21 @@ $(document).ready(function() {
     
     if (savedTheme === 'dark') {
         $('body').addClass('tamna-tema');
-        $themeBtn.text('☀️');
+        $themeBtn.text('S');
     } else {
         $('body').removeClass('tamna-tema');
-        $themeBtn.text('🌙');
+        $themeBtn.text('T');
     }
     
     $themeBtn.on('click', function() {
         $('body').toggleClass('tamna-tema');
         
         if ($('body').hasClass('tamna-tema')) {
-            $(this).text('☀️');
+            $(this).text('S');
             $('.bocno-dugme, #backToTopBtn').css('background', '#4CAF50');
             localStorage.setItem('theme', 'dark');
         } else {
-            $(this).text('🌙');
+            $(this).text('T');
             $('.bocno-dugme, #backToTopBtn').css('background', '#4CAF50');
             localStorage.setItem('theme', 'light');
         }
