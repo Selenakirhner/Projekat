@@ -340,7 +340,7 @@ $(document).ready(function() {
     
     // BACK TO TOP DUGME
     const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '↑';
+    backToTopBtn.innerHTML = '^';
     backToTopBtn.setAttribute('aria-label', 'Nazad na vrh');
     
     backToTopBtn.style.cssText = `
