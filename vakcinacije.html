@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO meta tagovi -->
     <meta name="description" content="Vakcinacija pasa i mačaka u Beogradu. Zaštitite svog ljubimca od opasnih bolesti. Povoljne cene, iskusni veterinari.">
     <meta name="keywords" content="vakcinacija pasa, vakcinacija mačaka, vakcine za pse, vakcine za mačke, besnilo, DHPPi, FVRCP, veterinar Beograd">
     <meta name="author" content="Šapica sreće">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph meta tagovi -->
     <meta property="og:title" content="Vakcinacija pasa i mačaka - Šapica sreće">
     <meta property="og:description" content="Redovna vakcinacija je najbolji način da zaštitite svog ljubimca.">
-    <meta property="og:image" content="logo.png">
-    <meta property="og:url" content="https://selenakirhner.github.io/Projekat">
+    <meta property="og:image" content="logotip.png">
+    <meta property="og:url" content="https://selenakirhner.github.io/Projekat/vakcinacije.html">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card meta tagovi -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vakcinacija - Šapica sreće">
     <meta name="twitter:description" content="Zaštitite svog ljubimca vakcinacijom.">
-    <meta name="twitter:image" content="logo.png">
-        <title>Šapica sreće | Vakcinacije</title>
+    <meta name="twitter:image" content="logotip.png">
+    
+    <title>Šapica sreće | Vakcinacije</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
     <link rel="icon" type="image/png" href="sapica.png">
     <script type="application/ld+json">
         {
@@ -33,7 +31,7 @@
         "name": "Šapica sreće",
         "alternateName": "Udruženje za udomljavanje životinja Šapica sreće",
         "url": "https://selenakirhner.github.io/Projekat",
-        "logo": "logo.png",
+        "logo": "logotip.png",
         "description": "Udruženje za udomljavanje pasa i mačaka. Pružamo šapu ljubavi svakoj životinji.",
         "foundingDate": "2015",
         "email": "info@sapica-srece.rs",
@@ -66,31 +64,31 @@
         }
     </script>
 </head>
-<body class="vacc-page">
+<body class="vakcina-stranica">
     <header>
-        <nav class="main-nav">
-            <div class="nav-container">
+        <nav class="glavna-navigacija">
+            <div class="navigacija-kontejner">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="logo.png" alt="Šapica sreće logo">
+                        <img src="logotip.png" alt="Šapica sreće logo">
                     </a>
                 </div>
                 
-                <ul class="nav-menu">
+                <ul class="navigacija-meni">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
-                    <li class="mega-menu-trigger">
-                        <a href="usluge.html" class="active">Usluge</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-grid">
-                                <div class="mega-col">
+                    <li class="megameni-okidac">
+                        <a href="usluge.html" class="aktivan">Usluge</a>
+                        <div class="megameni">
+                            <div class="megameni-mreza">
+                                <div class="megameni-kolona">
                                     <h3>Udomljavanje</h3>
                                     <ul>
                                         <li><a href="psi.html">Psi</a></li>
                                         <li><a href="macke.html">Mačke</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Veterinarska pomoć</h3>
                                     <ul>
                                         <li><a href="vakcinacije.html">Vakcinacije</a></li>
@@ -99,7 +97,7 @@
                                         <li><a href="pregledi.html">Zdravstveni pregledi</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Volontiranje</h3>
                                     <ul>
                                         <li><a href="volontiranje.html">Postani volonter</a></li>
@@ -113,13 +111,13 @@
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
 
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="sr">SRB</button>
-                    <button class="lang-btn" data-lang="en">ENG</button>
+                <div class="jezik-selektor">
+                    <button class="jezik-dugme aktivan" data-lang="sr">SRB</button>
+                    <button class="jezik-dugme" data-lang="en">ENG</button>
                 </div>
-                <a href="donacije.html" class="donate-btn pulse-animation">Doniraj</a>
+                <a href="donacije.html" class="doniraj-dugme pulsirajuca-animacija">Doniraj</a>
 
-                <button class="hamburger-menu">
+                <button class="hamburger-meni">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -129,30 +127,30 @@
     </header>
 
     <main>
-        <section class="service-detail">
-            <div class="container">
+        <section class="usluga-detalj">
+            <div class="kontejner">
                 <div class="row">
-                    <div class=" ">
+                    <div class="col-lg-8">
                         <h2>Zašto je vakcinacija važna?</h2>
                         <p>Redovna vakcinacija je najbolji način da zaštitite svog ljubimca od zaraznih i smrtonosnih bolesti. Naš veterinarski tim koristi najkvalitetnije vakcine i pridržava se svih protokola.</p>
                         
-                        <h3 class="mt-4">Vakcinacije za pse:</h3>
-                        <ul class="service-list">
+                        <h3>Vakcinacije za pse:</h3>
+                        <ul class="usluga-lista">
                             <li><strong>Osnovna vakcina (DHPPi):</strong> Štiti od kuge, hepatitisa, parvoviroze i parainfluence</li>
                             <li><strong>Besnilo:</strong> Obavezna vakcina po zakonu</li>
                             <li><strong>Bordetela:</strong> Zaštita od infekcija gornjih disajnih puteva</li>
                             <li><strong>Lajmska bolest:</strong> Preporučuje se za pse koji borave u prirodi</li>
                         </ul>
                         
-                        <h3 class="mt-4">Vakcinacije za mačke:</h3>
-                        <ul class="service-list">
+                        <h3>Vakcinacije za mačke:</h3>
+                        <ul class="usluga-lista">
                             <li><strong>Osnovna vakcina (FVRCP):</strong> Štiti od panleukopenije, kaliciviroze i rinotraheitisa</li>
                             <li><strong>Besnilo:</strong> Obavezna vakcina</li>
                             <li><strong>FeLV:</strong> Vakcina protiv leukoze</li>
                         </ul>
                         
-                        <h3 class="mt-4">Kada vakcinisati?</h3>
-                        <table class="vaccine-table">
+                        <h3>Kada vakcinisati?</h3>
+                        <table class="vakcina-tabela">
                             <tr>
                                 <th>Uzrast</th>
                                 <th>Preporučena vakcinacija</th>
@@ -177,49 +175,47 @@
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="service-sidebar">
-                            <div class="price-card">
-                                <h4>Cena vakcinacije</h4>
-                                <div class="price-item">
-                                    <span>Osnovna vakcina (psi)</span>
-                                    <strong>2.500 RSD</strong>
-                                </div>
-                                <div class="price-item">
-                                    <span>Osnovna vakcina (mačke)</span>
-                                    <strong>2.200 RSD</strong>
-                                </div>
-                                <div class="price-item">
-                                    <span>Vakcina protiv besnila</span>
-                                    <strong>1.500 RSD</strong>
-                                </div>
-                                <div class="price-item total">
-                                    <span>Paket (sve vakcine)</span>
-                                    <strong>3.500 RSD</strong>
-                                </div>
+                        <div class="cena-kartica">
+                            <h4>Cena vakcinacije</h4>
+                            <div class="cena-stavka">
+                                <span>Osnovna vakcina (psi)</span>
+                                <strong>2.500 RSD</strong>
                             </div>
-                            
-                            <div class="contact-sidebar">
-                                <h4>Zakažite termin</h4>
-                                <p><img src="footer/telefon-ikonica.png" alt="Telefon"> 011/123-456</p>
-                                <p><img src="footer/email-ikonica.png" alt="Email"> vet@sapica-srece.rs</p>
-                                <p><img src="usluge/ikonica-radnoVreme.png" alt="Radno vreme"> Pon-Pet: 10-18h</p>
-                                <a href="kontakt.html" class="btn-sidebar">Zakaži odmah</a>
+                            <div class="cena-stavka">
+                                <span>Osnovna vakcina (mačke)</span>
+                                <strong>2.200 RSD</strong>
                             </div>
-                            
-                            <div class="note-card">
-                                <h4>Važna napomena</h4>
-                                <p>Pre vakcinacije obavezan je klinički pregled. Ukoliko ljubimac nije pregledan u poslednjih mesec dana, cena pregleda je 800 RSD.</p>
+                            <div class="cena-stavka">
+                                <span>Vakcina protiv besnila</span>
+                                <strong>1.500 RSD</strong>
                             </div>
+                            <div class="cena-stavka ukupno">
+                                <span>Paket (sve vakcine)</span>
+                                <strong>3.500 RSD</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="kontakt-bocno">
+                            <h4>Zakažite termin</h4>
+                            <p><img src="podnozje/telefon-ikonica.png" alt="Telefon"> 011/123-456</p>
+                            <p><img src="podnozje/email-ikonica.png" alt="Email"> vet@sapica-srece.rs</p>
+                            <p><img src="usluge/ikonica-radnoVreme.png" alt="Radno vreme"> Pon-Pet: 10-18h</p>
+                            <a href="kontakt.html" class="dugme-bocno">Zakaži odmah</a>
+                        </div>
+                        
+                        <div class="napomena-kartica">
+                            <h4>Važna napomena</h4>
+                            <p>Pre vakcinacije obavezan je klinički pregled. Ukoliko ljubimac nije pregledan u poslednjih mesec dana, cena pregleda je 800 RSD.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="video-section">
-            <div class="container">
-                <h2 class="section-title text-center">Zašto je vakcinacija važna?</h2>
-                <div class="video-wrapper">
+        <section class="video-sekcija">
+            <div class="kontejner">
+                <h2 class="sekcija-naslov text-center">Zašto je vakcinacija važna?</h2>
+                <div class="video-omotac">
                     <iframe width="100%" height="400" 
                         src="https://www.youtube.com/embed/0zyNzDtBCfI"
                         title="Razumevanje vakcinacije pasa" 
@@ -228,36 +224,36 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p class="video-caption">Stručno objašnjenje zašto je redovna vakcinacija ključna za zdravlje vašeg ljubimca.</p>
+                <p class="video-natpis">Stručno objašnjenje zašto je redovna vakcinacija ključna za zdravlje vašeg ljubimca.</p>
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container text-center">
+        <section class="akcija-sekcija">
+            <div class="kontejner text-center">
                 <h2>Spremni da zaštitite svog ljubimca?</h2>
                 <p>Kontaktirajte nas i zakažite termin za vakcinaciju</p>
-                <a href="kontakt.html" class="btn-cta">Kontaktiraj nas</a>
+                <a href="kontakt.html" class="dugme-akcija">Kontaktiraj nas</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="podnozje-sadrzaj">
+            <div class="podnozje-sekcija">
                 <h4>Šapica sreće</h4>
                 <p>Pružamo šapu ljubavi svakoj životinji. Udruženje za udomljavanje životinja osnovano 2015. godine.</p>
                 
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><img src="footer/fb-ikonica.png" alt="Facebook"></a>
-                    <a href="#" aria-label="Instagram"><img src="footer/Instagram_ikonica.png" alt="Instagram"></a>
-                    <a href="#" aria-label="YouTube"><img src="footer/yt-ikonica.png" alt="YouTube"></a>
-                    <a href="#" aria-label="Twitter"><img src="footer/X_ikonica.png" alt="Twitter"></a>
+                <div class="drustvene-ikonice">
+                    <a href="#" aria-label="Facebook"><img src="podnozje/fb-ikonica.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="podnozje/Instagram_ikonica.png" alt="Instagram"></a>
+                    <a href="#" aria-label="YouTube"><img src="podnozje/yt-ikonica.png" alt="YouTube"></a>
+                    <a href="#" aria-label="Twitter"><img src="podnozje/X_ikonica.png" alt="Twitter"></a>
                 </div>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Brzi linkovi</h4>
-                <ul class="footer-links">
+                <ul class="podnozje-linkovi">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
@@ -266,32 +262,32 @@
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Kontaktirajte nas</h4>
-                <ul class="contact-info">
-                    <li><img src="footer/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
-                    <li><img src="footer/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
-                    <li><img src="footer/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
+                <ul class="kontakt-informacije">
+                    <li><img src="podnozje/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
+                    <li><img src="podnozje/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
+                    <li><img src="podnozje/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Prijavite se na newsletter</h4>
                 <p>Budite u toku sa novostima</p>
-                <form class="newsletter-form">
+                <form class="novine-forma">
                     <input type="email" placeholder="Vaš email" required>
                     <button type="submit">Prijavi se</button>
                 </form>
             </div>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2024 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
+        <div class="podnozje-dno">
+            <p>&copy; 2026 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
         </div>
     </footer>
     
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+    <script src="skripte/jquery-3.6.0.min.js"></script>
+    <script src="glavni.js"></script>
     <script src="jezik.js"></script>
 </body>
 </html>

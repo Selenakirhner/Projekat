@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO meta tagovi -->
     <meta name="description" content="Kontaktirajte Šapica sreće - Udruženje za udomljavanje životinja. Pošaljite nam poruku, prijavite se za volontiranje ili donacije.">
     <title>Šapica sreće | Kontakt</title>
     
     <link href="bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
+    <link rel="icon" type="image/png" href="sapica.png">
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -18,7 +18,7 @@
         "name": "Šapica sreće",
         "alternateName": "Udruženje za udomljavanje životinja Šapica sreće",
         "url": "https://selenakirhner.github.io/Projekat",
-        "logo": "logo.png",
+        "logo": "logotip.png",
         "description": "Udruženje za udomljavanje pasa i mačaka. Pružamo šapu ljubavi svakoj životinji.",
         "foundingDate": "2015",
         "email": "info@sapica-srece.rs",
@@ -70,34 +70,32 @@
         }
     </script>
 </head>
-<body class="contact-page">
-
-
+<body class="kontakt-stranica">
     <header>
-        <nav class="main-nav">
-            <div class="nav-container">
+        <nav class="glavna-navigacija">
+            <div class="navigacija-kontejner">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="logo.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
+                        <img src="logotip.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
                     </a>
                 </div>
 
-                <ul class="nav-menu">
+                <ul class="navigacija-meni">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
 
-                    <li class="mega-menu-trigger">
+                    <li class="megameni-okidac">
                         <a href="usluge.html">Usluge</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-grid">
-                                <div class="mega-col">
+                        <div class="megameni">
+                            <div class="megameni-mreza">
+                                <div class="megameni-kolona">
                                     <h3>Udomljavanje</h3>
                                     <ul>
                                         <li><a href="psi.html">Psi za udomljavanje</a></li>
                                         <li><a href="macke.html">Mačke za udomljavanje</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Veterinarska pomoć</h3>
                                     <ul>
                                         <li><a href="vakcinacije.html">Vakcinacije</a></li>
@@ -106,7 +104,7 @@
                                         <li><a href="pregledi.html">Zdravstveni pregledi</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Volontiranje</h3>
                                     <ul>
                                         <li><a href="volontiranje.html">Postani volonter</a></li>
@@ -118,15 +116,15 @@
                     </li>
                     
                     <li><a href="galerija.html">Galerija</a></li>
-                    <li><a href="kontakt.html"class="active">Kontakt</a></li>
+                    <li><a href="kontakt.html" class="aktivan">Kontakt</a></li>
                 </ul>
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="sr">SRB</button>
-                    <button class="lang-btn" data-lang="en">ENG</button>
+                <div class="jezik-selektor">
+                    <button class="jezik-dugme aktivan" data-lang="sr">SRB</button>
+                    <button class="jezik-dugme" data-lang="en">ENG</button>
                 </div>
-                <a href="donacije.html" class="donate-btn pulse-animation">Doniraj</a>
+                <a href="donacije.html" class="doniraj-dugme pulsirajuca-animacija">Doniraj</a>
 
-                <button class="hamburger-menu">
+                <button class="hamburger-meni">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -137,13 +135,13 @@
 
     <main>
         <div class="bg-success text-white py-5">
-            <div class="container text-center py-5">
+            <div class="kontejner text-center py-5">
                 <h1 class="display-3 fw-bold">Kontaktirajte nas</h1>
                 <p class="lead fs-3 hero-subtitle">Tu smo za sva vaša pitanja</p>
             </div>
         </div>
 
-        <div class="container py-5">
+        <div class="kontejner py-5">
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow text-center p-4">
@@ -184,7 +182,7 @@
         </div>
 
         <div class="bg-light py-5">
-            <div class="container">
+            <div class="kontejner">
                 <div class="row g-5">
                     <div class="col-lg-6">
                         <h2 class="display-6 fw-bold mb-4">Pošaljite nam poruku</h2>
@@ -277,7 +275,7 @@
             </div>
         </div>
 
-        <div class="container py-5">
+        <div class="kontejner py-5">
             <h2 class="display-5 fw-bold text-center mb-5">Postanite volonter</h2>
             
             <div class="row align-items-center g-5">
@@ -289,7 +287,6 @@
                     
                     <ul class="list-unstyled">
                         <li class="mb-3 d-flex">
-   
                             <span class="fs-5">- Druženje sa životinjama</span>
                         </li>
                         <li class="mb-3 d-flex">
@@ -313,22 +310,22 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="podnozje-sadrzaj">
+            <div class="podnozje-sekcija">
                 <h4>Šapica sreće</h4>
                 <p>Pružamo šapu ljubavi svakoj životinji. Udruženje za udomljavanje životinja osnovano 2015. godine.</p>
                 
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><img src="footer/fb-ikonica.png" alt="Facebook"></a>
-                    <a href="#" aria-label="Instagram"><img src="footer/Instagram_ikonica.png" alt="Instagram"></a>
-                    <a href="#" aria-label="YouTube"><img src="footer/yt-ikonica.png" alt="YouTube"></a>
-                    <a href="#" aria-label="Twitter"><img src="footer/X_ikonica.png" alt="Twitter"></a>
+                <div class="drustvene-ikonice">
+                    <a href="#" aria-label="Facebook"><img src="podnozje/fb-ikonica.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="podnozje/Instagram_ikonica.png" alt="Instagram"></a>
+                    <a href="#" aria-label="YouTube"><img src="podnozje/yt-ikonica.png" alt="YouTube"></a>
+                    <a href="#" aria-label="Twitter"><img src="podnozje/X_ikonica.png" alt="Twitter"></a>
                 </div>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Brzi linkovi</h4>
-                <ul class="footer-links">
+                <ul class="podnozje-linkovi">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
@@ -337,34 +334,34 @@
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Kontaktirajte nas</h4>
-                <ul class="contact-info">
-                    <li><img src="footer/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
-                    <li><img src="footer/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
-                    <li><img src="footer/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
+                <ul class="kontakt-informacije">
+                    <li><img src="podnozje/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
+                    <li><img src="podnozje/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
+                    <li><img src="podnozje/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Prijavite se na newsletter</h4>
                 <p>Budite u toku sa novostima</p>
-                <form class="newsletter-form">
+                <form class="novine-forma">
                     <input type="email" placeholder="Vaš email" required>
                     <button type="submit">Prijavi se</button>
                 </form>
             </div>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2024 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
+        <div class="podnozje-dno">
+            <p>&copy; 2026 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
         </div>
     </footer>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="skripte/jquery-3.6.0.min.js"></script>
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="validator.js"></script>
-    <script src="main.js"></script>
+    <script src="validacija.js"></script>
+    <script src="glavni.js"></script>
     <script src="jezik.js"></script>
 </body>
 </html>

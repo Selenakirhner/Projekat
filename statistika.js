@@ -1,34 +1,30 @@
 (function() {
     'use strict';
     
-
     document.addEventListener('DOMContentLoaded', function() {
-        initNumberAnimation();
+        pokreniAnimacijuBrojeva();
     });
     
-    function initNumberAnimation() {
-        const statNumbers = document.querySelectorAll('.stat-number');
+    function pokreniAnimacijuBrojeva() {
+        const statBrojevi = document.querySelectorAll('.stat-broj');
         
-
-        if (statNumbers.length === 0) return;
+        if (statBrojevi.length === 0) return;
         
-
-        function animateNumbers() {
-            statNumbers.forEach(stat => {
-                const target = parseInt(stat.getAttribute('data-target'));
-                const current = parseInt(stat.innerText);
+        function animirajBrojeve() {
+            statBrojevi.forEach(stat => {
+                const cilj = parseInt(stat.getAttribute('data-target'));
+                const trenutni = parseInt(stat.innerText);
                 
-                if (current < target) {
-                    const increment = Math.ceil(target / 50); 
-                    let newValue = current + increment;
-                    if (newValue > target) newValue = target;
-                    stat.innerText = newValue;
+                if (trenutni < cilj) {
+                    const korak = Math.ceil(cilj / 50);
+                    let novaVrednost = trenutni + korak;
+                    if (novaVrednost > cilj) novaVrednost = cilj;
+                    stat.innerText = novaVrednost;
                 }
             });
         }
         
-
-        function isElementInViewport(el) {
+        function daLiJeElementUVidnomPolju(el) {
             const rect = el.getBoundingClientRect();
             return (
                 rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
@@ -36,44 +32,44 @@
             );
         }
         
-        let animationStarted = false;
+        let animacijaPokrenuta = false;
         let interval;
         
-        function checkVisibilityAndAnimate() {
-            const statsSection = document.querySelector('.stats-section');
-            if (!animationStarted && statsSection && isElementInViewport(statsSection)) {
-                animationStarted = true;
+        function proveriVidljivostIPokreniAnimaciju() {
+            const statistikaSekcija = document.querySelector('.statistika-sekcija');
+            if (!animacijaPokrenuta && statistikaSekcija && daLiJeElementUVidnomPolju(statistikaSekcija)) {
+                animacijaPokrenuta = true;
                 
-
-                statNumbers.forEach(stat => {
+                statBrojevi.forEach(stat => {
                     stat.innerText = '0';
                 });
                 
                 interval = setInterval(() => {
-                    let allFinished = true;
+                    let sviZavrseni = true;
                     
-                    statNumbers.forEach(stat => {
-                        const target = parseInt(stat.getAttribute('data-target'));
-                        const current = parseInt(stat.innerText);
+                    statBrojevi.forEach(stat => {
+                        const cilj = parseInt(stat.getAttribute('data-target'));
+                        const trenutni = parseInt(stat.innerText);
                         
-                        if (current < target) {
-                            allFinished = false;
-                            const increment = Math.ceil(target / 50);
-                            let newValue = current + increment;
-                            if (newValue > target) newValue = target;
-                            stat.innerText = newValue;
+                        if (trenutni < cilj) {
+                            sviZavrseni = false;
+                            const korak = Math.ceil(cilj / 50);
+                            let novaVrednost = trenutni + korak;
+                            if (novaVrednost > cilj) novaVrednost = cilj;
+                            stat.innerText = novaVrednost;
                         }
                     });
                     
-                    if (allFinished) {
+                    if (sviZavrseni) {
                         clearInterval(interval);
                     }
-                }, 50); 
+                }, 50);
             }
         }
-        //Provera vidljivosti i pokretanje animacije
-        window.addEventListener('scroll', checkVisibilityAndAnimate);
-        checkVisibilityAndAnimate();
+        
+        // Provera vidljivosti i pokretanje animacije
+        window.addEventListener('scroll', proveriVidljivostIPokreniAnimaciju);
+        proveriVidljivostIPokreniAnimaciju();
     }
     
 })();

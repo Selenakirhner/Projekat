@@ -1,619 +1,613 @@
 {
-    "navigation": {
-        "home": "Home",
-        "about": "About us",
-        "services": "Services",
-        "gallery": "Gallery",
-        "contact": "Contact",
-        "donate": "Donate",
-        "dogAdoption": "Dog Adoption",
-        "catAdoption": "Cat Adoption",
-        "volunteer": "Volunteer",
-        "sterilization": "Sterilization",
-        "checkups": "Health checkups",
-        "microchip": "Microchipping",
-        "vaccinations": "Vaccinations",
-        "volunteering": "Become a volunteer",
-        "adoption": "Adoption",
-        "vetHelp": "Veterinary help",
-        "name": "Paw of Happiness",
-        "description": "Providing a paw of love to every animal. Animal welfare organization founded in 2015."
+    "navigacija": {
+        "pocetna": "Home",
+        "onama": "About us",
+        "usluge": "Services",
+        "galerija": "Gallery",
+        "kontakt": "Contact",
+        "doniraj": "Donate",
+        "udomljavanjePasa": "Dog Adoption",
+        "udomljavanjeMacaka": "Cat Adoption",
+        "volontiranje": "Volunteer",
+        "sterilizacija": "Sterilization",
+        "pregledi": "Health checkups",
+        "mikrocip": "Microchipping",
+        "vakcinacije": "Vaccinations",
+        "postaniVolonter": "Become a volunteer",
+        "udomljavanje": "Adoption",
+        "vetPomoc": "Veterinary help",
+        "ime": "Paw of Happiness",
+        "opis": "Providing a paw of love to every animal. Animal welfare organization founded in 2015."
     },
-    "slide-content": {
-        "title1": "Adopt a pet",
-        "description1": "Our animals are waiting for their home",
-        "button1": "View all",
-        "title2": "Become a volunteer",
-        "description2": "Your help makes all the difference.", 
-        "button2": "Sign up",   
-        "title3": "Help us",
-        "description3": "Every donation counts",
-        "button3": "Donate"
+    "slajdSadrzaj": {
+        "naslov1": "Adopt a pet",
+        "opis1": "Our animals are waiting for their home",
+        "dugme1": "View all",
+        "naslov2": "Become a volunteer",
+        "opis2": "Your help makes all the difference.",
+        "dugme2": "Sign up",
+        "naslov3": "Help us",
+        "opis3": "Every donation counts",
+        "dugme3": "Donate"
     },
-    "about": {
-        "title": "Who are we?",
-        "content": "Paw of Happiness is a citizens' association founded in 2015 with the aim of helping abandoned animals find their homes. So far, we have successfully adopted over 800 dogs and cats.",
-        "button": "Learn more about us"
+    "onama": {
+        "naslov": "Who are we?",
+        "sadrzaj": "Paw of Happiness is a citizens' association founded in 2015 with the aim of helping abandoned animals find their homes. So far, we have successfully adopted over 800 dogs and cats.",
+        "dugme": "Learn more about us"
     },
-    "services": {
-        "title": "Our Services",
+    "usluge": {
+        "naslov": "Our Services",
         "vet": "Veterinary help",
-        "dogAdoption": "Dog Adoption",
-        "catAdoption": "Cat Adoption",
-        "descriptionVet": "Vaccinations, sterilizations, and health checkups for your pets.",
-        "descriptionDog": "Help us find a home for dogs of all breeds and ages.",
-        "descriptionCat": "Gentle cats of all ages are waiting for someone to love them."
+        "udomljavanjePasa": "Dog Adoption",
+        "udomljavanjeMacaka": "Cat Adoption",
+        "opisVet": "Vaccinations, sterilizations, and health checkups for your pets.",
+        "opisPas": "Help us find a home for dogs of all breeds and ages.",
+        "opisMacka": "Gentle cats of all ages are waiting for someone to love them."
     },
     "video": {
-        "title": "How to Choose the Best Pet for You",
-        "description": "Choosing the right pet is an important decision. Watch our video to learn how to select a pet that fits your lifestyle and family."
+        "naslov": "How to Choose the Best Pet for You",
+        "opis": "Choosing the right pet is an important decision. Watch our video to learn how to select a pet that fits your lifestyle and family."
     },
-    "animation": {
-        "title": "Our Residents",
-        "description1": "Adopt me",
-        "description2": "Waiting for you",
-        "description3": "I will be your best friend"  
+    "animacija": {
+        "naslov": "Our Residents",
+        "opis1": "Adopt me",
+        "opis2": "Waiting for you",
+        "opis3": "I will be your best friend"
     },
-    "documents": {
-        "title": "Important Documents",
-        "adoptionForm": "Adoption Guide (PDF)",
-        "adoptionAgreement": "Adoption Agreement",
-        "advice": "Tips for new pet owners",
-        "download1": "(download 2.5MB)",
-        "download2": "(download 1.2MB)",
-        "download3": "(download 3.1MB)"
-
+    "dokumenti": {
+        "naslov": "Important Documents",
+        "vodic": "Adoption Guide (PDF)",
+        "ugovor": "Adoption Agreement",
+        "saveti": "Tips for new pet owners",
+        "preuzimanje1": "(download 2.5MB)",
+        "preuzimanje2": "(download 1.2MB)",
+        "preuzimanje3": "(download 3.1MB)"
     },
-    "map": {
-        "title": "Our Location",
-        "addressLabel": "Address:",
-        "address": "Bulevar Oslobođenja 123, Belgrade",
-        "hoursLabel": "Working hours:",
-        "time": "Monday - Friday: 10am - 6pm, Saturday: 10am - 3pm"
+    "mapa": {
+        "naslov": "Our Location",
+        "adresaLabel": "Address:",
+        "adresa": "Bulevar Oslobođenja 123, Belgrade",
+        "vremeLabel": "Working hours:",
+        "vreme": "Monday - Friday: 10am - 6pm, Saturday: 10am - 3pm"
     },
     "hero2": {
-        "title": "About Us",
-        "subtitle": "Learn the story behind Paw of Happiness"
+        "naslov": "About Us",
+        "podnaslov": "Learn the story behind Paw of Happiness"
     },
-    "story": {
-        "title": "Our Story",
-        "content1": "Paw of Happiness was founded in 2015 by a group of volunteers who wanted to help abandoned animals on the streets of Belgrade. What started as fostering for a few dogs, today has grown into one of the largest adoption associations in Serbia.",
-        "content2":"Our team consists of passionate animal lovers, veterinarians, trainers, and volunteers who work daily to give every animal a chance for a happy life. So far, we have successfully adopted over 200 dogs and cats, and we care for about 30 animals in our shelter every day.",
-        "content3":"We believe that every animal deserves love, attention, and a safe home. Our mission is to provide that through adoption programs, education, and support for new owners.",
-        "titleMission": "Our Mission",
-        "contentMission": "Provide shelter, care and love to abandoned animals and find them responsible and caring owners.",
-        "tittleVision": "Our Vision",
-        "contentVision": "A world where there are no abandoned animals and where every pet is treated as a family member."
+    "prica": {
+        "naslov": "Our Story",
+        "sadrzaj1": "Paw of Happiness was founded in 2015 by a group of volunteers who wanted to help abandoned animals on the streets of Belgrade. What started as fostering for a few dogs, today has grown into one of the largest adoption associations in Serbia.",
+        "sadrzaj2": "Our team consists of passionate animal lovers, veterinarians, trainers, and volunteers who work daily to give every animal a chance for a happy life. So far, we have successfully adopted over 200 dogs and cats, and we care for about 30 animals in our shelter every day.",
+        "sadrzaj3": "We believe that every animal deserves love, attention, and a safe home. Our mission is to provide that through adoption programs, education, and support for new owners.",
+        "misijaNaslov": "Our Mission",
+        "misijaSadrzaj": "Provide shelter, care and love to abandoned animals and find them responsible and caring owners.",
+        "vizijaNaslov": "Our Vision",
+        "vizijaSadrzaj": "A world where there are no abandoned animals and where every pet is treated as a family member."
     },
-    "statistics": {
-        "title": "Our Impact in Numbers",
-        "adoptedDogs": "Adopted Dogs",
-        "adoptedCats": "Adopted Cats",
-        "volunteers": "Active Volunteers",
-        "shelter": "Currently in Shelter"
+    "statistika": {
+        "naslov": "Our Impact in Numbers",
+        "udomljeniPsi": "Adopted Dogs",
+        "udomljeneMacke": "Adopted Cats",
+        "volonteri": "Active Volunteers",
+        "uAzilu": "Currently in Shelter"
     },
-    "team": {
-        "title": "Meet Our Team",
-        "name1": "Jovana Petrović",
-        "description1": "Founder and Director",
-        "content1": "With over 10 years of experience in animal rescue, Jovana leads our team with passion and dedication.",
-        "name2": "Marko Janković",
-        "description2": "Veterinarian",
-        "content2": "Dr. Marko has been providing veterinary care for our animals for over 5 years, ensuring they are healthy and happy.",
-        "name3": "Ana Marić",
-        "description3": "Volunteer Coordinator",
-        "content3": "Ana organizes our volunteer efforts and ensures that everyone has a rewarding experience helping our animals.",
-        "name4": "Nikola Jovanović",
-        "description4": "Adoption Manager",
-        "content4": "Nikola coordinates the adoption process and conducts interviews with potential adopters.",
-        "partenrs": "Our Partners"
+    "tim": {
+        "naslov": "Meet Our Team",
+        "ime1": "Jovana Petrović",
+        "pozicija1": "Founder and Director",
+        "bio1": "With over 10 years of experience in animal rescue, Jovana leads our team with passion and dedication.",
+        "ime2": "Marko Janković",
+        "pozicija2": "Veterinarian",
+        "bio2": "Dr. Marko has been providing veterinary care for our animals for over 5 years, ensuring they are healthy and happy.",
+        "ime3": "Ana Marić",
+        "pozicija3": "Volunteer Coordinator",
+        "bio3": "Ana organizes our volunteer efforts and ensures that everyone has a rewarding experience helping our animals.",
+        "ime4": "Nikola Jovanović",
+        "pozicija4": "Adoption Manager",
+        "bio4": "Nikola coordinates the adoption process and conducts interviews with potential adopters.",
+        "partneri": "Our Partners"
     },
-    "galleryPage": {
-    "title": "Meet Our Team and Shelter",
-    "intro": "See what life is like in our shelter, meet the volunteers, and take a look at the space where our residents stay while waiting for their forever homes.",
-    "items": {
-        "item1": {
-            "title": "Veterinary Team",
-            "subtitle": "Dr. Marković and the Jovanović sisters",
-            "description": "Takes care of our residents' health"
-        },
-        "item2": {
-            "title": "Management Team",
-            "subtitle": "Coordination and organization",
-            "description": "5 years of experience in adoption"
-        },
-        "item3": {
-            "title": "Dog Area",
-            "subtitle": "Modern kennels with yard",
-            "description": "Every dog has their own bed and toys"
-        },
-        "item4": {
-            "title": "Cat Room",
-            "subtitle": "Warm space for furry friends",
-            "description": "Cats move freely"
-        },
-        "item5": {
-            "title": "Veterinary Clinic",
-            "subtitle": "Fully equipped",
-            "description": "Regular checkups and vaccinations"
-        },
-        "item6": {
-            "title": "Dogs on a Walk",
-            "subtitle": "Enjoying nature",
-            "description": "Daily activities"
-        },
-        "item7": {
-            "title": "Cats Watching",
-            "subtitle": "Lili",
-            "description": "Your best friends"
-        },
-        "item8": {
-            "title": "Puppies",
-            "subtitle": "Litter of 5 puppies",
-            "description": "Born in the shelter, ready for a home"
-        },
-        "item9": {
-            "title": "Volunteer Team",
-            "subtitle": "Saturdays at the shelter",
-            "description": "Spending time with dogs"
-        },
-        "item10": {
-            "title": "Cleaning Action",
-            "subtitle": "Together for a clean space",
-            "description": "Thanks to all volunteers"
+    "galerijaStranica": {
+        "naslov": "Meet Our Team and Shelter",
+        "uvod": "See what life is like in our shelter, meet the volunteers, and take a look at the space where our residents stay while waiting for their forever homes.",
+        "stavke": {
+            "stavka1": {
+                "naslov": "Veterinary Team",
+                "podnaslov": "Dr. Marković and the Jovanović sisters",
+                "opis": "Takes care of our residents' health"
+            },
+            "stavka2": {
+                "naslov": "Management Team",
+                "podnaslov": "Coordination and organization",
+                "opis": "5 years of experience in adoption"
+            },
+            "stavka3": {
+                "naslov": "Dog Area",
+                "podnaslov": "Modern kennels with yard",
+                "opis": "Every dog has their own bed and toys"
+            },
+            "stavka4": {
+                "naslov": "Cat Room",
+                "podnaslov": "Warm space for furry friends",
+                "opis": "Cats move freely"
+            },
+            "stavka5": {
+                "naslov": "Veterinary Clinic",
+                "podnaslov": "Fully equipped",
+                "opis": "Regular checkups and vaccinations"
+            },
+            "stavka6": {
+                "naslov": "Dogs on a Walk",
+                "podnaslov": "Enjoying nature",
+                "opis": "Daily activities"
+            },
+            "stavka7": {
+                "naslov": "Cats Watching",
+                "podnaslov": "Lili",
+                "opis": "Your best friends"
+            },
+            "stavka8": {
+                "naslov": "Puppies",
+                "podnaslov": "Litter of 5 puppies",
+                "opis": "Born in the shelter, ready for a home"
+            },
+            "stavka9": {
+                "naslov": "Volunteer Team",
+                "podnaslov": "Saturdays at the shelter",
+                "opis": "Spending time with dogs"
+            },
+            "stavka10": {
+                "naslov": "Cleaning Action",
+                "podnaslov": "Together for a clean space",
+                "opis": "Thanks to all volunteers"
+            }
         }
-    }
     },
     "hero3": {
-        "title3": "Our Service",
-        "subtitle3": "All you need in one place"
+        "naslov3": "Our Service",
+        "podnaslov3": "All you need in one place"
     },
-    "servicesPage": {
-        "titleU": "Adoption",
-        "pet1": "Dogs",
-        "desc1": "See all the dogs waiting for their forever home. Different breeds, ages, and personalities.",
-        "petBtn1": "View Dogs",
-        "pet2": "Cats",
-        "desc2": "Gentle cats of all ages looking for a warm home and love.",
-        "petBtn2": "View Cats",
-        "titleV": "Veterinary Help",
-        "vacc": "Vaccinations",
-        "desc3": "Regular vaccinations for dogs and cats. Protect your pet.",
-        "vBtn1": "Learn More",
-        "ster": "Sterilization",
-        "desc4": "Sterilization and castration at affordable prices.",
-        "vBtn2": "Learn More",
-        "microchip": "Microchipping",
-        "desc5": "Microchipping and registration in the central registry.",
-        "vBtn3": "Learn More",
-        "check": "Health Checkups",
-        "desc6": "Regular health checkups for dogs and cats. Timely diagnosis and treatment.",
-        "vBtn4": "Learn More",
-        "titleVol": "Volunteering & Support",
-        "volon": "Become a Volunteer",
-        "descVo1": "Join our team of volunteers. Walking dogs, feeding, spending time with animals.",
-        "voBtn1": "Apply Now",
-        "don": "Donations",
-        "descVo2": "Help us with donations - food, equipment, money, or volunteer your time.",
-        "voBtn2": "Donate"
+    "uslugeStranica": {
+        "naslovU": "Adoption",
+        "ljubimac1": "Dogs",
+        "opis1": "See all the dogs waiting for their forever home. Different breeds, ages, and personalities.",
+        "dugme1": "View Dogs",
+        "ljubimac2": "Cats",
+        "opis2": "Gentle cats of all ages looking for a warm home and love.",
+        "dugme2": "View Cats",
+        "naslovV": "Veterinary Help",
+        "vakcina": "Vaccinations",
+        "opis3": "Regular vaccinations for dogs and cats. Protect your pet.",
+        "vDugme1": "Learn More",
+        "sterilizacija": "Sterilization",
+        "opis4": "Sterilization and castration at affordable prices.",
+        "vDugme2": "Learn More",
+        "mikrocip": "Microchipping",
+        "opis5": "Microchipping and registration in the central registry.",
+        "vDugme3": "Learn More",
+        "pregled": "Health Checkups",
+        "opis6": "Regular health checkups for dogs and cats. Timely diagnosis and treatment.",
+        "vDugme4": "Learn More",
+        "naslovVol": "Volunteering & Support",
+        "volontiraj": "Become a Volunteer",
+        "opisVo1": "Join our team of volunteers. Walking dogs, feeding, spending time with animals.",
+        "voDugme1": "Apply Now",
+        "donacija": "Donations",
+        "opisVo2": "Help us with donations - food, equipment, money, or volunteer your time.",
+        "voDugme2": "Donate"
     },
-    "ctaUsluge": {
-        "title": "Not sure what you need?",
-        "description": "Contact us and we will help you find the right service for you and your pet.",
-        "ctaBtn": "Contact Us"
+    "pozivNaAkciju": {
+        "naslov": "Not sure what you need?",
+        "opis": "Contact us and we will help you find the right service for you and your pet.",
+        "dugme": "Contact Us"
     },
-    "hero": {
-    "title": "Contact Us",
-    "subtitle": "We are here for all your questions"
+    "kontaktHero": {
+        "naslov": "Contact Us",
+        "podnaslov": "We are here for all your questions"
     },
-
-    "address": {
-        "title": "Address",
-        "line1": "Bulevar Oslobođenja 123",
-        "line2": "11000 Belgrade"
+    "adresa": {
+        "naslov": "Address",
+        "linija1": "Bulevar Oslobođenja 123",
+        "linija2": "11000 Belgrade"
     },
-
-    "phone": {
-        "title": "Phone"
+    "telefon": {
+        "naslov": "Phone"
     },
-
-    "form": {
-        "titleForm": "Send Us a Message",
-        "name": "Full Name *",
+    "forma": {
+        "naslovForme": "Send Us a Message",
+        "ime": "Full Name *",
         "email": "Email Address *",
-        "phone": "Phone",
-        "subject": "Message Subject *",
-        "interest": "You are interested in:",
-        "options": {
-            "option": "Select an option",
-            "adoption": "Adoption",
-            "volunteer": "Volunteering",
-            "donation": "Donation",
-            "info": "Information",
-            "other": "Other"
+        "telefon": "Phone",
+        "naslovPoruke": "Message Subject *",
+        "interesovanje": "You are interested in:",
+        "opcije": {
+            "opcija": "Select an option",
+            "udomljavanje": "Adoption",
+            "volontiranje": "Volunteering",
+            "donacija": "Donation",
+            "informacije": "Information",
+            "ostalo": "Other"
         },
-    "placeholders":{
-        "name": "Enter your full name",
-        "email": "Enter your email address",
-        "phone": "Enter your phone number",
-        "subject": "Enter the message subject",
-        "message": "Enter your message..."
+        "placeholderi": {
+            "ime": "Enter your full name",
+            "email": "Enter your email address",
+            "telefon": "Enter your phone number",
+            "naslov": "Enter the message subject",
+            "poruka": "Enter your message..."
+        },
+        "poruka": "Message *",
+        "saglasnost": "I agree to the processing of my data *",
+        "dugme": "Send Message"
     },
-    "message": "Message *",
-    "consent": "I agree to the processing of my data *",
-    "button": "Send Message"
+    "mapa1": {
+        "naslovMape": "Where We Are Located"
     },
-
-    "map1": {
-        "titleMap": "Where We Are Located"
+    "radnoVreme": {
+        "naslov": "Working Hours",
+        "radniDani": "Monday - Friday:",
+        "radniDaniVreme": "10:00 - 18:00",
+        "subota": "Saturday:",
+        "subotaVreme": "10:00 - 15:00",
+        "nedelja": "Sunday:",
+        "nedeljaStatus": "Closed"
     },
-
-    "workingHours": {
-        "title": "Working Hours",
-        "weekdays": "Monday - Friday:",
-        "weekdaysTime": "10:00 - 18:00",
-        "saturday": "Saturday:",
-        "saturdayTime": "10:00 - 15:00",
-        "sunday": "Sunday:",
-        "sundayStatus": "Closed"
-    },
-
-    "volunteer": {
-        "title": "Become a Volunteer",
-        "heading": "Why Volunteer?",
-        "benefits": {
+    "volontiranjeStranica": {
+        "naslov": "Become a Volunteer",
+        "naslovSekcije": "Why Volunteer?",
+        "prednosti": {
             "1": "- Spending time with animals",
             "2": "- Meeting new people",
             "3": "- Gaining experience",
             "4": "- A sense of fulfillment",
             "5": "- Job recommendations"
         },
-        "description": "Join our team of volunteers and help us change the lives of abandoned animals."
+        "opis": "Join our team of volunteers and help us change the lives of abandoned animals.",
+        "dugme": "Apply Now"
     },
-    "dogsPage": {
-        "title": "Dogs for Adoption",
-        "description": "Meet our dogs waiting for their forever home",
-        "age": "Age",
-        "breed": "Breed",
-        "button": "Adopt",
-        "dogs": {
-            "dog1": {
-                "age": "2 years",
-                "breed": "Mixed",
-                "desc": "Cheerful, playful, loves children"
+    "psiStranica": {
+        "naslov": "Dogs for Adoption",
+        "opis": "Meet our dogs waiting for their forever home",
+        "uzrast": "Age",
+        "rasa": "Breed",
+        "dugme": "Adopt",
+        "psi": {
+            "pas1": {
+                "uzrast": "2 years",
+                "rasa": "Mixed",
+                "opis": "Cheerful, playful, loves children"
             },
-            "dog2": {
-                "age": "3 years",
-                "breed": "Mixed",
-                "desc": "Calm, good with other pets"
+            "pas2": {
+                "uzrast": "3 years",
+                "rasa": "Mixed",
+                "opis": "Calm, good with other pets"
             },
-            "dog3": {
-                "age": "1 year",
-                "breed": "Pomeranian",
-                "desc": "Fluffy, playful"
+            "pas3": {
+                "uzrast": "1 year",
+                "rasa": "Pomeranian",
+                "opis": "Fluffy, playful"
             },
-            "dog4": {
-                "age": "7 months",
-                "breed": "Bernese Mountain Dog",
-                "desc": "Best guard dog"
+            "pas4": {
+                "uzrast": "7 months",
+                "rasa": "Bernese Mountain Dog",
+                "opis": "Best guard dog"
             },
-            "dog5": {
-                "age": "2.5 years",
-                "breed": "Golden Retriever",
-                "desc": "Cheerful, intelligent"
+            "pas5": {
+                "uzrast": "2.5 years",
+                "rasa": "Golden Retriever",
+                "opis": "Cheerful, intelligent"
             },
-            "dog6": {
-                "age": "11 months",
-                "breed": "Mixed",
-                "desc": "Friendly, good with children"
+            "pas6": {
+                "uzrast": "11 months",
+                "rasa": "Mixed",
+                "opis": "Friendly, good with children"
             }
         }
     },
-    "catsPage": {
-        "title": "Cats for Adoption",
-        "description": "Meet our cats waiting for their forever home",
-        "age": "Age",
-        "breed": "Breed",
-        "button": "Adopt",
-        "cats": {
-            "cat1": {
-                "age": "3 years",
-                "breed": "Maine Coon",
-                "desc": "Friendly, intelligent"
+    "mackeStranica": {
+        "naslov": "Cats for Adoption",
+        "opis": "Meet our cats waiting for their forever home",
+        "uzrast": "Age",
+        "rasa": "Breed",
+        "dugme": "Adopt",
+        "macke": {
+            "macka1": {
+                "uzrast": "3 years",
+                "rasa": "Maine Coon",
+                "opis": "Friendly, intelligent"
             },
-            "cat2": {
-                "age": "5 months",
-                "breed": "Mixed",
-                "desc": "Calm, good with children"
+            "macka2": {
+                "uzrast": "5 months",
+                "rasa": "Mixed",
+                "opis": "Calm, good with children"
             },
-            "cat3": {
-                "age": "2 years",
-                "breed": "Mixed",
-                "desc": "Loves nature, friendly"
+            "macka3": {
+                "uzrast": "2 years",
+                "rasa": "Mixed",
+                "opis": "Loves nature, friendly"
             },
-            "cat4": {
-                "age": "2 years",
-                "breed": "Russian Blue",
-                "desc": "Playful, kind"
+            "macka4": {
+                "uzrast": "2 years",
+                "rasa": "Russian Blue",
+                "opis": "Playful, kind"
             },
-            "cat5": {
-                "age": "3 months",
-                "breed": "Bengal",
-                "desc": "Loves children and cuddles"
+            "macka5": {
+                "uzrast": "3 months",
+                "rasa": "Bengal",
+                "opis": "Loves children and cuddles"
             },
-            "cat6": {
-                "age": "4 years",
-                "breed": "Mixed",
-                "desc": "Friendly, kind"
+            "macka6": {
+                "uzrast": "4 years",
+                "rasa": "Mixed",
+                "opis": "Friendly, kind"
             },
-            "cat7": {
-                "age": "2 years",
-                "breed": "Mixed",
-                "desc": "Independent, loves children"
+            "macka7": {
+                "uzrast": "2 years",
+                "rasa": "Mixed",
+                "opis": "Independent, loves children"
             },
-            "cat8": {
-                "age": "10 months",
-                "breed": "Persian",
-                "desc": "Soft, playful"
+            "macka8": {
+                "uzrast": "10 months",
+                "rasa": "Persian",
+                "opis": "Soft, playful"
             }
         }
     },
-    "vaccinationPage": {
-        "mainTitle": "Why is vaccination important?",
-        "mainDescription": "Regular vaccination is the best way to protect your pet from infectious and deadly diseases. Our veterinary team uses the highest quality vaccines and follows all protocols.",
-        "dogsTitle": "Vaccinations for dogs:",
-        "dogsList": {
-            "item1": "<strong>Core vaccine (DHPPi):</strong> Protects against distemper, hepatitis, parvovirus and parainfluenza",
-            "item2": "<strong>Rabies:</strong> Mandatory vaccine by law",
-            "item3": "<strong>Bordetella:</strong> Protection against upper respiratory infections",
-            "item4": "<strong>Lyme disease:</strong> Recommended for dogs that spend time outdoors"
+    "vakcinacijeStranica": {
+        "glavniNaslov": "Why is vaccination important?",
+        "glavniOpis": "Regular vaccination is the best way to protect your pet from infectious and deadly diseases. Our veterinary team uses the highest quality vaccines and follows all protocols.",
+        "naslovPsi": "Vaccinations for dogs:",
+        "listaPsi": {
+            "stavka1": "<strong>Core vaccine (DHPPi):</strong> Protects against distemper, hepatitis, parvovirus and parainfluenza",
+            "stavka2": "<strong>Rabies:</strong> Mandatory vaccine by law",
+            "stavka3": "<strong>Bordetella:</strong> Protection against upper respiratory infections",
+            "stavka4": "<strong>Lyme disease:</strong> Recommended for dogs that spend time outdoors"
         },
-        "catsTitle": "Vaccinations for cats:",
-        "catsList": {
-            "item1": "<strong>Core vaccine (FVRCP):</strong> Protects against panleukopenia, calicivirus and rhinotracheitis",
-            "item2": "<strong>Rabies:</strong> Mandatory vaccine",
-            "item3": "<strong>FeLV:</strong> Vaccine against leukemia"
+        "naslovMacke": "Vaccinations for cats:",
+        "listaMacke": {
+            "stavka1": "<strong>Core vaccine (FVRCP):</strong> Protects against panleukopenia, calicivirus and rhinotracheitis",
+            "stavka2": "<strong>Rabies:</strong> Mandatory vaccine",
+            "stavka3": "<strong>FeLV:</strong> Vaccine against leukemia"
         },
-        "whenTitle": "When to vaccinate?",
-        "table": {
-            "header1": "Age",
-            "header2": "Recommended vaccination",
-            "row1": {
-                "col1": "6-8 weeks",
-                "col2": "First vaccination"
+        "kadaNaslov": "When to vaccinate?",
+        "tabela": {
+            "zaglavlje1": "Age",
+            "zaglavlje2": "Recommended vaccination",
+            "red1": {
+                "kolona1": "6-8 weeks",
+                "kolona2": "First vaccination"
             },
-            "row2": {
-                "col1": "12 weeks",
-                "col2": "Second vaccination + rabies"
+            "red2": {
+                "kolona1": "12 weeks",
+                "kolona2": "Second vaccination + rabies"
             },
-            "row3": {
-                "col1": "16 weeks",
-                "col2": "Third vaccination (if needed)"
+            "red3": {
+                "kolona1": "16 weeks",
+                "kolona2": "Third vaccination (if needed)"
             },
-            "row4": {
-                "col1": "Yearly",
-                "col2": "Revaccination"
+            "red4": {
+                "kolona1": "Yearly",
+                "kolona2": "Revaccination"
             }
         },
-        "priceCard": {
-            "title": "Vaccination price",
-            "item1": "Core vaccine (dogs)",
-            "item2": "Core vaccine (cats)",
-            "item3": "Rabies vaccine",
-            "total": "Package (all vaccines)"
+        "cenaKartica": {
+            "naslov": "Vaccination price",
+            "stavka1": "Core vaccine (dogs)",
+            "stavka2": "Core vaccine (cats)",
+            "stavka3": "Rabies vaccine",
+            "ukupno": "Package (all vaccines)"
         },
-        "contactSidebar": {
-            "title": "Schedule an appointment",
-            "workTime": "Mon-Fri: 10am-6pm",
-            "button": "Schedule now"
+        "kontaktBocno": {
+            "naslov": "Schedule an appointment",
+            "radnoVreme": "Mon-Fri: 10am-6pm",
+            "dugme": "Schedule now"
         },
-        "noteCard": {
-            "title": "Important note",
-            "text": "A clinical examination is mandatory before vaccination. If your pet hasn't been examined in the last month, the examination fee is 800 RSD."
+        "napomena": {
+            "naslov": "Important note",
+            "tekst": "A clinical examination is mandatory before vaccination. If your pet hasn't been examined in the last month, the examination fee is 800 RSD."
         },
-        "vaccinationVideo": {
-            "title": "Why is vaccination important?",
-            "title2":"Understanding dog vaccination",
-            "description": "Expert explanation of why regular vaccination is key to your pet's health."
+        "video": {
+            "naslov": "Why is vaccination important?",
+            "podnaslov": "Understanding dog vaccination",
+            "opis": "Expert explanation of why regular vaccination is key to your pet's health."
         },
-        "cta": {
-            "title": "Ready to protect your pet?",
-            "description": "Contact us and schedule your vaccination appointment",
-            "button": "Contact us"
+        "poziv": {
+            "naslov": "Ready to protect your pet?",
+            "opis": "Contact us and schedule your vaccination appointment",
+            "dugme": "Contact us"
         }
     },
-    "donationsPage": {
-        "title": "Support Our Work",
-        "description": "Every donation, no matter how small, means a lot to our residents.",
-        "cards": {
-            "money": {
-                "title": "Monetary Donations",
-                "account": "Bank account: 123-456789-10 (Intesa Bank)",
+    "donacijeStranica": {
+        "naslov": "Support Our Work",
+        "opis": "Every donation, no matter how small, means a lot to our residents.",
+        "kartice": {
+            "novac": {
+                "naslov": "Monetary Donations",
+                "racun": "Bank account: 123-456789-10 (Intesa Bank)",
                 "paypal": "PayPal: donations@sapica-srece.rs"
             },
-            "food": {
-                "title": "Food and Treats",
-                "text": "We need:",
-                "items": {
-                    "item1": "Dry food for dogs and cats",
-                    "item2": "Wet food (cans)",
-                    "item3": "Training treats"
+            "hrana": {
+                "naslov": "Food and Treats",
+                "tekst": "We need:",
+                "stavke": {
+                    "stavka1": "Dry food for dogs and cats",
+                    "stavka2": "Wet food (cans)",
+                    "stavka3": "Training treats"
                 }
             },
-            "equipment": {
-                "title": "Equipment",
-                "items": {
-                    "item1": "Leashes and collars",
-                    "item2": "Beds and blankets",
-                    "item3": "Dog toys",
-                    "item4": "Food and water bowls"
+            "oprema": {
+                "naslov": "Equipment",
+                "stavke": {
+                    "stavka1": "Leashes and collars",
+                    "stavka2": "Beds and blankets",
+                    "stavka3": "Dog toys",
+                    "stavka4": "Food and water bowls"
                 }
             },
-            "medical": {
-                "title": "Medical Supplies",
-                "items": {
-                    "item1": "Bandages, gauze, plasters",
-                    "item2": "Antibiotics",
-                    "item3": "Disinfectants"
+            "medicina": {
+                "naslov": "Medical Supplies",
+                "stavke": {
+                    "stavka1": "Bandages, gauze, plasters",
+                    "stavka2": "Antibiotics",
+                    "stavka3": "Disinfectants"
                 }
             }
         }
     },
-    "microchipPage": {
-        "title": "Microchipping dogs and cats",
-        "description": "A microchip is a permanent identification for your pet. Mandatory by law for all dogs, and recommended for cats.",
-        "whatTitle": "What is a microchip?",
-        "whatText": "A microchip is an electronic identifier the size of a grain of rice that is injected under the skin. It contains a unique number that is entered into the central registry.",
-        "procedureTitle": "Microchipping procedure:",
-        "steps": {
-            "step1": "<strong>Examination:</strong> Short clinical examination",
-            "step2": "<strong>Injection:</strong> Quick and painless, like a vaccination",
-            "step3": "<strong>Scanning:</strong> Checking if the chip is readable",
-            "step4": "<strong>Registry entry:</strong> Entering data into the central database",
-            "step5": "<strong>You receive a passport:</strong> With all chip information"
+    "mikrocipStranica": {
+        "naslov": "Microchipping dogs and cats",
+        "opis": "A microchip is a permanent identification for your pet. Mandatory by law for all dogs, and recommended for cats.",
+        "staJeNaslov": "What is a microchip?",
+        "staJeTekst": "A microchip is an electronic identifier the size of a grain of rice that is injected under the skin. It contains a unique number that is entered into the central registry.",
+        "postupakNaslov": "Microchipping procedure:",
+        "koraci": {
+            "korak1": "<strong>Examination:</strong> Short clinical examination",
+            "korak2": "<strong>Injection:</strong> Quick and painless, like a vaccination",
+            "korak3": "<strong>Scanning:</strong> Checking if the chip is readable",
+            "korak4": "<strong>Registry entry:</strong> Entering data into the central database",
+            "korak5": "<strong>You receive a passport:</strong> With all chip information"
         },
-        "priceCard": {
-            "title": "Prices",
-            "item1": "Microchip + registration",
-            "item2": "Dog (with valid passport)",
-            "item3": "Cats"
+        "cene": {
+            "naslov": "Prices",
+            "stavka1": "Microchip + registration",
+            "stavka2": "Dog (with valid passport)",
+            "stavka3": "Cats"
         }
     },
-    "checkupsPage": {
-        "title": "Health Checkups",
-        "description": "Regular checkups are key to a long and healthy life for your pet.",
-        "includesTitle": "What does the checkup include?",
-        "includesList": {
-            "item1": "<strong>Clinical examination:</strong> Temperature, pulse, breathing",
-            "item2": "<strong>Ear and eye examination:</strong> Infections, foreign objects",
-            "item3": "<strong>Dental examination:</strong> Tartar, gum inflammation",
-            "item4": "<strong>Skin and coat examination:</strong> Parasites, allergies",
-            "item5": "<strong>Heart and lung examination:</strong> With stethoscope",
-            "item6": "<strong>Abdominal palpation:</strong> Organs, painful spots"
+    "preglediStranica": {
+        "naslov": "Health Checkups",
+        "opis": "Regular checkups are key to a long and healthy life for your pet.",
+        "ukljucujeNaslov": "What does the checkup include?",
+        "ukljucujeLista": {
+            "stavka1": "<strong>Clinical examination:</strong> Temperature, pulse, breathing",
+            "stavka2": "<strong>Ear and eye examination:</strong> Infections, foreign objects",
+            "stavka3": "<strong>Dental examination:</strong> Tartar, gum inflammation",
+            "stavka4": "<strong>Skin and coat examination:</strong> Parasites, allergies",
+            "stavka5": "<strong>Heart and lung examination:</strong> With stethoscope",
+            "stavka6": "<strong>Abdominal palpation:</strong> Organs, painful spots"
         },
-        "additionalTitle": "Additional examinations:",
-        "additionalList": {
-            "item1": "Ultrasound - 2,500 RSD",
-            "item2": "X-ray - 3,000 RSD",
-            "item3": "Blood count - 1,800 RSD",
-            "item4": "Biochemistry - 2,200 RSD"
+        "dodatniNaslov": "Additional examinations:",
+        "dodatniLista": {
+            "stavka1": "Ultrasound - 2,500 RSD",
+            "stavka2": "X-ray - 3,000 RSD",
+            "stavka3": "Blood count - 1,800 RSD",
+            "stavka4": "Biochemistry - 2,200 RSD"
         },
-        "priceCard": {
-            "title": "Examination price",
-            "item1": "Clinical examination"
+        "cenaKartica": {
+            "naslov": "Examination price",
+            "stavka1": "Clinical examination"
         }
     },
-    "sterilizationPage": {
-    "title": "Sterilization and Castration",
-    "description": "Sterilization is a responsible act of every owner. It helps control the population, reduces the risk of certain diseases, and extends the pet's lifespan.",
-    "benefitsTitle": "Benefits of sterilization:",
-    "benefitsList": {
-        "item1": "<strong>Reduces the risk of mammary tumors</strong> (especially if done before the first heat)",
-        "item2": "<strong>Eliminates the risk of pyometra</strong> - uterine infection",
-        "item3": "<strong>Reduces aggression</strong> and the urge to roam",
-        "item4": "<strong>No unwanted puppies</strong> - responsible ownership",
-        "item5": "<strong>Extends lifespan</strong> by an average of 1-3 years"
+    "sterilizacijaStranica": {
+        "naslov": "Sterilization and Castration",
+        "opis": "Sterilization is a responsible act of every owner. It helps control the population, reduces the risk of certain diseases, and extends the pet's lifespan.",
+        "prednostiNaslov": "Benefits of sterilization:",
+        "prednostiLista": {
+            "stavka1": "<strong>Reduces the risk of mammary tumors</strong> (especially if done before the first heat)",
+            "stavka2": "<strong>Eliminates the risk of pyometra</strong> - uterine infection",
+            "stavka3": "<strong>Reduces aggression</strong> and the urge to roam",
+            "stavka4": "<strong>No unwanted puppies</strong> - responsible ownership",
+            "stavka5": "<strong>Extends lifespan</strong> by an average of 1-3 years"
+        },
+        "kadaNaslov": "When to sterilize?",
+        "kadaTekst": "Recommended between 6 and 12 months of age, depending on the breed and size of the dog. For smaller breeds it can be done earlier, for larger ones later.",
+        "cene": {
+            "naslov": "Sterilization prices",
+            "stavka1": "Male - dog (up to 15kg)",
+            "stavka2": "Male - dog (15-30kg)",
+            "stavka3": "Male - dog (over 30kg)",
+            "stavka4": "Female - dog (up to 15kg)",
+            "stavka5": "Female - dog (15-30kg)",
+            "stavka6": "Female - dog (over 30kg)",
+            "stavka7": "Cats (male/female)"
+        }
     },
-    "whenTitle": "When to sterilize?",
-    "whenText": "Recommended between 6 and 12 months of age, depending on the breed and size of the dog. For smaller breeds it can be done earlier, for larger ones later.",
-    "priceCard": {
-        "title": "Sterilization prices",
-        "item1": "Male - dog (up to 15kg)",
-        "item2": "Male - dog (15-30kg)",
-        "item3": "Male - dog (over 30kg)",
-        "item4": "Female - dog (up to 15kg)",
-        "item5": "Female - dog (15-30kg)",
-        "item6": "Female - dog (over 30kg)",
-        "item7": "Cats (male/female)"
-    }
-    },
-    "volunteerPage": {
-        "title": "Become a Volunteer",
-        "description": "Join our team and help animals get through the days until adoption.",
-        "activitiesTitle": "What do volunteers do?",
-        "activities": {
-            "walking": {
-                "title": "Dog Walking",
-                "text": "Daily walks are essential for the physical and mental health of dogs."
+    "volontiranjeStranicaDetalj": {
+        "naslov": "Become a Volunteer",
+        "opis": "Join our team and help animals get through the days until adoption.",
+        "aktivnostiNaslov": "What do volunteers do?",
+        "aktivnosti": {
+            "setnja": {
+                "naslov": "Dog Walking",
+                "tekst": "Daily walks are essential for the physical and mental health of dogs."
             },
-            "feeding": {
-                "title": "Feeding",
-                "text": "Help with feeding and maintaining hygiene."
+            "hranjenje": {
+                "naslov": "Feeding",
+                "tekst": "Help with feeding and maintaining hygiene."
             },
-            "cleaning": {
-                "title": "Cleaning",
-                "text": "Keeping the boxes and rooms clean."
+            "ciscenje": {
+                "naslov": "Cleaning",
+                "tekst": "Keeping the boxes and rooms clean."
             },
-            "photo": {
-                "title": "Photography",
-                "text": "Taking nice pictures for advertisements."
+            "fotografisanje": {
+                "naslov": "Photography",
+                "tekst": "Taking nice pictures for advertisements."
             },
             "transport": {
-                "title": "Transport",
-                "text": "Driving animals to the vet or new homes."
+                "naslov": "Transport",
+                "tekst": "Driving animals to the vet or new homes."
             }
         },
-        "howTitle": "How to apply?",
-    "steps": {
-        "step1": "Fill out the application form below",
-        "step2": "Come for a short interview",
-        "step3": "Complete basic training",
-        "step4": "Start volunteering!"
-    },
-    "form": {
-        "title": "Volunteer Application",
-        "namePlaceholder": "Full name",
-        "emailPlaceholder": "Email",
-        "phonePlaceholder": "Phone",
-        "selectLabel": "Choose activity",
-        "selectOptions": {
-            "option1": "Dog walking",
-            "option2": "Feeding",
-            "option3": "Cleaning",
-            "option4": "Photography",
-            "option5": "Transport",
-            "option6": "All"
+        "kakoNaslov": "How to apply?",
+        "koraci": {
+            "korak1": "Fill out the application form below",
+            "korak2": "Come for a short interview",
+            "korak3": "Complete basic training",
+            "korak4": "Start volunteering!"
         },
-        "textareaPlaceholder": "Why do you want to volunteer?",
-        "submitButton": "Send application"
+        "forma": {
+            "naslov": "Volunteer Application",
+            "placeholderIme": "Full name",
+            "placeholderEmail": "Email",
+            "placeholderTelefon": "Phone",
+            "izborAktivnosti": "Choose activity",
+            "opcije": {
+                "opcija1": "Dog walking",
+                "opcija2": "Feeding",
+                "opcija3": "Cleaning",
+                "opcija4": "Photography",
+                "opcija5": "Transport",
+                "opcija6": "All"
+            },
+            "placeholderPoruka": "Why do you want to volunteer?",
+            "dugme": "Send application"
+        },
+        "infoKartica": {
+            "naslov": "Information",
+            "lokacija": "<strong>Location:</strong> Bulevar oslobođenja 123",
+            "vreme": "<strong>Time:</strong> Every day 10am-6pm",
+            "kontakt": "<strong>Contact:</strong> volunteers@sapica-srece.rs",
+            "potrebno": "<strong>Required:</strong> Love for animals and some free time"
+        }
     },
-    "infoCard": {
-        "title": "Information",
-        "location": "<strong>Location:</strong> Bulevar oslobođenja 123",
-        "time": "<strong>Time:</strong> Every day 10am-6pm",
-        "contact": "<strong>Contact:</strong> volunteers@sapica-srece.rs",
-        "required": "<strong>Required:</strong> Love for animals and some free time"
-    }
-    },
-    "footer": {
-        "quickLinks": "Quick links",
-        "contact": "Contact us",
-        "newsletter": "Newsletter",
-        "emailPlaceholder": "Your email",
-        "subscribe": "Subscribe",
-        "rights": "All rights reserved",
-        "phone": "011/123-456",
+    "podnozje": {
+        "brziLinkovi": "Quick links",
+        "kontakt": "Contact us",
+        "novine": "Newsletter",
+        "placeholderEmail": "Your email",
+        "prijaviSe": "Subscribe",
+        "prava": "All rights reserved",
+        "telefon": "011/123-456",
         "email": "info@sapica-srece.rs",
-        "address": "Bulevar Oslobođenja 123, Belgrade",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Use"
+        "adresa": "Bulevar Oslobođenja 123, Belgrade",
+        "privatnost": "Privacy Policy",
+        "uslovi": "Terms of Use"
     },
-    "buttons": {
-        "readMore": "Read more",
-        "send": "Send message",
-        "adopt": "Adopt"
+    "dugmad": {
+        "procitajVise": "Read more",
+        "posalji": "Send message",
+        "udomi": "Adopt"
     },
-    "contact": {
-        "name": "Full name",
+    "kontakt": {
+        "ime": "Full name",
         "email": "Email address",
-        "phone": "Phone",
-        "message": "Message",
-        "send": "Send message"
+        "telefon": "Phone",
+        "poruka": "Message",
+        "posalji": "Send message"
     },
-    "messages": {
-    "newsletterSuccess": "Thank you for subscribing! Check your email.",
-    "newsletterError": "Please enter a valid email address.",
-    "formSuccessTitle": "Thank you for your message!",
-    "formSuccessMessage": "We will get back to you as soon as possible."
-}
+    "poruke": {
+        "novineUspesno": "Thank you for subscribing! Check your email.",
+        "novineGreska": "Please enter a valid email address.",
+        "formaUspesnoNaslov": "Thank you for your message!",
+        "formaUspesnoPoruka": "We will get back to you as soon as possible."
+    }
 }

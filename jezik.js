@@ -1,509 +1,513 @@
 $(document).ready(function() {
     
     // Učitaj sačuvani jezik ili podrazumevani (srpski)
-    let currentLang = localStorage.getItem('language') || 'sr';
+    let trenutniJezik = localStorage.getItem('language') || 'sr';
     
     // Učitaj prevode i primeni
-    loadTranslations(currentLang);
+    ucitajPrevode(trenutniJezik);
     
     // Klik na dugme za jezik
-    $('.lang-btn').on('click', function() {
-        const lang = $(this).data('lang');
+    $('.jezik-dugme').on('click', function() {
+        const jezik = $(this).data('lang');
         
         // Ako je veći isti jezik, ne radi ništa
-        if (lang === currentLang) return;
+        if (jezik === trenutniJezik) return;
         
         // Ažuriraj aktivno dugme
-        $('.lang-btn').removeClass('active');
-        $(this).addClass('active');
+        $('.jezik-dugme').removeClass('aktivan');
+        $(this).addClass('aktivan');
         
         // Sačuvaj izbor
-        localStorage.setItem('language', lang);
-        currentLang = lang;
+        localStorage.setItem('language', jezik);
+        trenutniJezik = jezik;
         
         // Učitaj prevode
-        loadTranslations(lang);
+        ucitajPrevode(jezik);
     });
     
     // Funkcija za učitavanje prevoda
-    function loadTranslations(lang) {
-        $.getJSON(`lang-${lang}.json`, function(translations) {
-            applyTranslations(translations);
+    function ucitajPrevode(jezik) {
+        $.getJSON(`lang-${jezik}.json`, function(prevodi) {
+            primeniPrevode(prevodi);
         }).fail(function() {
-            console.error('Greška pri učitavanju prevoda za jezik:', lang);
+            console.error('Greška pri učitavanju prevoda za jezik:', jezik);
             
             // Ako ne može da učita engleski, probaj srpski
-            if (lang !== 'sr') {
-                $.getJSON('lang-sr.json', function(translations) {
-                    applyTranslations(translations);
+            if (jezik !== 'sr') {
+                $.getJSON('lang-sr.json', function(prevodi) {
+                    primeniPrevode(prevodi);
                 });
             }
         });
     }
     
     // Funkcija za primenu prevoda na stranicu
-    function applyTranslations(translations) {
+    function primeniPrevode(prevodi) {
         // Navigacija
-        $('.nav-menu a[href="index.html"]').text(translations.navigation.home);
-        $('.footer-links a[href="index.html"]').text(translations.navigation.home);
-        $('.nav-menu a[href="o-nama.html"]').text(translations.navigation.about);
-        $('.footer-links a[href="o-nama.html"]').text(translations.navigation.about);
-        $('.nav-menu a[href="usluge.html"]').text(translations.navigation.services);
-        $('.footer-links a[href="usluge.html"]').text(translations.navigation.services);
-        $('.nav-menu a[href="galerija.html"]').text(translations.navigation.gallery);
-        $('.footer-links a[href="galerija.html"]').text(translations.navigation.gallery);
-        $('.nav-menu a[href="kontakt.html"]').text(translations.navigation.contact);
-        $('.footer-links a[href="kontakt.html"]').text(translations.navigation.contact);
-        $('.nav-menu a[href="donacije.html"]').text(translations.navigation.donate);
-        $('.mega-col a[href="psi.html"]').text(translations.navigation.dogAdoption);
-        $('.mega-col a[href="macke.html"]').text(translations.navigation.catAdoption);
-        $('.mega-col a[href="mikrocip.html"]').text(translations.navigation.microchip);
-        $('.mega-col a[href="pregledi.html"]').text(translations.navigation.checkups);
-        $('.mega-col a[href="sterilizacija.html"]').text(translations.navigation.sterilization);
-        $('.mega-col a[href="vakcinacije.html"]').text(translations.navigation.vaccinations);
-        $('.mega-col a[href="volontiranje.html"]').text(translations.navigation.volunteering);
-        $('.mega-col:contains("Udomljavanje") h3').text(translations.navigation.adoption);
-        $('.mega-col:contains("Veterinarska pomoć") h3').text(translations.navigation.vetHelp);
-        $('.mega-col:contains("Volontiranje") h3').text(translations.navigation.volunteer);
-        $('.donate-btn').text(translations.navigation.donate);
-//INDEX
-        $('.slide-content').eq(0).find('h2').text(translations['slide-content'].title1);
-        $('.slide-content').eq(0).find('p').text(translations['slide-content'].description1);
-        $('.slide-content').eq(0).find('.slider-btn').text(translations['slide-content'].button1);
-        $('.slide-content').eq(1).find('h2').text(translations['slide-content'].title2);    
-        $('.slide-content').eq(1).find('p').text(translations['slide-content'].description2);
-        $('.slide-content').eq(1).find('.slider-btn').text(translations['slide-content'].button2);
-        $('.slide-content').eq(2).find('h2').text(translations['slide-content'].title3);
-        $('.slide-content').eq(2).find('p').text(translations['slide-content'].description3);
-        $('.slide-content').eq(2).find('.slider-btn').text(translations['slide-content'].button3);
+        $('.navigacija-meni a[href="index.html"]').text(prevodi.navigacija.pocetna);
+        $('.podnozje-linkovi a[href="index.html"]').text(prevodi.navigacija.pocetna);
+        $('.navigacija-meni a[href="o-nama.html"]').text(prevodi.navigacija.onama);
+        $('.podnozje-linkovi a[href="o-nama.html"]').text(prevodi.navigacija.onama);
+        $('.navigacija-meni a[href="usluge.html"]').text(prevodi.navigacija.usluge);
+        $('.podnozje-linkovi a[href="usluge.html"]').text(prevodi.navigacija.usluge);
+        $('.navigacija-meni a[href="galerija.html"]').text(prevodi.navigacija.galerija);
+        $('.podnozje-linkovi a[href="galerija.html"]').text(prevodi.navigacija.galerija);
+        $('.navigacija-meni a[href="kontakt.html"]').text(prevodi.navigacija.kontakt);
+        $('.podnozje-linkovi a[href="kontakt.html"]').text(prevodi.navigacija.kontakt);
+        $('.navigacija-meni a[href="donacije.html"]').text(prevodi.navigacija.doniraj);
+        $('.megameni-kolona a[href="psi.html"]').text(prevodi.navigacija.udomljavanjePasa);
+        $('.megameni-kolona a[href="macke.html"]').text(prevodi.navigacija.udomljavanjeMacaka);
+        $('.megameni-kolona a[href="mikrocip.html"]').text(prevodi.navigacija.mikrocip);
+        $('.megameni-kolona a[href="pregledi.html"]').text(prevodi.navigacija.pregledi);
+        $('.megameni-kolona a[href="sterilizacija.html"]').text(prevodi.navigacija.sterilizacija);
+        $('.megameni-kolona a[href="vakcinacije.html"]').text(prevodi.navigacija.vakcinacije);
+        $('.megameni-kolona a[href="volontiranje.html"]').text(prevodi.navigacija.postaniVolonter);
+        $('.megameni-kolona:contains("Udomljavanje") h3').text(prevodi.navigacija.udomljavanje);
+        $('.megameni-kolona:contains("Veterinarska pomoć") h3').text(prevodi.navigacija.vetPomoc);
+        $('.megameni-kolona:contains("Volontiranje") h3').text(prevodi.navigacija.volontiranje);
+        $('.doniraj-dugme').text(prevodi.navigacija.doniraj);
 
+        // INDEX
+        $('.slajd-sadrzaj').eq(0).find('h2').text(prevodi.slajdSadrzaj.naslov1);
+        $('.slajd-sadrzaj').eq(0).find('p').text(prevodi.slajdSadrzaj.opis1);
+        $('.slajd-sadrzaj').eq(0).find('.klizac-dugme').text(prevodi.slajdSadrzaj.dugme1);
+        $('.slajd-sadrzaj').eq(1).find('h2').text(prevodi.slajdSadrzaj.naslov2);    
+        $('.slajd-sadrzaj').eq(1).find('p').text(prevodi.slajdSadrzaj.opis2);
+        $('.slajd-sadrzaj').eq(1).find('.klizac-dugme').text(prevodi.slajdSadrzaj.dugme2);
+        $('.slajd-sadrzaj').eq(2).find('h2').text(prevodi.slajdSadrzaj.naslov3);
+        $('.slajd-sadrzaj').eq(2).find('p').text(prevodi.slajdSadrzaj.opis3);
+        $('.slajd-sadrzaj').eq(2).find('.klizac-dugme').text(prevodi.slajdSadrzaj.dugme3);
 
         // About preview
-        $('.about-content h2').text(translations.about.title);
-        $('.about-content p').text(translations.about.content);
-        $('.about-content .btn-outline').text(translations.about.button);
+        $('.o-nama-sadrzaj h2').text(prevodi.onama.naslov);
+        $('.o-nama-sadrzaj p').text(prevodi.onama.sadrzaj);
+        $('.o-nama-sadrzaj .dugme-okvir').text(prevodi.onama.dugme);
         
         // Services
-        $('.services-preview .section-title').text(translations.services.title);
-        $('.service-card h3').eq(0).text(translations.services.dogAdoption);
-        $('.service-card p').eq(0).text(translations.services.descriptionDog);
-        $('.service-card h3').eq(1).text(translations.services.catAdoption);
-        $('.service-card p').eq(1).text(translations.services.descriptionCat);
-        $('.service-card h3').eq(2).text(translations.services.vet);
-        $('.service-card p').eq(2).text(translations.services.descriptionVet);
-        $('.read-more').text(translations.buttons.readMore + ' →');
+        $('.usluge-pregled .sekcija-naslov').text(prevodi.usluge.naslov);
+        $('.usluga-kartica h3').eq(0).text(prevodi.usluge.udomljavanjePasa);
+        $('.usluga-kartica p').eq(0).text(prevodi.usluge.opisPas);
+        $('.usluga-kartica h3').eq(1).text(prevodi.usluge.udomljavanjeMacaka);
+        $('.usluga-kartica p').eq(1).text(prevodi.usluge.opisMacka);
+        $('.usluga-kartica h3').eq(2).text(prevodi.usluge.vet);
+        $('.usluga-kartica p').eq(2).text(prevodi.usluge.opisVet);
+        $('.procitaj-vise').text(prevodi.dugmad.procitajVise + ' →');
 
         // Video
-        $('.video-section h2').text(translations.video.title);
-        $('.video-section p').text(translations.video.description);
+        $('.video-sekcija h2').text(prevodi.video.naslov);
+        $('.video-sekcija p').text(prevodi.video.opis);
 
-        //Animacija
-        $('.animation-section .container .section-title').text(translations.animation.title);
-        $('.animated-box .overlay p').eq(0).text(translations.animation.description1);
-        $('.animated-box .overlay p').eq(1).text(translations.animation.description2);
-        $('.animated-box .overlay p').eq(2).text(translations.animation.description3);
+        // Animacija
+        $('.animacija-sekcija .kontejner .sekcija-naslov').text(prevodi.animacija.naslov);
+        $('.animirana-kutija .preklop p').eq(0).text(prevodi.animacija.opis1);
+        $('.animirana-kutija .preklop p').eq(1).text(prevodi.animacija.opis2);
+        $('.animirana-kutija .preklop p').eq(2).text(prevodi.animacija.opis3);
         
-        //Dokumenti
-        $('.document-section .container h2').text(translations.documents.title);
-        $('.documents-list span').eq(0).text(translations.documents.adoptionForm);
-        $('.documents-list small').eq(0).text(translations.documents.download1);
-        $('.documents-list span').eq(1).text(translations.documents.adoptionAgreement);
-        $('.documents-list small').eq(1).text(translations.documents.download2);
-        $('.documents-list span').eq(2).text(translations.documents.advice);
-        $('.documents-list small').eq(2).text(translations.documents.download3);
+        // Dokumenti
+        $('.dokument-sekcija .kontejner h2').text(prevodi.dokumenti.naslov);
+        $('.dokumenti-lista span').eq(0).text(prevodi.dokumenti.vodic);
+        $('.dokumenti-lista small').eq(0).text(prevodi.dokumenti.preuzimanje1);
+        $('.dokumenti-lista span').eq(1).text(prevodi.dokumenti.ugovor);
+        $('.dokumenti-lista small').eq(1).text(prevodi.dokumenti.preuzimanje2);
+        $('.dokumenti-lista span').eq(2).text(prevodi.dokumenti.saveti);
+        $('.dokumenti-lista small').eq(2).text(prevodi.dokumenti.preuzimanje3);
   
-        //Mapa
-        $('.map-section .container h2').text(translations.map.title);
-        $('.address-info p').eq(0).html(`<strong>${translations.map.addressLabel}</strong> ${translations.map.address}`);
-        $('.address-info p').eq(1).html(`<strong>${translations.map.hoursLabel}</strong> ${translations.map.time}`);
-//O NAMA
-        //Hero
-        $('.o-nama .hero-content1 h1').text(translations.hero2.title);
-        $('.o-nama .hero-content1 p').eq(0).text(translations.hero2.subtitle);
+        // Mapa
+        $('.mapa-sekcija .kontejner h2').text(prevodi.mapa.naslov);
+        $('.adresa-info p').eq(0).html(`<strong>${prevodi.mapa.adresaLabel}</strong> ${prevodi.mapa.adresa}`);
+        $('.adresa-info p').eq(1).html(`<strong>${prevodi.mapa.vremeLabel}</strong> ${prevodi.mapa.vreme}`);
 
-        $('.o-nama .our-story h2').text(translations.story.title);
-        $('.o-nama .story-text').eq(0).text(translations.story.content1);
-        $('.o-nama .story-text').eq(1).text(translations.story.content2);
-        $('.o-nama .story-text').eq(2).text(translations.story.content3);
-        $('.o-nama .mission-vision h3').eq(0).text(translations.story.titleMission);
-        $('.o-nama .mission-vision p').eq(0).text(translations.story.contentMission);
-        $('.o-nama .mission-vision h3').eq(1).text(translations.story.tittleVision);
-        $('.o-nama .mission-vision p').eq(1).text(translations.story.contentVision);
+        // O NAMA
+        // Hero
+        $('.o-nama-stranica .hero-sadrzaj1 h1').text(prevodi.hero2.naslov);
+        $('.o-nama-stranica .hero-sadrzaj1 p').eq(0).text(prevodi.hero2.podnaslov);
+
+        $('.nasa-prica h2').text(prevodi.prica.naslov);
+        $('.prica-tekst').eq(0).text(prevodi.prica.sadrzaj1);
+        $('.prica-tekst').eq(1).text(prevodi.prica.sadrzaj2);
+        $('.prica-tekst').eq(2).text(prevodi.prica.sadrzaj3);
+        $('.misija h3').text(prevodi.prica.misijaNaslov);
+        $('.misija p').text(prevodi.prica.misijaSadrzaj);
+        $('.vizija h3').text(prevodi.prica.vizijaNaslov);
+        $('.vizija p').text(prevodi.prica.vizijaSadrzaj);
         
-        //Statistika
-        $('.o-nama .stats-section .container h2').text(translations.statistics.title);
-        $('.o-nama .stat-item .stat-label').eq(0).text(translations.statistics.adoptedDogs);
-        $('.o-nama .stat-item .stat-label').eq(1).text(translations.statistics.adoptedCats);
-        $('.o-nama .stat-item .stat-label').eq(2).text(translations.statistics.volunteers);
-        $('.o-nama .stat-item .stat-label').eq(3).text(translations.statistics.shelter);
+        // Statistika
+        $('.statistika-sekcija .kontejner h2').text(prevodi.statistika.naslov);
+        $('.stat-stavka .stat-natpis').eq(0).text(prevodi.statistika.udomljeniPsi);
+        $('.stat-stavka .stat-natpis').eq(1).text(prevodi.statistika.udomljeneMacke);
+        $('.stat-stavka .stat-natpis').eq(2).text(prevodi.statistika.volonteri);
+        $('.stat-stavka .stat-natpis').eq(3).text(prevodi.statistika.uAzilu);
 
-        //Tim
-        $('.o-nama .our-team .container h2').text(translations.team.title);
-        $('.o-nama .team-card h3').eq(0).text(translations.team.name1);
-        $('.o-nama .team-card .position').eq(0).text(translations.team.description1);
-        $('.o-nama .team-card .bio').eq(0).text(translations.team.content1);
-        $('.o-nama .team-card h3').eq(1).text(translations.team.name2);
-        $('.o-nama .team-card .position').eq(1).text(translations.team.description2);
-        $('.o-nama .team-card .bio').eq(1).text(translations.team.content2);
-        $('.o-nama .team-card h3').eq(2).text(translations.team.name3);
-        $('.o-nama .team-card .position').eq(2).text(translations.team.description3);
-        $('.o-nama .team-card .bio').eq(2).text(translations.team.content3);
-        $('.o-nama .team-card h3').eq(3).text(translations.team.name4);
-        $('.o-nama .team-card .position').eq(3).text(translations.team.description4);
-        $('.o-nama .team-card .bio').eq(3).text(translations.team.content4);
-        $('.o-nama .partners h2').text(translations.team.partenrs);
+        // Tim
+        $('.nas-tim .kontejner h2').text(prevodi.tim.naslov);
+        $('.tim-kartica h3').eq(0).text(prevodi.tim.ime1);
+        $('.tim-kartica .pozicija').eq(0).text(prevodi.tim.pozicija1);
+        $('.tim-kartica .biografija').eq(0).text(prevodi.tim.bio1);
+        $('.tim-kartica h3').eq(1).text(prevodi.tim.ime2);
+        $('.tim-kartica .pozicija').eq(1).text(prevodi.tim.pozicija2);
+        $('.tim-kartica .biografija').eq(1).text(prevodi.tim.bio2);
+        $('.tim-kartica h3').eq(2).text(prevodi.tim.ime3);
+        $('.tim-kartica .pozicija').eq(2).text(prevodi.tim.pozicija3);
+        $('.tim-kartica .biografija').eq(2).text(prevodi.tim.bio3);
+        $('.tim-kartica h3').eq(3).text(prevodi.tim.ime4);
+        $('.tim-kartica .pozicija').eq(3).text(prevodi.tim.pozicija4);
+        $('.tim-kartica .biografija').eq(3).text(prevodi.tim.bio4);
+        $('.partneri h2').text(prevodi.tim.partneri);
 
-//Galerija
-        //Slike
-        $('.gallery-section .section-title').text(translations.galleryPage.title);
-        $('.gallery-intro').text(translations.galleryPage.intro);
+        // GALERIJA
+        $('.galerija-sekcija .sekcija-naslov').text(prevodi.galerijaStranica.naslov);
+        $('.galerija-uvod').text(prevodi.galerijaStranica.uvod);
 
-        $('.gallery-item').each(function(index) {
-        const itemNum = index + 1;
-        const item = translations.galleryPage.items[`item${itemNum}`];
-        
-        if (item) {
-                $(this).find('h3').text(item.title);
-                $(this).find('p').first().text(item.subtitle);
-                $(this).find('.description').text(item.description);
-        }
-        });
-//USLUGE
-        $('.hero-content h1').text(translations.hero3.title3);
-        $('.hero-content p').eq(0).text(translations.hero3.subtitle3);
-
-        $('.services-page .section-title').eq(0).text(translations.servicesPage.titleU); 
-        $('.service-card1 h3').eq(0).text(translations.servicesPage.pet1);
-        $('.service-card1 p').eq(0).text(translations.servicesPage.desc1);
-        $('.service-card1 a').eq(0).text(translations.servicesPage.petBtn1+ ' →');
-
-        $('.service-card1 h3').eq(1).text(translations.servicesPage.pet2);
-        $('.service-card1 p').eq(1).text(translations.servicesPage.desc2);
-        $('.service-card1 a').eq(1).text(translations.servicesPage.petBtn2+ ' →');
-
-        $('.services-page .section-title').eq(1).text(translations.servicesPage.titleV);
-        $('.service-card1 h3').eq(2).text(translations.servicesPage.vacc);
-        $('.service-card1 p').eq(2).text(translations.servicesPage.desc3);
-        $('.service-card1 a').eq(2).text(translations.servicesPage.vBtn1+ ' →');
-
-        $('.service-card1 h3').eq(3).text(translations.servicesPage.ster);
-        $('.service-card1 p').eq(3).text(translations.servicesPage.desc4);
-        $('.service-card1 a').eq(3).text(translations.servicesPage.vBtn2+ ' →');
-
-        $('.service-card1 h3').eq(4).text(translations.servicesPage.microchip);
-        $('.service-card1 p').eq(4).text(translations.servicesPage.desc5);
-        $('.service-card1 a').eq(4).text(translations.servicesPage.vBtn3+ ' →');
-
-        $('.service-card1 h3').eq(5).text(translations.servicesPage.check);
-        $('.service-card1 p').eq(5).text(translations.servicesPage.desc6);
-        $('.service-card1 a').eq(5).text(translations.servicesPage.vBtn4+ ' →');
-
-        $('.services-page .section-title').eq(2).text(translations.servicesPage.titleVol);
-        $('.service-card1 h3').eq(6).text(translations.servicesPage.volon);
-        $('.service-card1 p').eq(6).text(translations.servicesPage.descVo1);
-        $('.service-card1 a').eq(6).text(translations.servicesPage.voBtn1+ ' →');
-
-        $('.service-card1 h3').eq(7).text(translations.servicesPage.don);
-        $('.service-card1 p').eq(7).text(translations.servicesPage.descVo2);
-        $('.service-card1 a').eq(7).text(translations.servicesPage.voBtn2+ ' →');
-
-        //CTA
-        $('.cta-section h2').text(translations.ctaUsluge.title);
-        $('.cta-section p').text(translations.ctaUsluge.description);
-        $('.btn-cta').text(translations.ctaUsluge.ctaBtn);
-//KONTAKT
-        if ($('body').hasClass('contact-page')) {
-                
-                $('.bg-success .container h1').text(translations.hero.title);
-                $('.hero-subtitle').text(translations.hero.subtitle); 
-                $('.card h3').eq(0).text(translations.address.title);
-                $('.card p').eq(0).text(translations.address.line1);
-                $('.card p').eq(1).text(translations.address.line2);
-                $('.card h3').eq(1).text(translations.phone.title);
-
-                $('.col-lg-6 h2').first().text(translations.form.titleForm);
-                $('label[for="name"]').text(translations.form.name);
-                $('label[for="email"]').text(translations.form.email);
-                $('label[for="phone"]').text(translations.form.phone);
-                $('label[for="subject"]').text(translations.form.subject);
-                $('label[for="interest"]').text(translations.form.interest);
-
-                $('#interest option').first().text(translations.form.options.option);
-                $('#interest option[value="Udomljavanje"]').text(translations.form.options.adoption);
-                $('#interest option[value="Volontiranje"]').text(translations.form.options.volunteer);
-                $('#interest option[value="Donacija"]').text(translations.form.options.donation);
-                $('#interest option[value="Informacije"]').text(translations.form.options.info);
-                $('#interest option[value="Ostalo"]').text(translations.form.options.other);
-
-                $('input#name').attr('placeholder', translations.form.placeholders.name);
-                $('input#email').attr('placeholder', translations.form.placeholders.email);
-                $('input#phone').attr('placeholder', translations.form.placeholders.phone);
-                $('input#subject').attr('placeholder', translations.form.placeholders.subject);
-                $('textarea#message').attr('placeholder', translations.form.placeholders.message);
-
-                $('label[for="message"]').text(translations.form.message);
-                $('label[for="consent"]').text(translations.form.consent);
-                $('.btn-success').first().text(translations.form.button);
-
-                $('.col-lg-6 h2').last().text(translations.map1.titleMap);
-
-                $('.card h3').eq(3).text(translations.workingHours.title);
-
-                $('.list-unstyled li').eq(0).find('span').first().text(translations.workingHours.weekdays);
-                $('.list-unstyled li').eq(0).find('span').last().text(translations.workingHours.weekdaysTime);
-
-                $('.list-unstyled li').eq(1).find('span').first().text(translations.workingHours.saturday);
-                $('.list-unstyled li').eq(1).find('span').last().text(translations.workingHours.saturdayTime);
-
-                $('.list-unstyled li').eq(2).find('span').first().text(translations.workingHours.sunday);
-                $('.list-unstyled li').eq(2).find('span').last().text(translations.workingHours.sundayStatus);
-
-                $('.container.py-5 h2').first().text(translations.volunteer.title);
-                $('.col-md-6 h3').text(translations.volunteer.heading);
-
-                $('.list-unstyled .fs-5').eq(0).text(translations.volunteer.benefits['1']);
-                $('.list-unstyled .fs-5').eq(1).text(translations.volunteer.benefits['2']);
-                $('.list-unstyled .fs-5').eq(2).text(translations.volunteer.benefits['3']);
-                $('.list-unstyled .fs-5').eq(3).text(translations.volunteer.benefits['4']);
-                $('.list-unstyled .fs-5').eq(4).text(translations.volunteer.benefits['5']);
-
-                $('.volunteer-description').text(translations.volunteer.description);
-
-        }
-//PSI
-        $('.page-title').text(translations.dogsPage.title);
-        $('.page-description').text(translations.dogsPage.description);
-
-        $('.animal-card').each(function(index) {
-            const dogNum = index + 1;
-            const dog = translations.dogsPage.dogs[`dog${dogNum}`];
+        $('.galerija-stavka').each(function(index) {
+            const brojStavke = index + 1;
+            const stavka = prevodi.galerijaStranica.stavke[`stavka${brojStavke}`];
             
-            if (dog) {
-                const ageText = $(this).find('p').eq(0);
-                ageText.html(`<strong>${translations.dogsPage.age}:</strong> ${dog.age}`);
-                const breedText = $(this).find('p').eq(1);
-                breedText.html(`<strong>${translations.dogsPage.breed}:</strong> ${dog.breed}`);
-                $(this).find('.animal-desc').text(dog.desc);
-                $(this).find('.btn-small').text(translations.dogsPage.button);
+            if (stavka) {
+                $(this).find('h3').text(stavka.naslov);
+                $(this).find('p').first().text(stavka.podnaslov);
+                $(this).find('.opis').text(stavka.opis);
             }
         });
 
-//MACKE
-        $('.page-title1').text(translations.catsPage.title);
-        $('.page-description1').text(translations.catsPage.description);
+        // USLUGE
+        $('.hero-sadrzaj h1').text(prevodi.hero3.naslov3);
+        $('.hero-sadrzaj p').eq(0).text(prevodi.hero3.podnaslov3);
 
-        $('.animal-card1').each(function(index) {
-            const catNum = index + 1;
-            const cat = translations.catsPage.cats[`cat${catNum}`];
+        $('.usluge-stranica .sekcija-naslov').eq(0).text(prevodi.uslugeStranica.naslovU); 
+        $('.usluga-kartica1 h3').eq(0).text(prevodi.uslugeStranica.ljubimac1);
+        $('.usluga-kartica1 p').eq(0).text(prevodi.uslugeStranica.opis1);
+        $('.usluga-kartica1 a').eq(0).text(prevodi.uslugeStranica.dugme1 + ' →');
+
+        $('.usluga-kartica1 h3').eq(1).text(prevodi.uslugeStranica.ljubimac2);
+        $('.usluga-kartica1 p').eq(1).text(prevodi.uslugeStranica.opis2);
+        $('.usluga-kartica1 a').eq(1).text(prevodi.uslugeStranica.dugme2 + ' →');
+
+        $('.usluge-stranica .sekcija-naslov').eq(1).text(prevodi.uslugeStranica.naslovV);
+        $('.usluga-kartica1 h3').eq(2).text(prevodi.uslugeStranica.vakcina);
+        $('.usluga-kartica1 p').eq(2).text(prevodi.uslugeStranica.opis3);
+        $('.usluga-kartica1 a').eq(2).text(prevodi.uslugeStranica.vDugme1 + ' →');
+
+        $('.usluga-kartica1 h3').eq(3).text(prevodi.uslugeStranica.sterilizacija);
+        $('.usluga-kartica1 p').eq(3).text(prevodi.uslugeStranica.opis4);
+        $('.usluga-kartica1 a').eq(3).text(prevodi.uslugeStranica.vDugme2 + ' →');
+
+        $('.usluga-kartica1 h3').eq(4).text(prevodi.uslugeStranica.mikrocip);
+        $('.usluga-kartica1 p').eq(4).text(prevodi.uslugeStranica.opis5);
+        $('.usluga-kartica1 a').eq(4).text(prevodi.uslugeStranica.vDugme3 + ' →');
+
+        $('.usluga-kartica1 h3').eq(5).text(prevodi.uslugeStranica.pregled);
+        $('.usluga-kartica1 p').eq(5).text(prevodi.uslugeStranica.opis6);
+        $('.usluga-kartica1 a').eq(5).text(prevodi.uslugeStranica.vDugme4 + ' →');
+
+        $('.usluge-stranica .sekcija-naslov').eq(2).text(prevodi.uslugeStranica.naslovVol);
+        $('.usluga-kartica1 h3').eq(6).text(prevodi.uslugeStranica.volontiraj);
+        $('.usluga-kartica1 p').eq(6).text(prevodi.uslugeStranica.opisVo1);
+        $('.usluga-kartica1 a').eq(6).text(prevodi.uslugeStranica.voDugme1 + ' →');
+
+        $('.usluga-kartica1 h3').eq(7).text(prevodi.uslugeStranica.donacija);
+        $('.usluga-kartica1 p').eq(7).text(prevodi.uslugeStranica.opisVo2);
+        $('.usluga-kartica1 a').eq(7).text(prevodi.uslugeStranica.voDugme2 + ' →');
+
+        // CTA
+        $('.akcija-sekcija h2').text(prevodi.pozivNaAkciju.naslov);
+        $('.akcija-sekcija p').text(prevodi.pozivNaAkciju.opis);
+        $('.dugme-akcija').text(prevodi.pozivNaAkciju.dugme);
+
+        // KONTAKT
+        if ($('body').hasClass('kontakt-stranica')) {
+                
+            $('.bg-success .kontejner h1').text(prevodi.kontaktHero.naslov);
+            $('.hero-subtitle').text(prevodi.kontaktHero.podnaslov); 
+            $('.card h3').eq(0).text(prevodi.adresa.naslov);
+            $('.card p').eq(0).text(prevodi.adresa.linija1);
+            $('.card p').eq(1).text(prevodi.adresa.linija2);
+            $('.card h3').eq(1).text(prevodi.telefon.naslov);
+
+            $('.col-lg-6 h2').first().text(prevodi.forma.naslovForme);
+            $('label[for="name"]').text(prevodi.forma.ime);
+            $('label[for="email"]').text(prevodi.forma.email);
+            $('label[for="phone"]').text(prevodi.forma.telefon);
+            $('label[for="subject"]').text(prevodi.forma.naslovPoruke);
+            $('label[for="interest"]').text(prevodi.forma.interesovanje);
+
+            $('#interest option').first().text(prevodi.forma.opcije.opcija);
+            $('#interest option[value="Udomljavanje"]').text(prevodi.forma.opcije.udomljavanje);
+            $('#interest option[value="Volontiranje"]').text(prevodi.forma.opcije.volontiranje);
+            $('#interest option[value="Donacija"]').text(prevodi.forma.opcije.donacija);
+            $('#interest option[value="Informacije"]').text(prevodi.forma.opcije.informacije);
+            $('#interest option[value="Ostalo"]').text(prevodi.forma.opcije.ostalo);
+
+            $('input#name').attr('placeholder', prevodi.forma.placeholderi.ime);
+            $('input#email').attr('placeholder', prevodi.forma.placeholderi.email);
+            $('input#phone').attr('placeholder', prevodi.forma.placeholderi.telefon);
+            $('input#subject').attr('placeholder', prevodi.forma.placeholderi.naslov);
+            $('textarea#message').attr('placeholder', prevodi.forma.placeholderi.poruka);
+
+            $('label[for="message"]').text(prevodi.forma.poruka);
+            $('label[for="consent"]').text(prevodi.forma.saglasnost);
+            $('.btn-success').first().text(prevodi.forma.dugme);
+
+            $('.col-lg-6 h2').last().text(prevodi.mapa1.naslovMape);
+
+            $('.card h3').eq(3).text(prevodi.radnoVreme.naslov);
+
+            $('.list-unstyled li').eq(0).find('span').first().text(prevodi.radnoVreme.radniDani);
+            $('.list-unstyled li').eq(0).find('span').last().text(prevodi.radnoVreme.radniDaniVreme);
+
+            $('.list-unstyled li').eq(1).find('span').first().text(prevodi.radnoVreme.subota);
+            $('.list-unstyled li').eq(1).find('span').last().text(prevodi.radnoVreme.subotaVreme);
+
+            $('.list-unstyled li').eq(2).find('span').first().text(prevodi.radnoVreme.nedelja);
+            $('.list-unstyled li').eq(2).find('span').last().text(prevodi.radnoVreme.nedeljaStatus);
+
+            $('.kontejner.py-5 h2').first().text(prevodi.volontiranjeStranica.naslov);
+            $('.col-md-6 h3').text(prevodi.volontiranjeStranica.naslovSekcije);
+
+            $('.list-unstyled .fs-5').eq(0).text(prevodi.volontiranjeStranica.prednosti['1']);
+            $('.list-unstyled .fs-5').eq(1).text(prevodi.volontiranjeStranica.prednosti['2']);
+            $('.list-unstyled .fs-5').eq(2).text(prevodi.volontiranjeStranica.prednosti['3']);
+            $('.list-unstyled .fs-5').eq(3).text(prevodi.volontiranjeStranica.prednosti['4']);
+            $('.list-unstyled .fs-5').eq(4).text(prevodi.volontiranjeStranica.prednosti['5']);
+
+            $('.volunteer-description').text(prevodi.volontiranjeStranica.opis);
+        }
+
+        // PSI
+        $('.strana-naslov').text(prevodi.psiStranica.naslov);
+        $('.strana-opis').text(prevodi.psiStranica.opis);
+
+        $('.zivotinja-kartica').each(function(index) {
+            const brojPsa = index + 1;
+            const pas = prevodi.psiStranica.psi[`pas${brojPsa}`];
             
-            if (cat) {
-                const ageText = $(this).find('p').eq(0);
-                ageText.html(`<strong>${translations.catsPage.age}:</strong> ${cat.age}`);
-                
-                const breedText = $(this).find('p').eq(1);
-                breedText.html(`<strong>${translations.catsPage.breed}:</strong> ${cat.breed}`);
-                
-                $(this).find('.animal-desc1').text(cat.desc);
-                $(this).find('.btn-small').text(translations.catsPage.button);
+            if (pas) {
+                const uzrastTekst = $(this).find('p').eq(0);
+                uzrastTekst.html(`<strong>${prevodi.psiStranica.uzrast}:</strong> ${pas.uzrast}`);
+                const rasaTekst = $(this).find('p').eq(1);
+                rasaTekst.html(`<strong>${prevodi.psiStranica.rasa}:</strong> ${pas.rasa}`);
+                $(this).find('.zivotinja-opis').text(pas.opis);
+                $(this).find('.dugme-malo').text(prevodi.psiStranica.dugme);
             }
         });
-//VAKCINACIJA
-        $('.vacc-page .service-detail h2').first().text(translations.vaccinationPage.mainTitle);
-        $('.vacc-page .service-detail p').first().text(translations.vaccinationPage.mainDescription);
-        $('.vacc-page .service-detail h3').eq(0).text(translations.vaccinationPage.dogsTitle);
-        $('.vacc-page .service-list').eq(0).find('li').eq(0).html(translations.vaccinationPage.dogsList.item1);
-        $('.vacc-page .service-list').eq(0).find('li').eq(1).html(translations.vaccinationPage.dogsList.item2);
-        $('.vacc-page .service-list').eq(0).find('li').eq(2).html(translations.vaccinationPage.dogsList.item3);
-        $('.vacc-page .service-list').eq(0).find('li').eq(3).html(translations.vaccinationPage.dogsList.item4);
-        $('.vacc-page .service-detail h3').eq(1).text(translations.vaccinationPage.catsTitle);
-        $('.vacc-page .service-list').eq(1).find('li').eq(0).html(translations.vaccinationPage.catsList.item1);
-        $('.vacc-page .service-list').eq(1).find('li').eq(1).html(translations.vaccinationPage.catsList.item2);
-        $('.vacc-page .service-list').eq(1).find('li').eq(2).html(translations.vaccinationPage.catsList.item3);
-        $('.vacc-page .service-detail h3').eq(2).text(translations.vaccinationPage.whenTitle);
-        $('.vaccine-table th').eq(0).text(translations.vaccinationPage.table.header1);
-        $('.vaccine-table th').eq(1).text(translations.vaccinationPage.table.header2);
-        $('.vaccine-table tr').eq(1).find('td').eq(0).text(translations.vaccinationPage.table.row1.col1);
-        $('.vaccine-table tr').eq(1).find('td').eq(1).text(translations.vaccinationPage.table.row1.col2);
-        $('.vaccine-table tr').eq(2).find('td').eq(0).text(translations.vaccinationPage.table.row2.col1);
-        $('.vaccine-table tr').eq(2).find('td').eq(1).text(translations.vaccinationPage.table.row2.col2);
-        $('.vaccine-table tr').eq(3).find('td').eq(0).text(translations.vaccinationPage.table.row3.col1);
-        $('.vaccine-table tr').eq(3).find('td').eq(1).text(translations.vaccinationPage.table.row3.col2);
-        $('.vaccine-table tr').eq(4).find('td').eq(0).text(translations.vaccinationPage.table.row4.col1);
-        $('.vaccine-table tr').eq(4).find('td').eq(1).text(translations.vaccinationPage.table.row4.col2);
-        $('.vacc-page .price-card h4').text(translations.vaccinationPage.priceCard.title);
-        $('.vacc-page .price-item span').eq(0).text(translations.vaccinationPage.priceCard.item1);
-        $('.vacc-page .price-item span').eq(1).text(translations.vaccinationPage.priceCard.item2);
-        $('.vacc-page .price-item span').eq(2).text(translations.vaccinationPage.priceCard.item3);
-        $('.vacc-page .price-item.total span').text(translations.vaccinationPage.priceCard.total);
-        $('.vacc-page .contact-sidebar h4').text(translations.vaccinationPage.contactSidebar.title);
-        $('.vacc-page .contact-sidebar p').eq(2).html(`<img src="usluge/ikonica-radnoVreme.png" alt="Radno vreme"> ${translations.vaccinationPage.contactSidebar.workTime}`);
-        $('.vacc-page .btn-sidebar').text(translations.vaccinationPage.contactSidebar.button);
-        $('.vacc-page .note-card h4').text(translations.vaccinationPage.noteCard.title);
-        $('.vacc-page .note-card p').text(translations.vaccinationPage.noteCard.text);
-        $('.vacc-page .cta-section h2').text(translations.vaccinationPage.cta.title);
-        $('.vacc-page .cta-section p').text(translations.vaccinationPage.cta.description);
-        $('.vacc-page .btn-cta').text(translations.vaccinationPage.cta.button);
-        $('.vacc-page .video-section h2').text(translations.vaccinationPage.vaccinationVideo.title);
-        $('.vacc-page .video-section h3').text(translations.vaccinationPage.vaccinationVideo.title2);
-        $('.vacc-page .video-section p').text(translations.vaccinationPage.vaccinationVideo.description);
 
-//DONACIJE
-        $('.donations-page .service-detail h2').text(translations.donationsPage.title);
-        $('.donations-page .service-detail p').first().text(translations.donationsPage.description);
+        // MACKE
+        $('.strana-naslov1').text(prevodi.mackeStranica.naslov);
+        $('.strana-opis1').text(prevodi.mackeStranica.opis);
 
-        $('.donations-page .donation-card h3').eq(0).text(translations.donationsPage.cards.money.title);
-        $('.donations-page .donation-card p').eq(0).text(translations.donationsPage.cards.money.account);
-        $('.donations-page .donation-card p').eq(1).text(translations.donationsPage.cards.money.paypal);
+        $('.zivotinja-kartica1').each(function(index) {
+            const brojMacke = index + 1;
+            const macka = prevodi.mackeStranica.macke[`macka${brojMacke}`];
+            
+            if (macka) {
+                const uzrastTekst = $(this).find('p').eq(0);
+                uzrastTekst.html(`<strong>${prevodi.mackeStranica.uzrast}:</strong> ${macka.uzrast}`);
+                const rasaTekst = $(this).find('p').eq(1);
+                rasaTekst.html(`<strong>${prevodi.mackeStranica.rasa}:</strong> ${macka.rasa}`);
+                $(this).find('.zivotinja-opis1').text(macka.opis);
+                $(this).find('.dugme-malo').text(prevodi.mackeStranica.dugme);
+            }
+        });
 
-        $('.donations-page .donation-card h3').eq(1).text(translations.donationsPage.cards.food.title);
-        $('.donations-page .donation-card p').eq(2).text(translations.donationsPage.cards.food.text);
-        $('.donations-page .donation-card ul').eq(0).find('li').eq(0).text(translations.donationsPage.cards.food.items.item1);
-        $('.donations-page .donation-card ul').eq(0).find('li').eq(1).text(translations.donationsPage.cards.food.items.item2);
-        $('.donations-page .donation-card ul').eq(0).find('li').eq(2).text(translations.donationsPage.cards.food.items.item3);
+        // VAKCINACIJA
+        $('.vakcina-stranica .usluga-detalj h2').first().text(prevodi.vakcinacijeStranica.glavniNaslov);
+        $('.vakcina-stranica .usluga-detalj p').first().text(prevodi.vakcinacijeStranica.glavniOpis);
+        $('.vakcina-stranica .usluga-detalj h3').eq(0).text(prevodi.vakcinacijeStranica.naslovPsi);
+        $('.vakcina-stranica .usluga-lista').eq(0).find('li').eq(0).html(prevodi.vakcinacijeStranica.listaPsi.stavka1);
+        $('.vakcina-stranica .usluga-lista').eq(0).find('li').eq(1).html(prevodi.vakcinacijeStranica.listaPsi.stavka2);
+        $('.vakcina-stranica .usluga-lista').eq(0).find('li').eq(2).html(prevodi.vakcinacijeStranica.listaPsi.stavka3);
+        $('.vakcina-stranica .usluga-lista').eq(0).find('li').eq(3).html(prevodi.vakcinacijeStranica.listaPsi.stavka4);
+        $('.vakcina-stranica .usluga-detalj h3').eq(1).text(prevodi.vakcinacijeStranica.naslovMacke);
+        $('.vakcina-stranica .usluga-lista').eq(1).find('li').eq(0).html(prevodi.vakcinacijeStranica.listaMacke.stavka1);
+        $('.vakcina-stranica .usluga-lista').eq(1).find('li').eq(1).html(prevodi.vakcinacijeStranica.listaMacke.stavka2);
+        $('.vakcina-stranica .usluga-lista').eq(1).find('li').eq(2).html(prevodi.vakcinacijeStranica.listaMacke.stavka3);
+        $('.vakcina-stranica .usluga-detalj h3').eq(2).text(prevodi.vakcinacijeStranica.kadaNaslov);
+        $('.vakcina-tabela th').eq(0).text(prevodi.vakcinacijeStranica.tabela.zaglavlje1);
+        $('.vakcina-tabela th').eq(1).text(prevodi.vakcinacijeStranica.tabela.zaglavlje2);
+        $('.vakcina-tabela tr').eq(1).find('td').eq(0).text(prevodi.vakcinacijeStranica.tabela.red1.kolona1);
+        $('.vakcina-tabela tr').eq(1).find('td').eq(1).text(prevodi.vakcinacijeStranica.tabela.red1.kolona2);
+        $('.vakcina-tabela tr').eq(2).find('td').eq(0).text(prevodi.vakcinacijeStranica.tabela.red2.kolona1);
+        $('.vakcina-tabela tr').eq(2).find('td').eq(1).text(prevodi.vakcinacijeStranica.tabela.red2.kolona2);
+        $('.vakcina-tabela tr').eq(3).find('td').eq(0).text(prevodi.vakcinacijeStranica.tabela.red3.kolona1);
+        $('.vakcina-tabela tr').eq(3).find('td').eq(1).text(prevodi.vakcinacijeStranica.tabela.red3.kolona2);
+        $('.vakcina-tabela tr').eq(4).find('td').eq(0).text(prevodi.vakcinacijeStranica.tabela.red4.kolona1);
+        $('.vakcina-tabela tr').eq(4).find('td').eq(1).text(prevodi.vakcinacijeStranica.tabela.red4.kolona2);
+        $('.vakcina-stranica .cena-kartica h4').text(prevodi.vakcinacijeStranica.cenaKartica.naslov);
+        $('.vakcina-stranica .cena-stavka span').eq(0).text(prevodi.vakcinacijeStranica.cenaKartica.stavka1);
+        $('.vakcina-stranica .cena-stavka span').eq(1).text(prevodi.vakcinacijeStranica.cenaKartica.stavka2);
+        $('.vakcina-stranica .cena-stavka span').eq(2).text(prevodi.vakcinacijeStranica.cenaKartica.stavka3);
+        $('.vakcina-stranica .cena-stavka.ukupno span').text(prevodi.vakcinacijeStranica.cenaKartica.ukupno);
+        $('.vakcina-stranica .kontakt-bocno h4').text(prevodi.vakcinacijeStranica.kontaktBocno.naslov);
+        $('.vakcina-stranica .kontakt-bocno p').eq(2).html(`<img src="usluge/ikonica-radnoVreme.png" alt="Radno vreme"> ${prevodi.vakcinacijeStranica.kontaktBocno.radnoVreme}`);
+        $('.vakcina-stranica .dugme-bocno').text(prevodi.vakcinacijeStranica.kontaktBocno.dugme);
+        $('.vakcina-stranica .napomena-kartica h4').text(prevodi.vakcinacijeStranica.napomena.naslov);
+        $('.vakcina-stranica .napomena-kartica p').text(prevodi.vakcinacijeStranica.napomena.tekst);
+        $('.vakcina-stranica .akcija-sekcija h2').text(prevodi.vakcinacijeStranica.poziv.naslov);
+        $('.vakcina-stranica .akcija-sekcija p').text(prevodi.vakcinacijeStranica.poziv.opis);
+        $('.vakcina-stranica .dugme-akcija').text(prevodi.vakcinacijeStranica.poziv.dugme);
+        $('.vakcina-stranica .video-sekcija h2').text(prevodi.vakcinacijeStranica.video.naslov);
+        $('.vakcina-stranica .video-sekcija h3').text(prevodi.vakcinacijeStranica.video.podnaslov);
+        $('.vakcina-stranica .video-sekcija p').text(prevodi.vakcinacijeStranica.video.opis);
 
-        $('.donations-page .donation-card h3').eq(2).text(translations.donationsPage.cards.equipment.title);
-        $('.donations-page .donation-card ul').eq(1).find('li').eq(0).text(translations.donationsPage.cards.equipment.items.item1);
-        $('.donations-page .donation-card ul').eq(1).find('li').eq(1).text(translations.donationsPage.cards.equipment.items.item2);
-        $('.donations-page .donation-card ul').eq(1).find('li').eq(2).text(translations.donationsPage.cards.equipment.items.item3);
-        $('.donations-page .donation-card ul').eq(1).find('li').eq(3).text(translations.donationsPage.cards.equipment.items.item4);
+        // DONACIJE
+        $('.donacije-stranica .usluga-detalj h2').text(prevodi.donacijeStranica.naslov);
+        $('.donacije-stranica .usluga-detalj p').first().text(prevodi.donacijeStranica.opis);
 
-        $('.donations-page .donation-card h3').eq(3).text(translations.donationsPage.cards.medical.title);
-        $('.donations-page .donation-card ul').eq(2).find('li').eq(0).text(translations.donationsPage.cards.medical.items.item1);
-        $('.donations-page .donation-card ul').eq(2).find('li').eq(1).text(translations.donationsPage.cards.medical.items.item2);
-        $('.donations-page .donation-card ul').eq(2).find('li').eq(2).text(translations.donationsPage.cards.medical.items.item3);
-//MIKROCIPOVANJE
-        $('.mikrocip .service-detail h2').text(translations.microchipPage.title);
-        $('.mikrocip .service-detail p').eq(0).text(translations.microchipPage.description);
-        $('.mikrocip .service-detail h3').eq(0).text(translations.microchipPage.whatTitle);
-        $('.mikrocip .service-detail p').eq(1).text(translations.microchipPage.whatText);
-        $('.mikrocip .service-detail h3').eq(1).text(translations.microchipPage.procedureTitle);
+        $('.donacije-stranica .donacije-kartica h3').eq(0).text(prevodi.donacijeStranica.kartice.novac.naslov);
+        $('.donacije-stranica .donacije-kartica p').eq(0).text(prevodi.donacijeStranica.kartice.novac.racun);
+        $('.donacije-stranica .donacije-kartica p').eq(1).text(prevodi.donacijeStranica.kartice.novac.paypal);
 
-        $('.mikrocip .service-steps li').eq(0).html(translations.microchipPage.steps.step1);
-        $('.mikrocip .service-steps li').eq(1).html(translations.microchipPage.steps.step2);
-        $('.mikrocip .service-steps li').eq(2).html(translations.microchipPage.steps.step3);
-        $('.mikrocip .service-steps li').eq(3).html(translations.microchipPage.steps.step4);
-        $('.mikrocip .service-steps li').eq(4).html(translations.microchipPage.steps.step5);
+        $('.donacije-stranica .donacije-kartica h3').eq(1).text(prevodi.donacijeStranica.kartice.hrana.naslov);
+        $('.donacije-stranica .donacije-kartica p').eq(2).text(prevodi.donacijeStranica.kartice.hrana.tekst);
+        $('.donacije-stranica .donacije-kartica ul').eq(0).find('li').eq(0).text(prevodi.donacijeStranica.kartice.hrana.stavke.stavka1);
+        $('.donacije-stranica .donacije-kartica ul').eq(0).find('li').eq(1).text(prevodi.donacijeStranica.kartice.hrana.stavke.stavka2);
+        $('.donacije-stranica .donacije-kartica ul').eq(0).find('li').eq(2).text(prevodi.donacijeStranica.kartice.hrana.stavke.stavka3);
 
-        $('.mikrocip .price-card h4').text(translations.microchipPage.priceCard.title);
-        $('.mikrocip .price-item span').eq(0).text(translations.microchipPage.priceCard.item1);
-        $('.mikrocip .price-item span').eq(1).text(translations.microchipPage.priceCard.item2);
-        $('.mikrocip .price-item span').eq(2).text(translations.microchipPage.priceCard.item3);
+        $('.donacije-stranica .donacije-kartica h3').eq(2).text(prevodi.donacijeStranica.kartice.oprema.naslov);
+        $('.donacije-stranica .donacije-kartica ul').eq(1).find('li').eq(0).text(prevodi.donacijeStranica.kartice.oprema.stavke.stavka1);
+        $('.donacije-stranica .donacije-kartica ul').eq(1).find('li').eq(1).text(prevodi.donacijeStranica.kartice.oprema.stavke.stavka2);
+        $('.donacije-stranica .donacije-kartica ul').eq(1).find('li').eq(2).text(prevodi.donacijeStranica.kartice.oprema.stavke.stavka3);
+        $('.donacije-stranica .donacije-kartica ul').eq(1).find('li').eq(3).text(prevodi.donacijeStranica.kartice.oprema.stavke.stavka4);
 
-//PREGLEDI
-        $('.pregledi .service-detail h2').text(translations.checkupsPage.title);
-        $('.pregledi .service-detail p').first().text(translations.checkupsPage.description);
+        $('.donacije-stranica .donacije-kartica h3').eq(3).text(prevodi.donacijeStranica.kartice.medicina.naslov);
+        $('.donacije-stranica .donacije-kartica ul').eq(2).find('li').eq(0).text(prevodi.donacijeStranica.kartice.medicina.stavke.stavka1);
+        $('.donacije-stranica .donacije-kartica ul').eq(2).find('li').eq(1).text(prevodi.donacijeStranica.kartice.medicina.stavke.stavka2);
+        $('.donacije-stranica .donacije-kartica ul').eq(2).find('li').eq(2).text(prevodi.donacijeStranica.kartice.medicina.stavke.stavka3);
 
-        $('.pregledi .service-detail h3').eq(0).text(translations.checkupsPage.includesTitle);
-        $('.pregledi .service-list').eq(0).find('li').eq(0).html(translations.checkupsPage.includesList.item1);
-        $('.pregledi .service-list').eq(0).find('li').eq(1).html(translations.checkupsPage.includesList.item2);
-        $('.pregledi .service-list').eq(0).find('li').eq(2).html(translations.checkupsPage.includesList.item3);
-        $('.pregledi .service-list').eq(0).find('li').eq(3).html(translations.checkupsPage.includesList.item4);
-        $('.pregledi .service-list').eq(0).find('li').eq(4).html(translations.checkupsPage.includesList.item5);
-        $('.pregledi .service-list').eq(0).find('li').eq(5).html(translations.checkupsPage.includesList.item6);
+        // MIKROČIPOVANJE
+        $('.mikrocip-stranica .usluga-detalj h2').text(prevodi.mikrocipStranica.naslov);
+        $('.mikrocip-stranica .usluga-detalj p').eq(0).text(prevodi.mikrocipStranica.opis);
+        $('.mikrocip-stranica .usluga-detalj h3').eq(0).text(prevodi.mikrocipStranica.staJeNaslov);
+        $('.mikrocip-stranica .usluga-detalj p').eq(1).text(prevodi.mikrocipStranica.staJeTekst);
+        $('.mikrocip-stranica .usluga-detalj h3').eq(1).text(prevodi.mikrocipStranica.postupakNaslov);
 
-        $('.pregledi .service-detail h3').eq(1).text(translations.checkupsPage.additionalTitle);
-        $('.pregledi .service-detail ul').eq(1).find('li').eq(0).text(translations.checkupsPage.additionalList.item1);
-        $('.pregledi .service-detail ul').eq(1).find('li').eq(1).text(translations.checkupsPage.additionalList.item2);
-        $('.pregledi .service-detail ul').eq(1).find('li').eq(2).text(translations.checkupsPage.additionalList.item3);
-        $('.pregledi .service-detail ul').eq(1).find('li').eq(3).text(translations.checkupsPage.additionalList.item4);
+        $('.mikrocip-stranica .usluga-koraci li').eq(0).html(prevodi.mikrocipStranica.koraci.korak1);
+        $('.mikrocip-stranica .usluga-koraci li').eq(1).html(prevodi.mikrocipStranica.koraci.korak2);
+        $('.mikrocip-stranica .usluga-koraci li').eq(2).html(prevodi.mikrocipStranica.koraci.korak3);
+        $('.mikrocip-stranica .usluga-koraci li').eq(3).html(prevodi.mikrocipStranica.koraci.korak4);
+        $('.mikrocip-stranica .usluga-koraci li').eq(4).html(prevodi.mikrocipStranica.koraci.korak5);
 
-        $('.pregledi .price-card h4').text(translations.checkupsPage.priceCard.title);
-        $('.pregledi .price-item span').text(translations.checkupsPage.priceCard.item1);
-//STERILIZACIJA
-        $('.sterilizacija .service-detail h2').text(translations.sterilizationPage.title);
-        $('.sterilizacija .service-detail p').first().text(translations.sterilizationPage.description);
+        $('.mikrocip-stranica .cena-kartica h4').text(prevodi.mikrocipStranica.cene.naslov);
+        $('.mikrocip-stranica .cena-stavka span').eq(0).text(prevodi.mikrocipStranica.cene.stavka1);
+        $('.mikrocip-stranica .cena-stavka span').eq(1).text(prevodi.mikrocipStranica.cene.stavka2);
+        $('.mikrocip-stranica .cena-stavka span').eq(2).text(prevodi.mikrocipStranica.cene.stavka3);
 
-        $('.sterilizacija .service-detail h3').eq(0).text(translations.sterilizationPage.benefitsTitle);
-        $('.sterilizacija .service-list li').eq(0).html(translations.sterilizationPage.benefitsList.item1);
-        $('.sterilizacija .service-list li').eq(1).html(translations.sterilizationPage.benefitsList.item2);
-        $('.sterilizacija .service-list li').eq(2).html(translations.sterilizationPage.benefitsList.item3);
-        $('.sterilizacija .service-list li').eq(3).html(translations.sterilizationPage.benefitsList.item4);
-        $('.sterilizacija .service-list li').eq(4).html(translations.sterilizationPage.benefitsList.item5);
+        // PREGLEDI
+        $('.pregledi-stranica .usluga-detalj h2').text(prevodi.preglediStranica.naslov);
+        $('.pregledi-stranica .usluga-detalj p').first().text(prevodi.preglediStranica.opis);
 
-        $('.sterilizacija .service-detail h3').eq(1).text(translations.sterilizationPage.whenTitle);
-        $('.sterilizacija .service-detail p').eq(1).text(translations.sterilizationPage.whenText);
+        $('.pregledi-stranica .usluga-detalj h3').eq(0).text(prevodi.preglediStranica.ukljucujeNaslov);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(0).html(prevodi.preglediStranica.ukljucujeLista.stavka1);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(1).html(prevodi.preglediStranica.ukljucujeLista.stavka2);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(2).html(prevodi.preglediStranica.ukljucujeLista.stavka3);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(3).html(prevodi.preglediStranica.ukljucujeLista.stavka4);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(4).html(prevodi.preglediStranica.ukljucujeLista.stavka5);
+        $('.pregledi-stranica .usluga-lista').eq(0).find('li').eq(5).html(prevodi.preglediStranica.ukljucujeLista.stavka6);
 
-        $('.sterilizacija .price-card h4').text(translations.sterilizationPage.priceCard.title);
-        $('.sterilizacija .price-item span').eq(0).text(translations.sterilizationPage.priceCard.item1);
-        $('.sterilizacija .price-item span').eq(1).text(translations.sterilizationPage.priceCard.item2);
-        $('.sterilizacija .price-item span').eq(2).text(translations.sterilizationPage.priceCard.item3);
-        $('.sterilizacija .price-item span').eq(3).text(translations.sterilizationPage.priceCard.item4);
-        $('.sterilizacija .price-item span').eq(4).text(translations.sterilizationPage.priceCard.item5);
-        $('.sterilizacija .price-item span').eq(5).text(translations.sterilizationPage.priceCard.item6);
-        $('.sterilizacija .price-item span').eq(6).text(translations.sterilizationPage.priceCard.item7);
-//VOLONTIRANJE
-        $('.volontiranje .service-detail h2').text(translations.volunteerPage.title);
-        $('.volontiranje .service-detail p').first().text(translations.volunteerPage.description);
+        $('.pregledi-stranica .usluga-detalj h3').eq(1).text(prevodi.preglediStranica.dodatniNaslov);
+        $('.pregledi-stranica .usluga-detalj ul').eq(1).find('li').eq(0).text(prevodi.preglediStranica.dodatniLista.stavka1);
+        $('.pregledi-stranica .usluga-detalj ul').eq(1).find('li').eq(1).text(prevodi.preglediStranica.dodatniLista.stavka2);
+        $('.pregledi-stranica .usluga-detalj ul').eq(1).find('li').eq(2).text(prevodi.preglediStranica.dodatniLista.stavka3);
+        $('.pregledi-stranica .usluga-detalj ul').eq(1).find('li').eq(3).text(prevodi.preglediStranica.dodatniLista.stavka4);
 
-        $('.volontiranje .service-detail h3').eq(0).text(translations.volunteerPage.activitiesTitle);
-        $('.volontiranje .activity h4').eq(0).text(translations.volunteerPage.activities.walking.title);
-        $('.volontiranje .activity p').eq(0).text(translations.volunteerPage.activities.walking.text);
-        $('.volontiranje .activity h4').eq(1).text(translations.volunteerPage.activities.feeding.title);
-        $('.volontiranje .activity p').eq(1).text(translations.volunteerPage.activities.feeding.text);
-        $('.volontiranje .activity h4').eq(2).text(translations.volunteerPage.activities.cleaning.title);
-        $('.volontiranje .activity p').eq(2).text(translations.volunteerPage.activities.cleaning.text);
-        $('.volontiranje .activity h4').eq(3).text(translations.volunteerPage.activities.photo.title);
-        $('.volontiranje .activity p').eq(3).text(translations.volunteerPage.activities.photo.text);
-        $('.volontiranje .activity h4').eq(4).text(translations.volunteerPage.activities.transport.title);
-        $('.volontiranje .activity p').eq(4).text(translations.volunteerPage.activities.transport.text);
+        $('.pregledi-stranica .cena-kartica h4').text(prevodi.preglediStranica.cenaKartica.naslov);
+        $('.pregledi-stranica .cena-stavka span').text(prevodi.preglediStranica.cenaKartica.stavka1);
 
-        $('.volontiranje .service-detail h3').eq(1).text(translations.volunteerPage.howTitle);
-        $('.volontiranje .service-steps li').eq(0).text(translations.volunteerPage.steps.step1);
-        $('.volontiranje .service-steps li').eq(1).text(translations.volunteerPage.steps.step2);
-        $('.volontiranje .service-steps li').eq(2).text(translations.volunteerPage.steps.step3);
-        $('.volontiranje .service-steps li').eq(3).text(translations.volunteerPage.steps.step4);
+        // STERILIZACIJA
+        $('.sterilizacija-stranica .usluga-detalj h2').text(prevodi.sterilizacijaStranica.naslov);
+        $('.sterilizacija-stranica .usluga-detalj p').first().text(prevodi.sterilizacijaStranica.opis);
 
-        $('.volontiranje .volunteer-form h3').text(translations.volunteerPage.form.title);
-        $('.volontiranje .volunteer-form input[type="text"]').attr('placeholder', translations.volunteerPage.form.namePlaceholder);
-        $('.volontiranje .volunteer-form input[type="email"]').attr('placeholder', translations.volunteerPage.form.emailPlaceholder);
-        $('.volontiranje .volunteer-form input[type="tel"]').attr('placeholder', translations.volunteerPage.form.phonePlaceholder);
-        $('.volontiranje .volunteer-form select option').eq(0).text(translations.volunteerPage.form.selectLabel);
-        $('.volontiranje .volunteer-form select option').eq(1).text(translations.volunteerPage.form.selectOptions.option1);
-        $('.volontiranje .volunteer-form select option').eq(2).text(translations.volunteerPage.form.selectOptions.option2);
-        $('.volontiranje .volunteer-form select option').eq(3).text(translations.volunteerPage.form.selectOptions.option3);
-        $('.volontiranje .volunteer-form select option').eq(4).text(translations.volunteerPage.form.selectOptions.option4);
-        $('.volontiranje .volunteer-form select option').eq(5).text(translations.volunteerPage.form.selectOptions.option5);
-        $('.volontiranje .volunteer-form select option').eq(6).text(translations.volunteerPage.form.selectOptions.option6);
-        $('.volontiranje .volunteer-form textarea').attr('placeholder', translations.volunteerPage.form.textareaPlaceholder);
-        $('.volontiranje .btn-submit').text(translations.volunteerPage.form.submitButton);
+        $('.sterilizacija-stranica .usluga-detalj h3').eq(0).text(prevodi.sterilizacijaStranica.prednostiNaslov);
+        $('.sterilizacija-stranica .usluga-lista li').eq(0).html(prevodi.sterilizacijaStranica.prednostiLista.stavka1);
+        $('.sterilizacija-stranica .usluga-lista li').eq(1).html(prevodi.sterilizacijaStranica.prednostiLista.stavka2);
+        $('.sterilizacija-stranica .usluga-lista li').eq(2).html(prevodi.sterilizacijaStranica.prednostiLista.stavka3);
+        $('.sterilizacija-stranica .usluga-lista li').eq(3).html(prevodi.sterilizacijaStranica.prednostiLista.stavka4);
+        $('.sterilizacija-stranica .usluga-lista li').eq(4).html(prevodi.sterilizacijaStranica.prednostiLista.stavka5);
 
-        $('.volontiranje .info-card h4').text(translations.volunteerPage.infoCard.title);
-        $('.volontiranje .info-card p').eq(0).html(translations.volunteerPage.infoCard.location);
-        $('.volontiranje .info-card p').eq(1).html(translations.volunteerPage.infoCard.time);
-        $('.volontiranje .info-card p').eq(2).html(translations.volunteerPage.infoCard.contact);
-        $('.volontiranje .info-card p').eq(3).html(translations.volunteerPage.infoCard.required);
-// FOOTER
-        $('.footer-section h4').eq(0).text(translations.navigation.name);
-        $('.footer-section h4').eq(1).text(translations.footer.quickLinks);
-        $('.footer-section h4').eq(2).text(translations.footer.contact);
-        $('.footer-section h4').eq(3).text(translations.footer.newsletter);
+        $('.sterilizacija-stranica .usluga-detalj h3').eq(1).text(prevodi.sterilizacijaStranica.kadaNaslov);
+        $('.sterilizacija-stranica .usluga-detalj p').eq(1).text(prevodi.sterilizacijaStranica.kadaTekst);
+
+        $('.sterilizacija-stranica .cena-kartica h4').text(prevodi.sterilizacijaStranica.cene.naslov);
+        $('.sterilizacija-stranica .cena-stavka span').eq(0).text(prevodi.sterilizacijaStranica.cene.stavka1);
+        $('.sterilizacija-stranica .cena-stavka span').eq(1).text(prevodi.sterilizacijaStranica.cene.stavka2);
+        $('.sterilizacija-stranica .cena-stavka span').eq(2).text(prevodi.sterilizacijaStranica.cene.stavka3);
+        $('.sterilizacija-stranica .cena-stavka span').eq(3).text(prevodi.sterilizacijaStranica.cene.stavka4);
+        $('.sterilizacija-stranica .cena-stavka span').eq(4).text(prevodi.sterilizacijaStranica.cene.stavka5);
+        $('.sterilizacija-stranica .cena-stavka span').eq(5).text(prevodi.sterilizacijaStranica.cene.stavka6);
+        $('.sterilizacija-stranica .cena-stavka span').eq(6).text(prevodi.sterilizacijaStranica.cene.stavka7);
+
+        // VOLONTIRANJE
+        $('.volontiranje-stranica .usluga-detalj h2').text(prevodi.volontiranjeStranicaDetalj.naslov);
+        $('.volontiranje-stranica .usluga-detalj p').first().text(prevodi.volontiranjeStranicaDetalj.opis);
+
+        $('.volontiranje-stranica .usluga-detalj h3').eq(0).text(prevodi.volontiranjeStranicaDetalj.aktivnostiNaslov);
+        $('.volontiranje-stranica .aktivnost h4').eq(0).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.setnja.naslov);
+        $('.volontiranje-stranica .aktivnost p').eq(0).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.setnja.tekst);
+        $('.volontiranje-stranica .aktivnost h4').eq(1).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.hranjenje.naslov);
+        $('.volontiranje-stranica .aktivnost p').eq(1).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.hranjenje.tekst);
+        $('.volontiranje-stranica .aktivnost h4').eq(2).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.ciscenje.naslov);
+        $('.volontiranje-stranica .aktivnost p').eq(2).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.ciscenje.tekst);
+        $('.volontiranje-stranica .aktivnost h4').eq(3).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.fotografisanje.naslov);
+        $('.volontiranje-stranica .aktivnost p').eq(3).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.fotografisanje.tekst);
+        $('.volontiranje-stranica .aktivnost h4').eq(4).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.transport.naslov);
+        $('.volontiranje-stranica .aktivnost p').eq(4).text(prevodi.volontiranjeStranicaDetalj.aktivnosti.transport.tekst);
+
+        $('.volontiranje-stranica .usluga-detalj h3').eq(1).text(prevodi.volontiranjeStranicaDetalj.kakoNaslov);
+        $('.volontiranje-stranica .usluga-koraci li').eq(0).text(prevodi.volontiranjeStranicaDetalj.koraci.korak1);
+        $('.volontiranje-stranica .usluga-koraci li').eq(1).text(prevodi.volontiranjeStranicaDetalj.koraci.korak2);
+        $('.volontiranje-stranica .usluga-koraci li').eq(2).text(prevodi.volontiranjeStranicaDetalj.koraci.korak3);
+        $('.volontiranje-stranica .usluga-koraci li').eq(3).text(prevodi.volontiranjeStranicaDetalj.koraci.korak4);
+
+        $('.volontiranje-stranica .volonterska-forma h3').text(prevodi.volontiranjeStranicaDetalj.forma.naslov);
+        $('.volontiranje-stranica .volonterska-forma input[type="text"]').attr('placeholder', prevodi.volontiranjeStranicaDetalj.forma.placeholderIme);
+        $('.volontiranje-stranica .volonterska-forma input[type="email"]').attr('placeholder', prevodi.volontiranjeStranicaDetalj.forma.placeholderEmail);
+        $('.volontiranje-stranica .volonterska-forma input[type="tel"]').attr('placeholder', prevodi.volontiranjeStranicaDetalj.forma.placeholderTelefon);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(0).text(prevodi.volontiranjeStranicaDetalj.forma.izborAktivnosti);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(1).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija1);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(2).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija2);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(3).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija3);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(4).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija4);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(5).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija5);
+        $('.volontiranje-stranica .volonterska-forma select option').eq(6).text(prevodi.volontiranjeStranicaDetalj.forma.opcije.opcija6);
+        $('.volontiranje-stranica .volonterska-forma textarea').attr('placeholder', prevodi.volontiranjeStranicaDetalj.forma.placeholderPoruka);
+        $('.volontiranje-stranica .dugme-slanje').text(prevodi.volontiranjeStranicaDetalj.forma.dugme);
+
+        $('.volontiranje-stranica .info-kartica h4').text(prevodi.volontiranjeStranicaDetalj.infoKartica.naslov);
+        $('.volontiranje-stranica .info-kartica p').eq(0).html(prevodi.volontiranjeStranicaDetalj.infoKartica.lokacija);
+        $('.volontiranje-stranica .info-kartica p').eq(1).html(prevodi.volontiranjeStranicaDetalj.infoKartica.vreme);
+        $('.volontiranje-stranica .info-kartica p').eq(2).html(prevodi.volontiranjeStranicaDetalj.infoKartica.kontakt);
+        $('.volontiranje-stranica .info-kartica p').eq(3).html(prevodi.volontiranjeStranicaDetalj.infoKartica.potrebno);
+
+        // FOOTER
+        $('.podnozje-sekcija h4').eq(0).text(prevodi.navigacija.ime);
+        $('.podnozje-sekcija h4').eq(1).text(prevodi.podnozje.brziLinkovi);
+        $('.podnozje-sekcija h4').eq(2).text(prevodi.podnozje.kontakt);
+        $('.podnozje-sekcija h4').eq(3).text(prevodi.podnozje.novine);
         
+        $('.podnozje-sekcija p').eq(0).text(prevodi.navigacija.opis);
+        $('.podnozje-sekcija p').eq(1).text(prevodi.podnozje.novine);
         
-        $('.footer-section p').eq(0).text(translations.navigation.description);
-        $('.footer-section p').eq(1).text(translations.footer.newsletter);
-        
-       $('.contact-info li').eq(0).html(`<img src="footer/telefon-ikonica.png" alt="Telefon"> ${translations.footer.phone}`);
-        $('.contact-info li').eq(1).html(`<img src="footer/email-ikonica.png" alt="Email"> ${translations.footer.email}`);
-        $('.contact-info li').eq(2).html(`<img src="footer/lokacija-ikonica.png" alt="Lokacija"> ${translations.footer.address}`);
+        $('.kontakt-informacije li').eq(0).html(`<img src="podnozje/telefon-ikonica.png" alt="Telefon"> ${prevodi.podnozje.telefon}`);
+        $('.kontakt-informacije li').eq(1).html(`<img src="podnozje/email-ikonica.png" alt="Email"> ${prevodi.podnozje.email}`);
+        $('.kontakt-informacije li').eq(2).html(`<img src="podnozje/lokacija-ikonica.png" alt="Lokacija"> ${prevodi.podnozje.adresa}`);
 
-        $('.footer-links a[href="index.html"]').text(translations.navigation.home);
-        $('.footer-links a[href="o-nama.html"]').text(translations.navigation.about);
-        $('.footer-links a[href="usluge.html"]').text(translations.navigation.services);
-        $('.footer-links a[href="galerija.html"]').text(translations.navigation.gallery);
-        $('.footer-links a[href="kontakt.html"]').text(translations.navigation.contact);
+        $('.podnozje-linkovi a[href="index.html"]').text(prevodi.navigacija.pocetna);
+        $('.podnozje-linkovi a[href="o-nama.html"]').text(prevodi.navigacija.onama);
+        $('.podnozje-linkovi a[href="usluge.html"]').text(prevodi.navigacija.usluge);
+        $('.podnozje-linkovi a[href="galerija.html"]').text(prevodi.navigacija.galerija);
+        $('.podnozje-linkovi a[href="kontakt.html"]').text(prevodi.navigacija.kontakt);
         
-        $('.newsletter-form input').attr('placeholder', translations.footer.emailPlaceholder);
-        $('.newsletter-form button').text(translations.footer.subscribe);
+        $('.novine-forma input').attr('placeholder', prevodi.podnozje.placeholderEmail);
+        $('.novine-forma button').text(prevodi.podnozje.prijaviSe);
         
-        $('.footer-bottom p').html(`© 2026 ${translations.navigation.name} - ${translations.footer.rights}. | <a href="politika-privatnosti.html">${translations.footer.privacy}</a> | <a href="uslovi.html">${translations.footer.terms}</a>`);
+        $('.podnozje-dno p').html(`© 2026 ${prevodi.navigacija.ime} - ${prevodi.podnozje.prava}. | <a href="politika-privatnosti.html">${prevodi.podnozje.privatnost}</a> | <a href="uslovi.html">${prevodi.podnozje.uslovi}</a>`);
         
         // Kontakt forma
         if ($('#contactForm').length) {
-            $('label[for="name"]').text(translations.contact.name + ' *');
-            $('label[for="email"]').text(translations.contact.email + ' *');
-            $('label[for="phone"]').text(translations.contact.phone);
-            $('label[for="message"]').text(translations.contact.message + ' *');
-            $('.submit-btn').text(translations.contact.send);
+            $('label[for="name"]').text(prevodi.kontakt.ime + ' *');
+            $('label[for="email"]').text(prevodi.kontakt.email + ' *');
+            $('label[for="phone"]').text(prevodi.kontakt.telefon);
+            $('label[for="message"]').text(prevodi.kontakt.poruka + ' *');
+            $('.submit-btn').text(prevodi.kontakt.posalji);
         }
     }
 });

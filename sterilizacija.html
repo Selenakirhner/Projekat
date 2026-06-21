@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO meta tagovi -->
     <meta name="description" content="Sterilizacija i kastracija pasa i mačaka u Beogradu. Povoljne cene, siguran postupak. Sterilizacija produžava životni vek ljubimca.">
     <meta name="keywords" content="sterilizacija pasa, sterilizacija mačaka, kastracija, sterilisati psa, sterilisati mačku, veterinar, operacija">
     <meta name="author" content="Šapica sreće">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph meta tagovi -->
     <meta property="og:title" content="Sterilizacija i kastracija - Šapica sreće">
     <meta property="og:description" content="Odgovorno vlasništvo - sterilišite svog ljubimca.">
-    <meta property="og:image" content="logo.png">
-    <meta property="og:url" content="https://selenakirhner.github.io/Projekat">
+    <meta property="og:image" content="logotip.png">
+    <meta property="og:url" content="https://selenakirhner.github.io/Projekat/sterilizacija.html">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card meta tagovi -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sterilizacija - Šapica sreće">
     <meta name="twitter:description" content="Sterilizacija produžava životni vek ljubimca.">
-    <meta name="twitter:image" content="logo.png">
+    <meta name="twitter:image" content="logotip.png">
     
     <title>Šapica sreće | Sterilizacija</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
     <link rel="icon" type="image/png" href="sapica.png">
     <script type="application/ld+json">
         {
@@ -34,7 +31,7 @@
         "name": "Šapica sreće",
         "alternateName": "Udruženje za udomljavanje životinja Šapica sreće",
         "url": "https://selenakirhner.github.io/Projekat",
-        "logo": "logo.png",
+        "logo": "logotip.png",
         "description": "Udruženje za udomljavanje pasa i mačaka. Pružamo šapu ljubavi svakoj životinji.",
         "foundingDate": "2015",
         "email": "info@sapica-srece.rs",
@@ -67,32 +64,32 @@
         }
     </script>
 </head>
-<body class="sterilizacija">
+<body class="sterilizacija-stranica">
     <header>
-        <nav class="main-nav">
-            <div class="nav-container">
+        <nav class="glavna-navigacija">
+            <div class="navigacija-kontejner">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="logo.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
+                        <img src="logotip.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
                     </a>
                 </div>
 
-                <ul class="nav-menu">
+                <ul class="navigacija-meni">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
 
-                    <li class="mega-menu-trigger">
-                        <a href="usluge.html" class="active">Usluge</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-grid">
-                                <div class="mega-col">
+                    <li class="megameni-okidac">
+                        <a href="usluge.html" class="aktivan">Usluge</a>
+                        <div class="megameni">
+                            <div class="megameni-mreza">
+                                <div class="megameni-kolona">
                                     <h3>Udomljavanje</h3>
                                     <ul>
                                         <li><a href="psi.html">Psi za udomljavanje</a></li>
                                         <li><a href="macke.html">Mačke za udomljavanje</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Veterinarska pomoć</h3>
                                     <ul>
                                         <li><a href="vakcinacije.html">Vakcinacije</a></li>
@@ -101,7 +98,7 @@
                                         <li><a href="pregledi.html">Zdravstveni pregledi</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Volontiranje</h3>
                                     <ul>
                                         <li><a href="volontiranje.html">Postani volonter</a></li>
@@ -116,13 +113,13 @@
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
 
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="sr">SRB</button>
-                    <button class="lang-btn" data-lang="en">ENG</button>
+                <div class="jezik-selektor">
+                    <button class="jezik-dugme aktivan" data-lang="sr">SRB</button>
+                    <button class="jezik-dugme" data-lang="en">ENG</button>
                 </div>
-                <a href="donacije.html" class="donate-btn pulse-animation">Doniraj</a>
+                <a href="donacije.html" class="doniraj-dugme pulsirajuca-animacija">Doniraj</a>
                 
-                <button class="hamburger-menu">
+                <button class="hamburger-meni">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -130,82 +127,83 @@
             </div>
         </nav>
     </header>
+
     <main>
-    <section class="service-detail">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h2>Sterilizacija i kastracija</h2>
-                    <p>Sterilizacija je odgovoran čin svakog vlasnika. Pomaže u kontroli populacije, smanjuje rizik od određenih bolesti i produžava životni vek ljubimca.</p>
+        <section class="usluga-detalj">
+            <div class="kontejner">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>Sterilizacija i kastracija</h2>
+                        <p>Sterilizacija je odgovoran čin svakog vlasnika. Pomaže u kontroli populacije, smanjuje rizik od određenih bolesti i produžava životni vek ljubimca.</p>
+                        
+                        <h3>Prednosti sterilizacije:</h3>
+                        <ul class="usluga-lista">
+                            <li><strong>Smanjuje rizik od tumora mlečnih žlezdi</strong> (posebno ako se uradi pre prvog teranja)</li>
+                            <li><strong>Eliminiše rizik od piometre</strong> - infekcije materice</li>
+                            <li><strong>Smanjuje agresivnost</strong> i želju za lutanjem</li>
+                            <li><strong>Nema neželjenih štenaca</strong> - odgovorno vlasništvo</li>
+                            <li><strong>Produžava životni vek</strong> u proseku 1-3 godine</li>
+                        </ul>
+                        
+                        <h3>Kada uraditi sterilizaciju?</h3>
+                        <p>Preporučuje se između 6 i 12 meseci starosti, u zavisnosti od rase i veličine psa. Za manje rane može i ranije, za velike kasnije.</p>
+                    </div>
                     
-                    <h3>Prednosti sterilizacije:</h3>
-                    <ul class="service-list">
-                        <li><strong>Smanjuje rizik od tumora mlečnih žlezdi</strong> (posebno ako se uradi pre prvog teranja)</li>
-                        <li><strong>Eliminiše rizik od piometre</strong> - infekcije materice</li>
-                        <li><strong>Smanjuje agresivnost</strong> i želju za lutanjem</li>
-                        <li><strong>Nema neželjenih štenaca</strong> - odgovorno vlasništvo</li>
-                        <li><strong>Produžava životni vek</strong> u proseku 1-3 godine</li>
-                    </ul>
-                    
-                    <h3>Kada uraditi sterilizaciju?</h3>
-                    <p>Preporučuje se između 6 i 12 meseci starosti, u zavisnosti od rase i veličine psa. Za manje rane može i ranije, za velike kasnije.</p>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="price-card">
-                        <h4>Cene sterilizacije</h4>
-                        <div class="price-item">
-                            <span>Mužjak - pas (do 15kg)</span>
-                            <strong>4.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Mužjak - pas (15-30kg)</span>
-                            <strong>5.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Mužjak - pas (preko 30kg)</span>
-                            <strong>6.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Ženka - pas (do 15kg)</span>
-                            <strong>6.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Ženka - pas (15-30kg)</span>
-                            <strong>7.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Ženka - pas (preko 30kg)</span>
-                            <strong>8.500 RSD</strong>
-                        </div>
-                        <div class="price-item">
-                            <span>Mačke (mužjak/ženka)</span>
-                            <strong>3.500/4.500 RSD</strong>
+                    <div class="col-lg-4">
+                        <div class="cena-kartica">
+                            <h4>Cene sterilizacije</h4>
+                            <div class="cena-stavka">
+                                <span>Mužjak - pas (do 15kg)</span>
+                                <strong>4.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Mužjak - pas (15-30kg)</span>
+                                <strong>5.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Mužjak - pas (preko 30kg)</span>
+                                <strong>6.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Ženka - pas (do 15kg)</span>
+                                <strong>6.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Ženka - pas (15-30kg)</span>
+                                <strong>7.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Ženka - pas (preko 30kg)</span>
+                                <strong>8.500 RSD</strong>
+                            </div>
+                            <div class="cena-stavka">
+                                <span>Mačke (mužjak/ženka)</span>
+                                <strong>3.500/4.500 RSD</strong>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="podnozje-sadrzaj">
+            <div class="podnozje-sekcija">
                 <h4>Šapica sreće</h4>
                 <p>Pružamo šapu ljubavi svakoj životinji. Udruženje za udomljavanje životinja osnovano 2015. godine.</p>
                 
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><img src="footer/fb-ikonica.png" alt="Facebook"></a>
-                    <a href="#" aria-label="Instagram"><img src="footer/Instagram_ikonica.png" alt="Instagram"></a>
-                    <a href="#" aria-label="YouTube"><img src="footer/yt-ikonica.png" alt="YouTube"></a>
-                    <a href="#" aria-label="Twitter"><img src="footer/X_ikonica.png" alt="Twitter"></a>
+                <div class="drustvene-ikonice">
+                    <a href="#" aria-label="Facebook"><img src="podnozje/fb-ikonica.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="podnozje/Instagram_ikonica.png" alt="Instagram"></a>
+                    <a href="#" aria-label="YouTube"><img src="podnozje/yt-ikonica.png" alt="YouTube"></a>
+                    <a href="#" aria-label="Twitter"><img src="podnozje/X_ikonica.png" alt="Twitter"></a>
                 </div>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Brzi linkovi</h4>
-                <ul class="footer-links">
+                <ul class="podnozje-linkovi">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
@@ -214,32 +212,32 @@
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Kontaktirajte nas</h4>
-                <ul class="contact-info">
-                    <li><img src="footer/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
-                    <li><img src="footer/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
-                    <li><img src="footer/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
+                <ul class="kontakt-informacije">
+                    <li><img src="podnozje/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
+                    <li><img src="podnozje/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
+                    <li><img src="podnozje/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Prijavite se na newsletter</h4>
                 <p>Budite u toku sa novostima</p>
-                <form class="newsletter-form">
+                <form class="novine-forma">
                     <input type="email" placeholder="Vaš email" required>
                     <button type="submit">Prijavi se</button>
                 </form>
             </div>
         </div>
         
-        <div class="footer-bottom">
-            <p>&copy; 2024 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
+        <div class="podnozje-dno">
+            <p>&copy; 2026 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
         </div>
     </footer>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+    <script src="skripte/jquery-3.6.0.min.js"></script>
+    <script src="glavni.js"></script>
     <script src="jezik.js"></script>
 </body>
 </html>

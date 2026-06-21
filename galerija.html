@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO meta tagovi -->
     <meta name="description" content="Galerija naših štićenika - Pogledajte pse i mačke koji čekaju svoj dom. Slatke slike pasa i mačaka za udomljavanje.">
     <meta name="keywords" content="galerija, slike pasa, slike mačaka, štenci, mačići, udomljavanje">
     <meta name="author" content="Šapica sreće">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Galerija - Šapica sreće">
     <meta property="og:description" content="Pogledajte naše štićenike koji čekaju svoj dom.">
-    <meta property="og:image" content="logo.png">
+    <meta property="og:image" content="logotip.png">
     <meta property="og:url" content="https://selenakirhner.github.io/Projekat/galerija.html">
     
     <title>Šapica sreće | Galerija</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stil.css">
     <link rel="icon" type="image/png" href="sapica.png">
     <script type="application/ld+json">
         {
@@ -27,7 +25,7 @@
         "name": "Šapica sreće",
         "alternateName": "Udruženje za udomljavanje životinja Šapica sreće",
         "url": "https://selenakirhner.github.io/Projekat",
-        "logo": "logo.png",
+        "logo": "logotip.png",
         "description": "Udruženje za udomljavanje pasa i mačaka. Pružamo šapu ljubavi svakoj životinji.",
         "foundingDate": "2015",
         "email": "info@sapica-srece.rs",
@@ -62,30 +60,30 @@
 </head>
 <body>
     <header>
-        <nav class="main-nav">
-            <div class="nav-container">
+        <nav class="glavna-navigacija">
+            <div class="navigacija-kontejner">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="logo.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
+                        <img src="logotip.png" alt="Šapica sreće - Udruženje za udomljavanje životinja">
                     </a>
                 </div>
 
-                <ul class="nav-menu">
+                <ul class="navigacija-meni">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
 
-                    <li class="mega-menu-trigger">
+                    <li class="megameni-okidac">
                         <a href="usluge.html">Usluge</a>
-                        <div class="mega-menu">
-                            <div class="mega-menu-grid">
-                                <div class="mega-col">
+                        <div class="megameni">
+                            <div class="megameni-mreza">
+                                <div class="megameni-kolona">
                                     <h3>Udomljavanje</h3>
                                     <ul>
                                         <li><a href="psi.html">Psi za udomljavanje</a></li>
                                         <li><a href="macke.html">Mačke za udomljavanje</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Veterinarska pomoć</h3>
                                     <ul>
                                         <li><a href="vakcinacije.html">Vakcinacije</a></li>
@@ -94,7 +92,7 @@
                                         <li><a href="pregledi.html">Zdravstveni pregledi</a></li>
                                     </ul>
                                 </div>
-                                <div class="mega-col">
+                                <div class="megameni-kolona">
                                     <h3>Volontiranje</h3>
                                     <ul>
                                         <li><a href="volontiranje.html">Postani volonter</a></li>
@@ -105,17 +103,17 @@
                         </div>
                     </li>
                     
-                    <li><a href="galerija.html" class="active">Galerija</a></li>
+                    <li><a href="galerija.html" class="aktivan">Galerija</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
 
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="sr">SRB</button>
-                    <button class="lang-btn" data-lang="en">ENG</button>
+                <div class="jezik-selektor">
+                    <button class="jezik-dugme aktivan" data-lang="sr">SRB</button>
+                    <button class="jezik-dugme" data-lang="en">ENG</button>
                 </div>
-                <a href="donacije.html" class="donate-btn pulse-animation">Doniraj</a>
+                <a href="donacije.html" class="doniraj-dugme pulsirajuca-animacija">Doniraj</a>
                 
-                <button class="hamburger-menu">
+                <button class="hamburger-meni">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -124,127 +122,128 @@
         </nav>
     </header>
 
-<main>
-<section class="gallery-section">
-    <div class="container">
-        <h1 class="section-title">Upoznajte naš tim i azil</h1>
-        <p class="gallery-intro">
-            Pogledajte kako izgleda život u našem azilu, upoznajte volontere 
-            i pogledajte prostor u kome naši štićenici borave dok čekaju svoj dom.
-        </p>
+    <main>
+        <section class="galerija-sekcija">
+            <div class="kontejner">
+                <h1 class="sekcija-naslov">Upoznajte naš tim i azil</h1>
+                <p class="galerija-uvod">
+                    Pogledajte kako izgleda život u našem azilu, upoznajte volontere 
+                    i pogledajte prostor u kome naši štićenici borave dok čekaju svoj dom.
+                </p>
 
-        <div class="gallery-grid">
-            <div class="gallery-item" data-category="team">
-                <img src="galerija/slika1.webp" alt="Naš veterinarski tim">
-                <div class="gallery-overlay">
-                    <h3>Veterinarski tim</h3>
-                    <p>Dr Marković i sestre Jovanović</p>
-                    <p class="description">Brine se o zdravlju naših štićenika</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="team">
-                <img src="galerija/slika2.jpg" alt="Menadžment tim">
-                <div class="gallery-overlay">
-                    <h3>Upravni tim</h3>
-                    <p>Koordinacija i organizacija</p>
-                    <p class="description">5 godina iskustva u udomljavanju</p>
-                </div>
-            </div>
+                <div class="galerija-mreza">
+                    <div class="galerija-stavka" data-category="team">
+                        <img src="galerija/slika1.webp" alt="Naš veterinarski tim">
+                        <div class="galerija-preklop">
+                            <h3>Veterinarski tim</h3>
+                            <p>Dr Marković i sestre Jovanović</p>
+                            <p class="opis">Brine se o zdravlju naših štićenika</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="team">
+                        <img src="galerija/slika2.jpg" alt="Menadžment tim">
+                        <div class="galerija-preklop">
+                            <h3>Upravni tim</h3>
+                            <p>Koordinacija i organizacija</p>
+                            <p class="opis">5 godina iskustva u udomljavanju</p>
+                        </div>
+                    </div>
 
-            <div class="gallery-item" data-category="facility">
-                <img src="galerija/slika3.jpg" alt="Prostor za pse">
-                <div class="gallery-overlay">
-                    <h3>Prostor za pse</h3>
-                    <p>Moderni boksevi sa dvorištem</p>
-                    <p class="description">Svaki pas ima svoj krevet i igračke</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="facility">
-                <img src="galerija/slika4.webp" alt="Prostor za mačke">
-                <div class="gallery-overlay">
-                    <h3>Mačja soba</h3>
-                    <p>Topao prostor za krznene prijatelje</p>
-                    <p class="description">Mačke se slobodno kreću</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="facility">
-                <img src="galerija/slika5.jpg" alt="Veterinarska ambulanta">
-                <div class="gallery-overlay">
-                    <h3>Veterinarska ambulanta</h3>
-                    <p>Potpuno opremljena</p>
-                    <p class="description">Redovni pregledi i vakcinacije</p>
-                </div>
-            </div>
+                    <div class="galerija-stavka" data-category="facility">
+                        <img src="galerija/slika3.jpg" alt="Prostor za pse">
+                        <div class="galerija-preklop">
+                            <h3>Prostor za pse</h3>
+                            <p>Moderni boksevi sa dvorištem</p>
+                            <p class="opis">Svaki pas ima svoj krevet i igračke</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="facility">
+                        <img src="galerija/slika4.webp" alt="Prostor za mačke">
+                        <div class="galerija-preklop">
+                            <h3>Mačja soba</h3>
+                            <p>Topao prostor za krznene prijatelje</p>
+                            <p class="opis">Mačke se slobodno kreću</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="facility">
+                        <img src="galerija/slika5.jpg" alt="Veterinarska ambulanta">
+                        <div class="galerija-preklop">
+                            <h3>Veterinarska ambulanta</h3>
+                            <p>Potpuno opremljena</p>
+                            <p class="opis">Redovni pregledi i vakcinacije</p>
+                        </div>
+                    </div>
 
-            <div class="gallery-item" data-category="animals">
-                <img src="galerija/slika6.jpg" alt="Psi u šetnji">
-                <div class="gallery-overlay">
-                    <h3>Psi u šetnji</h3>
-                    <p>Uživaju u prirodi</p>
-                    <p class="description">Svakodnevne aktivnosti</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="animals">
-                <img src="galerija/slika7.jpg" alt="Mačke na prozoru">
-                <div class="gallery-overlay">
-                    <h3>Mačke posmatraju</h3>
-                    <p>Lili</p>
-                    <p class="description">Vaši najbolji drugari</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-category="animals">
-                <img src="galerija/slika8.jpg" alt="Štenad">
-                <div class="gallery-overlay">
-                    <h3>Štenad</h3>
-                    <p>Leglo od 5 šteneta</p>
-                    <p class="description">Rođeni u azilu, spremni za dom</p>
-                </div>
-            </div>
+                    <div class="galerija-stavka" data-category="animals">
+                        <img src="galerija/slika6.jpg" alt="Psi u šetnji">
+                        <div class="galerija-preklop">
+                            <h3>Psi u šetnji</h3>
+                            <p>Uživaju u prirodi</p>
+                            <p class="opis">Svakodnevne aktivnosti</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="animals">
+                        <img src="galerija/slika7.jpg" alt="Mačke na prozoru">
+                        <div class="galerija-preklop">
+                            <h3>Mačke posmatraju</h3>
+                            <p>Lili</p>
+                            <p class="opis">Vaši najbolji drugari</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="animals">
+                        <img src="galerija/slika8.jpg" alt="Štenad">
+                        <div class="galerija-preklop">
+                            <h3>Štenad</h3>
+                            <p>Leglo od 5 šteneta</p>
+                            <p class="opis">Rođeni u azilu, spremni za dom</p>
+                        </div>
+                    </div>
 
-            <div class="gallery-item" data-category="volunteers">
-                <img src="galerija/slika9.jpg" alt="Volonteri sa psima">
-                <div class="gallery-overlay">
-                    <h3>Volonterski tim</h3>
-                    <p>Subotom u azilu</p>
-                    <p class="description">Druženje sa psima</p>
+                    <div class="galerija-stavka" data-category="volunteers">
+                        <img src="galerija/slika9.jpg" alt="Volonteri sa psima">
+                        <div class="galerija-preklop">
+                            <h3>Volonterski tim</h3>
+                            <p>Subotom u azilu</p>
+                            <p class="opis">Druženje sa psima</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galerija-stavka" data-category="volunteers">
+                        <img src="galerija/slika10.jpg" alt="Čišćenje prostora">
+                        <div class="galerija-preklop">
+                            <h3>Akcija čišćenja</h3>
+                            <p>Zajedno do čistog prostora</p>
+                            <p class="opis">Hvala svim volonterima</p>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
-            
-            <div class="gallery-item" data-category="volunteers">
-                <img src="galerija/slika10.jpg" alt="Čišćenje prostora">
-                <div class="gallery-overlay">
-                    <h3>Akcija čišćenja</h3>
-                    <p>Zajedno do čistog prostora</p>
-                    <p class="description">Hvala svim volonterima</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
-</main>
+        </section>
+    </main>
+    
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="podnozje-sadrzaj">
+            <div class="podnozje-sekcija">
                 <h4>Šapica sreće</h4>
                 <p>Pružamo šapu ljubavi svakoj životinji. Udruženje za udomljavanje životinja osnovano 2015. godine.</p>
                 
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><img src="footer/fb-ikonica.png" alt="Facebook"></a>
-                    <a href="#" aria-label="Instagram"><img src="footer/Instagram_ikonica.png" alt="Instagram"></a>
-                    <a href="#" aria-label="YouTube"><img src="footer/yt-ikonica.png" alt="YouTube"></a>
-                    <a href="#" aria-label="Twitter"><img src="footer/X_ikonica.png" alt="Twitter"></a>
+                <div class="drustvene-ikonice">
+                    <a href="#" aria-label="Facebook"><img src="podnozje/fb-ikonica.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="podnozje/Instagram_ikonica.png" alt="Instagram"></a>
+                    <a href="#" aria-label="YouTube"><img src="podnozje/yt-ikonica.png" alt="YouTube"></a>
+                    <a href="#" aria-label="Twitter"><img src="podnozje/X_ikonica.png" alt="Twitter"></a>
                 </div>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Brzi linkovi</h4>
-                <ul class="footer-links">
+                <ul class="podnozje-linkovi">
                     <li><a href="index.html">Početna</a></li>
                     <li><a href="o-nama.html">O nama</a></li>
                     <li><a href="usluge.html">Usluge</a></li>
@@ -253,35 +252,34 @@
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Kontaktirajte nas</h4>
-                <ul class="contact-info">
-                    <li><img src="footer/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
-                    <li><img src="footer/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
-                    <li><img src="footer/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
+                <ul class="kontakt-informacije">
+                    <li><img src="podnozje/telefon-ikonica.png" alt="Telefon"> 011/123-456</li>
+                    <li><img src="podnozje/email-ikonica.png" alt="Email"> info@sapica-srece.rs</li>
+                    <li><img src="podnozje/lokacija-ikonica.png" alt="Lokacija"> Bulevar oslobođenja 123, Beograd</li>
                 </ul>
             </div>
 
-            <div class="footer-section">
+            <div class="podnozje-sekcija">
                 <h4>Prijavite se na newsletter</h4>
                 <p>Budite u toku sa novostima</p>
-                <form class="newsletter-form">
+                <form class="novine-forma">
                     <input type="email" placeholder="Vaš email" required>
                     <button type="submit">Prijavi se</button>
                 </form>
             </div>
         </div>
         
-        <div class="footer-bottom">
+        <div class="podnozje-dno">
             <p>&copy; 2026 Šapica sreće - Sva prava zadržana. | <a href="politika-privatnosti.html">Politika privatnosti</a> | <a href="uslovi.html">Uslovi korišćenja</a></p>
         </div>
     </footer>
 
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
-    <script src="slider.js"></script>
-    <script src="lightbox.js"></script>
-    <script src="gallery-filters.js"></script>
+    <script src="skripte/jquery-3.6.0.min.js"></script>
+    <script src="glavni.js"></script>
+    <script src="klizac.js"></script>
+    <script src="svetlosna-kutija.js"></script>
     <script src="jezik.js"></script>
     
 </body>
