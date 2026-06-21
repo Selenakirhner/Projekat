@@ -229,7 +229,7 @@ $(document).ready(function() {
     const $themeBtn = $('<button>', {
         id: 'tema-promena-bocno',
         class: 'bocno-dugme tema-dugme',
-        text: '🌙',
+        text: 'T',
         'aria-label': 'Promeni temu'
     }).css({
         'position': 'fixed',
