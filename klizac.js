@@ -122,12 +122,10 @@ class KlizacSlika {
     }
 }
 
-// Inicijalizacija slajdera kada se DOM učita
 document.addEventListener('DOMContentLoaded', function() {
     new KlizacSlika('.klizac');
 });
 
-// Eksport za korišćenje u drugim modulima (ako je potrebno)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = KlizacSlika;
 }
