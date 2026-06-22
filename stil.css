@@ -432,11 +432,13 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease;
 }
 
 .slajd.aktivan {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .slajd img {
