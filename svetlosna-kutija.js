@@ -6,13 +6,11 @@
     });
     
     function pokreniSvetlosnuKutiju() {
-        // Proveri da li smo na stranici sa galerijom
         const galerijaStavke = document.querySelectorAll('.galerija-stavka');
         if (galerijaStavke.length === 0) return;
 
         napraviSvetlosnuKutiju();
-        
-        // Elementi svetlosne kutije
+
         const svetlosnaKutija = document.getElementById('svetlosna-kutija');
         const slikaUKutiji = document.getElementById('svetlosna-kutija-slika');
         const natpisUKutiji = document.getElementById('svetlosna-kutija-natpis');
@@ -21,8 +19,7 @@
         const dugmeSledece = document.querySelector('.svetlosna-kutija-sledece');
         
         let trenutniIndex = 0;
-        
-        // Otvaranje svetlosne kutije na klik slike
+
         galerijaStavke.forEach((stavka, index) => {
             stavka.addEventListener('click', function() {
                 trenutniIndex = index;
@@ -38,40 +35,35 @@
             svetlosnaKutija.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
-        
-        // Zatvaranje
+
         if (dugmeZatvori) {
             dugmeZatvori.addEventListener('click', function() {
                 svetlosnaKutija.style.display = 'none';
                 document.body.style.overflow = 'auto';
             });
         }
-        
-        // Klik van slike
+
         svetlosnaKutija.addEventListener('click', function(e) {
             if (e.target === svetlosnaKutija) {
                 svetlosnaKutija.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
         });
-        
-        // Prethodna slika
+
         if (dugmePre) {
             dugmePre.addEventListener('click', function() {
                 trenutniIndex = (trenutniIndex - 1 + galerijaStavke.length) % galerijaStavke.length;
                 otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
             });
         }
-        
-        // Sledeća slika
+
         if (dugmeSledece) {
             dugmeSledece.addEventListener('click', function() {
                 trenutniIndex = (trenutniIndex + 1) % galerijaStavke.length;
                 otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
             });
         }
-        
-        // Tastatura
+
         document.addEventListener('keydown', function(e) {
             if (svetlosnaKutija.style.display === 'block') {
                 if (e.key === 'Escape') {
