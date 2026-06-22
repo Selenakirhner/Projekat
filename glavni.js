@@ -1,4 +1,3 @@
-// Čekamo da se DOM učita
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     pokreniMobilniMeni();
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     pokreniAnimacijeNaSkrol();
 });
 
-// MOBILNI MENI - Hamburger meni za mobilne uređaje
 function pokreniMobilniMeni() {
     const hamburger = document.querySelector('.hamburger-meni');
     const navMenu = document.querySelector('.navigacija-meni');
@@ -44,7 +42,6 @@ function pokreniMobilniMeni() {
         });
     }
     
-    // Zatvaranje menija kada se klikne van njega
     document.addEventListener('click', function(e) {
         if (navMenu && navMenu.classList.contains('aktivan')) {
             if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
@@ -60,7 +57,6 @@ function pokreniMobilniMeni() {
     });
 }
 
-// GLATKO SKROLOVANJE - Za anchor linkove
 function pokreniGlatkoSkrolovanje() {
     const links = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     
@@ -85,7 +81,6 @@ function pokreniGlatkoSkrolovanje() {
     });
 }
 
-// NEWSLETTER FORMA - Validacija i slanje
 function pokreniNovineFormu() {
     const forms = document.querySelectorAll('.novine-forma');
     
@@ -117,13 +112,11 @@ function pokreniNovineFormu() {
     });
 }
 
-// VALIDACIJA EMAILA
 function proveriEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// NOTIFIKACIJA
 function prikaziObavestenje(message, type = 'info') {
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
@@ -157,7 +150,6 @@ function prikaziObavestenje(message, type = 'info') {
     }, 3000);
 }
 
-// ANIMACIJE NA SKROL
 function pokreniAnimacijeNaSkrol() {
     const animatedElements = document.querySelectorAll('.usluga-kartica, .tim-kartica, .stat-stavka, .galerija-stavka');
     
@@ -185,7 +177,6 @@ function pokreniAnimacijeNaSkrol() {
     }
 }
 
-// CSS za animacije
 const fadeStyle = document.createElement('style');
 fadeStyle.textContent = `
     .fade-in {
@@ -224,8 +215,7 @@ fadeStyle.textContent = `
 document.head.appendChild(fadeStyle);
 
 $(document).ready(function() {
-    
-    // DUGME ZA TEMU SA STRANE
+
     const $themeBtn = $('<button>', {
         id: 'tema-promena-bocno',
         class: 'bocno-dugme tema-dugme',
@@ -252,8 +242,7 @@ $(document).ready(function() {
     });
     
     $('body').append($themeBtn);
-    
-    // DUGME ZA FONT SA STRANE
+
     const $fontControls = $('<div>', {
         id: 'font-bocne-kontrole',
         class: 'font-bocne-kontrole'
@@ -337,8 +326,7 @@ $(document).ready(function() {
     
     $fontControls.append($fontDecrease, $fontReset, $fontIncrease);
     $('body').append($fontControls);
-    
-    // BACK TO TOP DUGME
+  
     const backToTopBtn = document.createElement('button');
     backToTopBtn.innerHTML = '^';
     backToTopBtn.setAttribute('aria-label', 'Nazad na vrh');
@@ -362,8 +350,7 @@ $(document).ready(function() {
     `;
     
     document.body.appendChild(backToTopBtn);
-    
-    // HOVER EFEKTI ZA DUGMAD
+
     $('.bocno-dugme').on('mouseenter', function() {
         $(this).css({
             'background': '#006f12',
@@ -385,8 +372,7 @@ $(document).ready(function() {
         this.style.background = '#378a3a';
         this.style.transform = 'translateY(0)';
     });
-    
-    // TAMNA TEMA
+ 
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme === 'dark') {
@@ -410,8 +396,7 @@ $(document).ready(function() {
             localStorage.setItem('theme', 'light');
         }
     });
-    
-    // KONTROLA FONTA
+
     (function() {
         const baseSize = 16;
         let currentSize = localStorage.getItem('fontSize') ? 
@@ -441,8 +426,7 @@ $(document).ready(function() {
             }
         });
     })();
-    
-    // PRIKAZIVANJE NA SKROLU
+
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 300) {
             $themeBtn.fadeIn(300);
@@ -454,8 +438,7 @@ $(document).ready(function() {
             $(backToTopBtn).fadeOut(300);
         }
     });
-    
-    // BACK TO TOP KLIK
+
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
