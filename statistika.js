@@ -67,7 +67,6 @@
             }
         }
         
-        // Provera vidljivosti i pokretanje animacije
         window.addEventListener('scroll', proveriVidljivostIPokreniAnimaciju);
         proveriVidljivostIPokreniAnimaciju();
     }
