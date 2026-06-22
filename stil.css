@@ -1643,6 +1643,7 @@ body {
     font-style: italic;
 }
 
+
 /* ===== 12. DONACIJE ===== */
 .donacije-opcije {
     display: grid;
@@ -2128,29 +2129,6 @@ h3+ul::after {
     }
 }
 
-/* ===== 18. DUGME ZA TEMU ===== */
-.tema-promena-dugme {
-    background: transparent;
-    border: 2px solid var(--primarna-boja);
-    color: var(--primarna-boja);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--prelaz);
-    margin-left: 1rem;
-}
-
-.tema-promena-dugme:hover {
-    background: var(--primarna-boja);
-    color: white;
-    transform: scale(1.1);
-}
-
 /* Kada je crna tema aktivna */
 body.tamna-tema {
     background-color: #121212;
@@ -2269,17 +2247,6 @@ body.tamna-tema .megameni-kolona ul li a {
 body.tamna-tema .vakcina-tabela td {
     background-color: #2d2d2d;
     color: #e0e0e0;
-}
-
-body.tamna-tema .tema-promena-dugme {
-    background: var(--primarna-boja);
-    color: #121212;
-    border-color: var(--primarna-boja);
-}
-
-body.tamna-tema .tema-promena-dugme:hover {
-    background: transparent;
-    color: var(--primarna-boja);
 }
 
 /* GALERIJA */
@@ -2528,26 +2495,6 @@ body.tamna-tema .dokumenti-lista .dokument-link:hover small {
     color: #121212 !important;
 }
 
-/* Tamna tema - dugme za temu */
-body.tamna-tema .tema-promena-bocno {
-    background: var(--primarna-boja) !important;
-}
-
-body.tamna-tema .tema-promena-bocno:hover {
-    background: var(--primarna-boja) !important;
-}
-
-/* Tamna tema - dugmad za font */
-body.tamna-tema .font-dugme {
-    border-color: var(--primarna-boja);
-    color: var(--primarna-boja);
-}
-
-body.tamna-tema .font-dugme:hover {
-    background: var(--primarna-boja);
-    color: #121212;
-}
-
 /* ===== 19. BOOTSTRAP KLASE ===== */
 .bg-success {
     background-color: var(--primarna-boja) !important;
@@ -2627,4 +2574,77 @@ body.tamna-tema .jezik-dugme.aktivan {
     body.tamna-tema .megameni-kolona ul li a {
         color: #c0c0c0 !important;
     }
+}
+/* ===== KONTAKT STRANICA - TAMNA TEMA ===== */
+body.tamna-tema .card {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.tamna-tema .card .text-secondary {
+    color: #b0b0b0 !important;
+}
+
+body.tamna-tema .bg-light {
+    background-color: #1a1a1a !important;
+}
+
+body.tamna-tema .form-control,
+body.tamna-tema .form-select {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.tamna-tema .form-control:focus,
+body.tamna-tema .form-select:focus {
+    background-color: #333 !important;
+    border-color: var(--primarna-boja) !important;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25) !important;
+}
+
+body.tamna-tema .form-control::placeholder {
+    color: #888 !important;
+}
+
+body.tamna-tema .form-check-input {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+body.tamna-tema .form-check-input:checked {
+    background-color: var(--primarna-boja) !important;
+    border-color: var(--primarna-boja) !important;
+}
+
+body.tamna-tema .list-unstyled .border-bottom {
+    border-bottom-color: #333 !important;
+}
+
+body.tamna-tema .list-unstyled .text-danger {
+    color: #ff6b6b !important;
+}
+
+body.tamna-tema .btn-success {
+    background-color: var(--primarna-boja) !important;
+    color: #121212 !important;
+}
+
+body.tamna-tema .btn-success:hover {
+    background-color: #45a049 !important;
+    color: #121212 !important;
+}
+
+body.tamna-tema .bg-success.text-white {
+    background-color: #2d7a2d !important;
+}
+
+body.tamna-tema .kontakt-stranica .card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+
+body.tamna-tema .kontakt-stranica .card .text-secondary {
+    color: #b0b0b0 !important;
 }
