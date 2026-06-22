@@ -42,8 +42,7 @@ class ValidatorForme {
         
         this.pokreni();
     }
-    
-    // Pomoćna funkcija za dohvatanje jezika
+
     dohvatiTrenutniJezik() {
         return localStorage.getItem('language') || 'sr';
     }
@@ -92,14 +91,12 @@ class ValidatorForme {
         let isValid = true;
         let greskaPoruka = '';
         const trenutniJezik = this.dohvatiTrenutniJezik();
-        
-        // Provera obavezno
+
         if (polje.obavezno && vrednost === '') {
             greskaPoruka = (trenutniJezik === 'en') ? 'This field is required.' : 'Ovo polje je obavezno.';
             isValid = false;
         }
-        
-        // Provera minDuzina
+
         if (isValid && polje.minDuzina && vrednost.length < polje.minDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field must have at least ${polje.minDuzina} characters.`;
@@ -108,8 +105,7 @@ class ValidatorForme {
             }
             isValid = false;
         }
-        
-        // Provera maxDuzina
+
         if (isValid && polje.maxDuzina && vrednost.length > polje.maxDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field cannot have more than ${polje.maxDuzina} characters.`;
@@ -118,8 +114,7 @@ class ValidatorForme {
             }
             isValid = false;
         }
-        
-        // Provera obrazac
+
         if (isValid && polje.obrazac && vrednost !== '' && !polje.obrazac.test(vrednost)) {
             greskaPoruka = (trenutniJezik === 'en') ? 'Field is not in the correct format.' : 'Polje nije u ispravnom formatu.';
             isValid = false;
@@ -271,7 +266,6 @@ class ValidatorForme {
     }
 }
 
-// CSS za animacije
 const stil = document.createElement('style');
 stil.textContent = `
     @keyframes sklizniDole {
@@ -298,7 +292,6 @@ stil.textContent = `
 `;
 document.head.appendChild(stil);
 
-// Inicijalizacija validatora
 document.addEventListener('DOMContentLoaded', function() {
     new ValidatorForme('contactForm');
 });
