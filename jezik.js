@@ -1,38 +1,29 @@
 $(document).ready(function() {
     
-    // Učitaj sačuvani jezik ili podrazumevani (srpski)
     let trenutniJezik = localStorage.getItem('language') || 'sr';
-    
-    // Učitaj prevode i primeni
+
     ucitajPrevode(trenutniJezik);
-    
-    // Klik na dugme za jezik
+
     $('.jezik-dugme').on('click', function() {
         const jezik = $(this).data('lang');
-        
-        // Ako je veći isti jezik, ne radi ništa
+
         if (jezik === trenutniJezik) return;
-        
-        // Ažuriraj aktivno dugme
+
         $('.jezik-dugme').removeClass('aktivan');
         $(this).addClass('aktivan');
-        
-        // Sačuvaj izbor
+
         localStorage.setItem('language', jezik);
         trenutniJezik = jezik;
-        
-        // Učitaj prevode
+
         ucitajPrevode(jezik);
     });
-    
-    // Funkcija za učitavanje prevoda
+
     function ucitajPrevode(jezik) {
         $.getJSON(`lang-${jezik}.json`, function(prevodi) {
             primeniPrevode(prevodi);
         }).fail(function() {
             console.error('Greška pri učitavanju prevoda za jezik:', jezik);
-            
-            // Ako ne može da učita engleski, probaj srpski
+
             if (jezik !== 'sr') {
                 $.getJSON('lang-sr.json', function(prevodi) {
                     primeniPrevode(prevodi);
@@ -40,8 +31,7 @@ $(document).ready(function() {
             }
         });
     }
-    
-    // Funkcija za primenu prevoda na stranicu
+
     function primeniPrevode(prevodi) {
         // Navigacija
         $('.navigacija-meni a[href="index.html"]').text(prevodi.navigacija.pocetna);
@@ -78,12 +68,12 @@ $(document).ready(function() {
         $('.slajd-sadrzaj').eq(2).find('p').text(prevodi.slajdSadrzaj.opis3);
         $('.slajd-sadrzaj').eq(2).find('.klizac-dugme').text(prevodi.slajdSadrzaj.dugme3);
 
-        // About preview
+        // o nama
         $('.o-nama-sadrzaj h2').text(prevodi.onama.naslov);
         $('.o-nama-sadrzaj p').text(prevodi.onama.sadrzaj);
         $('.o-nama-sadrzaj .dugme-okvir').text(prevodi.onama.dugme);
         
-        // Services
+        // usluge
         $('.usluge-pregled .sekcija-naslov').text(prevodi.usluge.naslov);
         $('.usluga-kartica h3').eq(0).text(prevodi.usluge.udomljavanjePasa);
         $('.usluga-kartica p').eq(0).text(prevodi.usluge.opisPas);
