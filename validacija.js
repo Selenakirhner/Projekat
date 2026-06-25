@@ -62,11 +62,11 @@ class ValidatorForme {
     }
     
     proveriFormu() {
-        let isValid = true;
+        let daLiJeValidno = true;
         
         for (const [nazivPolja, polje] of Object.entries(this.polja)) {
             if (!this.proveriPolje(nazivPolja)) {
-                isValid = false;
+                daLiJeValidno = false;
             }
         }
         
@@ -77,10 +77,10 @@ class ValidatorForme {
                 ? 'You must agree to the data processing.'
                 : 'Morate se složiti sa obradom podataka.';
             this.prikaziGresku(greskaPoruka);
-            isValid = false;
+            daLiJeValidno = false;
         }
         
-        return isValid;
+        return daLiJeValidno;
     }
     
     proveriPolje(nazivPolja) {
@@ -88,45 +88,45 @@ class ValidatorForme {
         if (!polje || !polje.element) return true;
         
         const vrednost = polje.element.value.trim();
-        let isValid = true;
+        let daLiJeValidno = true;
         let greskaPoruka = '';
         const trenutniJezik = this.dohvatiTrenutniJezik();
         
         if (polje.obavezno && vrednost === '') {
             greskaPoruka = (trenutniJezik === 'en') ? 'This field is required.' : 'Ovo polje je obavezno.';
-            isValid = false;
+            daLiJeValidno = false;
         }
         
-        if (isValid && polje.minDuzina && vrednost.length < polje.minDuzina) {
+        if (daLiJeValidno && polje.minDuzina && vrednost.length < polje.minDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field must have at least ${polje.minDuzina} characters.`;
             } else {
                 greskaPoruka = `Polje mora imati najmanje ${polje.minDuzina} karaktera.`;
             }
-            isValid = false;
+            daLiJeValidno = false;
         }
         
-        if (isValid && polje.maxDuzina && vrednost.length > polje.maxDuzina) {
+        if (daLiJeValidno && polje.maxDuzina && vrednost.length > polje.maxDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field cannot have more than ${polje.maxDuzina} characters.`;
             } else {
                 greskaPoruka = `Polje ne može imati više od ${polje.maxDuzina} karaktera.`;
             }
-            isValid = false;
+            daLiJeValidno = false;
         }
         
-        if (isValid && polje.obrazac && vrednost !== '' && !polje.obrazac.test(vrednost)) {
+        if (daLiJeValidno && polje.obrazac && vrednost !== '' && !polje.obrazac.test(vrednost)) {
             greskaPoruka = (trenutniJezik === 'en') ? 'Field is not in the correct format.' : 'Polje nije u ispravnom formatu.';
-            isValid = false;
+            daLiJeValidno = false;
         }
         
-        if (!isValid) {
+        if (!daLiJeValidno) {
             this.prikaziGreskuPolja(nazivPolja, greskaPoruka);
         } else {
             this.ocistiGreskuPolja(nazivPolja);
         }
         
-        return isValid;
+        return daLiJeValidno;
     }
     
     prikaziGreskuPolja(nazivPolja, poruka) {
@@ -205,10 +205,10 @@ class ValidatorForme {
     }
     
     posaljiFormu() {
-        const formData = new FormData(this.forma);
+        const podaciForme = new FormData(this.forma);
         const podaci = {};
         
-        for (let [kljuc, vrednost] of formData.entries()) {
+        for (let [kljuc, vrednost] of podaciForme.entries()) {
             podaci[kljuc] = vrednost;
         }
         
@@ -224,8 +224,8 @@ class ValidatorForme {
     }
     
     prikaziPorukuOUspehu() {
-        const successDiv = document.createElement('div');
-        successDiv.className = 'form-success';
+        const uspesanDiv = document.createElement('div');
+        uspesanDiv.className = 'form-success';
         
         const trenutniJezik = this.dohvatiTrenutniJezik();
         let naslov, poruka;
@@ -238,12 +238,12 @@ class ValidatorForme {
             poruka = 'Javićemo vam se u najkraćem mogućem roku.';
         }
         
-        successDiv.innerHTML = `
+        uspesanDiv.innerHTML = `
             <h3>${naslov}</h3>
             <p>${poruka}</p>
         `;
         
-        successDiv.style.cssText = `
+        uspesanDiv.style.cssText = `
             background: #4CAF50;
             color: white;
             padding: 20px;
@@ -253,13 +253,13 @@ class ValidatorForme {
             animation: sklizniDole 0.5s ease;
         `;
         
-        this.forma.insertBefore(successDiv, this.forma.firstChild);
+        this.forma.insertBefore(uspesanDiv, this.forma.firstChild);
         
         setTimeout(() => {
-            successDiv.style.animation = 'sklizniGore 0.5s ease';
+            uspesanDiv.style.animation = 'sklizniGore 0.5s ease';
             setTimeout(() => {
-                if (successDiv.parentNode) {
-                    successDiv.remove();
+                if (uspesanDiv.parentNode) {
+                    uspesanDiv.remove();
                 }
             }, 500);
         }, 5000);
