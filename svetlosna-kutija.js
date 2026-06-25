@@ -10,7 +10,7 @@
         if (galerijaStavke.length === 0) return;
 
         napraviSvetlosnuKutiju();
-
+        
         const svetlosnaKutija = document.getElementById('svetlosna-kutija');
         const slikaUKutiji = document.getElementById('svetlosna-kutija-slika');
         const natpisUKutiji = document.getElementById('svetlosna-kutija-natpis');
@@ -18,31 +18,30 @@
         const dugmePre = document.querySelector('.svetlosna-kutija-pre');
         const dugmeSledece = document.querySelector('.svetlosna-kutija-sledece');
         
-        let trenutniIndex = 0;
-
-        galerijaStavke.forEach((stavka, index) => {
+        let trenutniIndeks = 0;
+        
+        galerijaStavke.forEach((stavka, indeks) => {
             stavka.addEventListener('click', function() {
-                trenutniIndex = index;
+                trenutniIndeks = indeks;
                 otvoriSvetlosnuKutiju(this);
             });
         });
         
         function otvoriSvetlosnuKutiju(stavka) {
-            const img = stavka.querySelector('img');
-            
-            slikaUKutiji.src = img.src;
+            const slika = stavka.querySelector('img');
+            slikaUKutiji.src = slika.src;
             natpisUKutiji.innerHTML = '';
             svetlosnaKutija.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
-
+        
         if (dugmeZatvori) {
             dugmeZatvori.addEventListener('click', function() {
                 svetlosnaKutija.style.display = 'none';
                 document.body.style.overflow = 'auto';
             });
         }
-
+        
         svetlosnaKutija.addEventListener('click', function(e) {
             if (e.target === svetlosnaKutija) {
                 svetlosnaKutija.style.display = 'none';
@@ -52,29 +51,29 @@
 
         if (dugmePre) {
             dugmePre.addEventListener('click', function() {
-                trenutniIndex = (trenutniIndex - 1 + galerijaStavke.length) % galerijaStavke.length;
-                otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
+                trenutniIndeks = (trenutniIndeks - 1 + galerijaStavke.length) % galerijaStavke.length;
+                otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndeks]);
             });
         }
 
         if (dugmeSledece) {
             dugmeSledece.addEventListener('click', function() {
-                trenutniIndex = (trenutniIndex + 1) % galerijaStavke.length;
-                otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
+                trenutniIndeks = (trenutniIndeks + 1) % galerijaStavke.length;
+                otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndeks]);
             });
         }
-
+        
         document.addEventListener('keydown', function(e) {
             if (svetlosnaKutija.style.display === 'block') {
                 if (e.key === 'Escape') {
                     svetlosnaKutija.style.display = 'none';
                     document.body.style.overflow = 'auto';
                 } else if (e.key === 'ArrowLeft') {
-                    trenutniIndex = (trenutniIndex - 1 + galerijaStavke.length) % galerijaStavke.length;
-                    otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
+                    trenutniIndeks = (trenutniIndeks - 1 + galerijaStavke.length) % galerijaStavke.length;
+                    otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndeks]);
                 } else if (e.key === 'ArrowRight') {
-                    trenutniIndex = (trenutniIndex + 1) % galerijaStavke.length;
-                    otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndex]);
+                    trenutniIndeks = (trenutniIndeks + 1) % galerijaStavke.length;
+                    otvoriSvetlosnuKutiju(galerijaStavke[trenutniIndeks]);
                 }
             }
         });
