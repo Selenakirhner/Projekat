@@ -58,55 +58,55 @@ function pokreniMobilniMeni() {
 }
 
 function pokreniGlatkoSkrolovanje() {
-    const links = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+    const linkovi = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     
-    links.forEach(link => {
+    linkovi.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const idCilja = this.getAttribute('href');
+            const elementCilja = document.querySelector(idCilja);
             
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 100;
+            if (elementCilja) {
+                const pomerajOdVrha = elementCilja.offsetTop - 100;
                 
                 window.scrollTo({
-                    top: offsetTop,
+                    top: pomerajOdVrha,
                     behavior: 'smooth'
                 });
                 
-                history.pushState(null, null, targetId);
+                history.pushState(null, null, idCilja);
             }
         });
     });
 }
 
 function pokreniNovineFormu() {
-    const forms = document.querySelectorAll('.novine-forma');
+    const forme = document.querySelectorAll('.novine-forma');
     
-    forms.forEach(form => {
+    forme.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
             const emailInput = this.querySelector('input[type="email"]');
             const email = emailInput.value.trim();
             
-            let currentLang = localStorage.getItem('language') || 'sr';
+            let trenutniJezik = localStorage.getItem('language') || 'sr';
             
-            let successMsg, errorMsg;
-            if (currentLang === 'en') {
-                successMsg = 'Thank you for subscribing! Check your email.';
-                errorMsg = 'Please enter a valid email address.';
+            let porukaUspesno, porukaGreska;
+            if (trenutniJezik === 'en') {
+                porukaUspesno = 'Thank you for subscribing! Check your email.';
+                porukaGreska = 'Please enter a valid email address.';
             } else {
-                successMsg = 'Hvala na prijavi! Proverite vaš email.';
-                errorMsg = 'Molimo unesite validnu email adresu.';
+                porukaUspesno = 'Hvala na prijavi! Proverite vaš email.';
+                porukaGreska = 'Molimo unesite validnu email adresu.';
             }
             
             if (proveriEmail(email)) {
-                prikaziObavestenje(successMsg, 'success');
+                prikaziObavestenje(porukaUspesno, 'success');
                 emailInput.value = '';
             } else {
-                prikaziObavestenje(errorMsg, 'error');
+                prikaziObavestenje(porukaGreska, 'error');
             }
         });
     });
@@ -117,22 +117,22 @@ function proveriEmail(email) {
     return re.test(email);
 }
 
-function prikaziObavestenje(message, type = 'info') {
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
+function prikaziObavestenje(poruka, tip = 'info') {
+    const postojeceObavestenje = document.querySelector('.notification');
+    if (postojeceObavestenje) {
+        postojeceObavestenje.remove();
     }
     
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.textContent = message;
+    const obavestenje = document.createElement('div');
+    obavestenje.className = `notification notification-${tip}`;
+    obavestenje.textContent = poruka;
 
-    notification.style.cssText = `
+    obavestenje.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
         padding: 15px 25px;
-        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+        background: ${tip === 'success' ? '#4CAF50' : tip === 'error' ? '#f44336' : '#2196F3'};
         color: white;
         border-radius: 5px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -140,20 +140,20 @@ function prikaziObavestenje(message, type = 'info') {
         animation: uletiDesno 0.3s ease;
     `;
     
-    document.body.appendChild(notification);
+    document.body.appendChild(obavestenje);
     
     setTimeout(() => {
-        notification.style.animation = 'izletiDesno 0.3s ease';
+        obavestenje.style.animation = 'izletiDesno 0.3s ease';
         setTimeout(() => {
-            notification.remove();
+            obavestenje.remove();
         }, 300);
     }, 3000);
 }
 
 function pokreniAnimacijeNaSkrol() {
-    const animatedElements = document.querySelectorAll('.usluga-kartica, .tim-kartica, .stat-stavka, .galerija-stavka');
+    const animiraniElementi = document.querySelectorAll('.usluga-kartica, .tim-kartica, .stat-stavka, .galerija-stavka');
     
-    animatedElements.forEach(el => {
+    animiraniElementi.forEach(el => {
         el.classList.add('fade-in');
     });
     
@@ -161,7 +161,7 @@ function pokreniAnimacijeNaSkrol() {
     proveriVidljivost();
     
     function proveriVidljivost() {
-        animatedElements.forEach(el => {
+        animiraniElementi.forEach(el => {
             if (daLiJeElementUVidnomPolju(el)) {
                 el.classList.add('visible');
             }
@@ -177,8 +177,8 @@ function pokreniAnimacijeNaSkrol() {
     }
 }
 
-const fadeStyle = document.createElement('style');
-fadeStyle.textContent = `
+const stilFade = document.createElement('style');
+stilFade.textContent = `
     .fade-in {
         opacity: 0;
         transform: translateY(20px);
@@ -212,7 +212,7 @@ fadeStyle.textContent = `
         }
     }
 `;
-document.head.appendChild(fadeStyle);
+document.head.appendChild(stilFade);
 
 $(document).ready(function() {
 
@@ -327,11 +327,11 @@ $(document).ready(function() {
     $fontControls.append($fontDecrease, $fontReset, $fontIncrease);
     $('body').append($fontControls);
   
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '^';
-    backToTopBtn.setAttribute('aria-label', 'Nazad na vrh');
+    const dugmeNaVrh = document.createElement('button');
+    dugmeNaVrh.innerHTML = '^';
+    dugmeNaVrh.setAttribute('aria-label', 'Nazad na vrh');
     
-    backToTopBtn.style.cssText = `
+    dugmeNaVrh.style.cssText = `
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -349,7 +349,7 @@ $(document).ready(function() {
         box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     `;
     
-    document.body.appendChild(backToTopBtn);
+    document.body.appendChild(dugmeNaVrh);
 
     $('.bocno-dugme').on('mouseenter', function() {
         $(this).css({
@@ -363,19 +363,19 @@ $(document).ready(function() {
         });
     });
     
-    backToTopBtn.addEventListener('mouseenter', function() {
+    dugmeNaVrh.addEventListener('mouseenter', function() {
         this.style.background = '#006f12';
         this.style.transform = 'translateY(-5px)';
     });
     
-    backToTopBtn.addEventListener('mouseleave', function() {
+    dugmeNaVrh.addEventListener('mouseleave', function() {
         this.style.background = '#378a3a';
         this.style.transform = 'translateY(0)';
     });
  
-    const savedTheme = localStorage.getItem('theme');
+    const sacuvanaTema = localStorage.getItem('theme');
     
-    if (savedTheme === 'dark') {
+    if (sacuvanaTema === 'dark') {
         $('body').addClass('tamna-tema');
         $themeBtn.text('S');
     } else {
@@ -388,41 +388,41 @@ $(document).ready(function() {
         
         if ($('body').hasClass('tamna-tema')) {
             $(this).text('S');
-            $('.bocno-dugme, #backToTopBtn').css('background', '#4CAF50');
+            $('.bocno-dugme, .tema-dugme').css('background', '#4CAF50');
             localStorage.setItem('theme', 'dark');
         } else {
             $(this).text('T');
-            $('.bocno-dugme, #backToTopBtn').css('background', '#4CAF50');
+            $('.bocno-dugme, .tema-dugme').css('background', '#4CAF50');
             localStorage.setItem('theme', 'light');
         }
     });
 
     (function() {
-        const baseSize = 16;
-        let currentSize = localStorage.getItem('fontSize') ? 
-                         parseFloat(localStorage.getItem('fontSize')) : baseSize;
+        const osnovnaVelicina = 16;
+        let trenutnaVelicina = localStorage.getItem('fontSize') ? 
+                         parseFloat(localStorage.getItem('fontSize')) : osnovnaVelicina;
         
-        document.documentElement.style.fontSize = currentSize + 'px';
+        document.documentElement.style.fontSize = trenutnaVelicina + 'px';
         
         $('#font-bocno-smanji').on('click', function() {
-            if (currentSize > 12) {
-                currentSize = currentSize - 1;
-                document.documentElement.style.fontSize = currentSize + 'px';
-                localStorage.setItem('fontSize', currentSize);
+            if (trenutnaVelicina > 12) {
+                trenutnaVelicina = trenutnaVelicina - 1;
+                document.documentElement.style.fontSize = trenutnaVelicina + 'px';
+                localStorage.setItem('fontSize', trenutnaVelicina);
             }
         });
         
         $('#font-bocno-resetuj').on('click', function() {
-            currentSize = baseSize;
-            document.documentElement.style.fontSize = baseSize + 'px';
-            localStorage.setItem('fontSize', baseSize);
+            trenutnaVelicina = osnovnaVelicina;
+            document.documentElement.style.fontSize = osnovnaVelicina + 'px';
+            localStorage.setItem('fontSize', osnovnaVelicina);
         });
         
         $('#font-bocno-povecaj').on('click', function() {
-            if (currentSize < 24) {
-                currentSize = currentSize + 1;
-                document.documentElement.style.fontSize = currentSize + 'px';
-                localStorage.setItem('fontSize', currentSize);
+            if (trenutnaVelicina < 24) {
+                trenutnaVelicina = trenutnaVelicina + 1;
+                document.documentElement.style.fontSize = trenutnaVelicina + 'px';
+                localStorage.setItem('fontSize', trenutnaVelicina);
             }
         });
     })();
@@ -431,15 +431,15 @@ $(document).ready(function() {
         if ($(window).scrollTop() > 300) {
             $themeBtn.fadeIn(300);
             $fontControls.fadeIn(300);
-            $(backToTopBtn).fadeIn(300);
+            $(dugmeNaVrh).fadeIn(300);
         } else {
             $themeBtn.fadeOut(300);
             $fontControls.fadeOut(300);
-            $(backToTopBtn).fadeOut(300);
+            $(dugmeNaVrh).fadeOut(300);
         }
     });
 
-    backToTopBtn.addEventListener('click', function() {
+    dugmeNaVrh.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
