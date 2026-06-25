@@ -7,51 +7,49 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function pokreniMobilniMeni() {
-    const hamburger = document.querySelector('.hamburger-meni');
-    const navMenu = document.querySelector('.navigacija-meni');
-    const megaMenuTriggers = document.querySelectorAll('.megameni-okidac');
+    const hamburgerMeni = document.querySelector('.hamburger-meni');
+    const navigacioniMeni = document.querySelector('.navigacija-meni');
+    const okidaciMegamenija = document.querySelectorAll('.megameni-okidac');
     
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+    if (hamburgerMeni && navigacioniMeni) {
+        hamburgerMeni.addEventListener('click', function() {
             this.classList.toggle('aktivan');
-            navMenu.classList.toggle('aktivan');
+            navigacioniMeni.classList.toggle('aktivan');
             
-            // Animacija hamburger ikonice
-            const spans = this.querySelectorAll('span');
+            const spanovi = this.querySelectorAll('span');
             if (this.classList.contains('aktivan')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                spanovi[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spanovi[1].style.opacity = '0';
+                spanovi[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                spanovi[0].style.transform = 'none';
+                spanovi[1].style.opacity = '1';
+                spanovi[2].style.transform = 'none';
             }
         });
     }
     
-    // Za mega meni na mobilnim uređajima
     if (window.innerWidth <= 768) {
-        megaMenuTriggers.forEach(trigger => {
-            const link = trigger.querySelector('a');
+        okidaciMegamenija.forEach(okidac => {
+            const veza = okidac.querySelector('a');
             
-            link.addEventListener('click', function(e) {
+            veza.addEventListener('click', function(e) {
                 e.preventDefault();
-                trigger.classList.toggle('aktivan');
+                okidac.classList.toggle('aktivan');
             });
         });
     }
     
     document.addEventListener('click', function(e) {
-        if (navMenu && navMenu.classList.contains('aktivan')) {
-            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-                navMenu.classList.remove('aktivan');
-                hamburger.classList.remove('aktivan');
+        if (navigacioniMeni && navigacioniMeni.classList.contains('aktivan')) {
+            if (!navigacioniMeni.contains(e.target) && !hamburgerMeni.contains(e.target)) {
+                navigacioniMeni.classList.remove('aktivan');
+                hamburgerMeni.classList.remove('aktivan');
                 
-                const spans = hamburger.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                const spanovi = hamburgerMeni.querySelectorAll('span');
+                spanovi[0].style.transform = 'none';
+                spanovi[1].style.opacity = '1';
+                spanovi[2].style.transform = 'none';
             }
         }
     });
@@ -60,8 +58,8 @@ function pokreniMobilniMeni() {
 function pokreniGlatkoSkrolovanje() {
     const linkovi = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     
-    linkovi.forEach(link => {
-        link.addEventListener('click', function(e) {
+    linkovi.forEach(veza => {
+        veza.addEventListener('click', function(e) {
             e.preventDefault();
             
             const idCilja = this.getAttribute('href');
@@ -88,8 +86,8 @@ function pokreniNovineFormu() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const emailInput = this.querySelector('input[type="email"]');
-            const email = emailInput.value.trim();
+            const unosEmaila = this.querySelector('input[type="email"]');
+            const email = unosEmaila.value.trim();
             
             let trenutniJezik = localStorage.getItem('language') || 'sr';
             
@@ -104,7 +102,7 @@ function pokreniNovineFormu() {
             
             if (proveriEmail(email)) {
                 prikaziObavestenje(porukaUspesno, 'success');
-                emailInput.value = '';
+                unosEmaila.value = '';
             } else {
                 prikaziObavestenje(porukaGreska, 'error');
             }
@@ -169,10 +167,10 @@ function pokreniAnimacijeNaSkrol() {
     }
     
     function daLiJeElementUVidnomPolju(el) {
-        const rect = el.getBoundingClientRect();
+        const pravougaonik = el.getBoundingClientRect();
         return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-            rect.bottom >= 0
+            pravougaonik.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            pravougaonik.bottom >= 0
         );
     }
 }
