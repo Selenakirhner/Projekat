@@ -42,7 +42,7 @@ class ValidatorForme {
         
         this.pokreni();
     }
-
+    
     dohvatiTrenutniJezik() {
         return localStorage.getItem('language') || 'sr';
     }
@@ -91,12 +91,12 @@ class ValidatorForme {
         let isValid = true;
         let greskaPoruka = '';
         const trenutniJezik = this.dohvatiTrenutniJezik();
-
+        
         if (polje.obavezno && vrednost === '') {
             greskaPoruka = (trenutniJezik === 'en') ? 'This field is required.' : 'Ovo polje je obavezno.';
             isValid = false;
         }
-
+        
         if (isValid && polje.minDuzina && vrednost.length < polje.minDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field must have at least ${polje.minDuzina} characters.`;
@@ -105,7 +105,7 @@ class ValidatorForme {
             }
             isValid = false;
         }
-
+        
         if (isValid && polje.maxDuzina && vrednost.length > polje.maxDuzina) {
             if (trenutniJezik === 'en') {
                 greskaPoruka = `Field cannot have more than ${polje.maxDuzina} characters.`;
@@ -114,7 +114,7 @@ class ValidatorForme {
             }
             isValid = false;
         }
-
+        
         if (isValid && polje.obrazac && vrednost !== '' && !polje.obrazac.test(vrednost)) {
             greskaPoruka = (trenutniJezik === 'en') ? 'Field is not in the correct format.' : 'Polje nije u ispravnom formatu.';
             isValid = false;
